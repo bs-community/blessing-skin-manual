@@ -1,0 +1,15 @@
+{
+  "name": "blessing-skin-manual",
+  "version": "0.0.0",
+  "repository": "https://github.com/bs-community/blessing-skin-manual",
+  "author": "The Blessing Skin Community",
+  "license": "CC-BY-SA 4.0",
+  "private": true,
+  "scripts": {
+    "dev": "vuepress dev man",
+    "build": "vuepress build man"
+  },
+  "devDependencies": {
+    "vuepress": "^1.0.3"
+  }
+}
