@@ -13,11 +13,16 @@ module.exports = {
     },
   },
   themeConfig: {
+    repo: 'bs-community/blessing-skin-manual',
+    docBranch: 'master',
+    editLinks: true,
     locales: {
       '/': {
         selectText: '选择语言',
         label: '简体中文',
-        editLinkText: '在 GitHub 上编辑此页',
+        docsDir: 'man',
+        editLinkText: '帮助我们完善这个页面',
+        lastUpdated: '最后更新 ',
         sidebar: [
           '/setup',
           '/faq',
@@ -36,7 +41,9 @@ module.exports = {
       '/en/': {
         selectText: 'Languages',
         label: 'English',
+        docsDir: 'man/en',
         editLinkText: 'Edit this page on GitHub',
+        lastUpdated: 'Last Updated',
         sidebar: [
           '/en/mod',
           '/en/v3-to-v4',
