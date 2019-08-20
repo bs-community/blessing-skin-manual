@@ -52,7 +52,9 @@ location / {
 
 注意上面的 `root` 配置项，务必使它指向皮肤站的 `public` 目录。
 
-> 如果你用的是 lnmp 一键包、某某面板之类的东西添加的站点配置，请阅读 [Issue #46 - 图片无法显示](https://github.com/printempw/blessing-skin-server/issues/46) 并查看你的配置文件中是不是也有类似的东西。
+::: tip
+如果你用的是 LNMP 一键包、某某面板之类的东西添加的站点配置，请阅读 [printempw/blessing-skin-server#46 - 图片无法显示](https://github.com/printempw/blessing-skin-server/issues/46) 并查看你的配置文件中是不是也有类似的东西。
+:::
 
 什么？你不知道你的 `nginx.conf` 在哪，也不知道该把这一段加在哪里？
 
