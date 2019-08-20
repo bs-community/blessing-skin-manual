@@ -6,19 +6,25 @@
 
 如有意向维护第三方更新源请提交 Issue。
 
-如果你想维护第三方更新源，可以直接 Clone 这个仓库：[https://dev.azure.com/blessing-skin/_git/Blessing%20Skin%20Server](https://dev.azure.com/blessing-skin/_git/Blessing%20Skin%20Server)。其中的 JSON 文件包含了最新版本的更新信息，ZIP 压缩包为完整更新包。你也可以直接使用 [更新源服务端](https://github.com/bs-community/update-source-server) 这个项目。
-
+::: tip
+如果你想维护第三方更新源，你可以直接 Clone 这个仓库：[https://dev.azure.com/blessing-skin/%5Fgit/Blessing%20Skin%20Server](https://dev.azure.com/blessing-skin/%5Fgit/Blessing%20Skin%20Server)。其中的 JSON 文件包含了最新版本的更新信息，ZIP 压缩包为完整压缩包。
+:::
 ### 官方更新源
 
 ```
-https://dev.azure.com/blessing-skin/51010f6d-9f99-40f1-a262-0a67f788df32/_apis/git/repositories/a9ff8df7-6dc3-4ff8-bb22-4871d3a43936/Items?path=%2Fupdate.json
+https://dev.azure.com/blessing-skin/51010f6d-9f99-40f1-a262-0a67f788df32/_apis/git/repositories/a9ff8df7-6dc3-4ff8-bb22-4871d3a43936/Items?path=%2Fupdate_2.json
 ```
 
 官方更新源位于 Azure DevOps。你不需要手动添加官方更新源，默认情况下即是从官方更新源获取更新。
 
 ### 第三方更新源
 
-> 注意，我们无法 100% 保证第三方更新源的安全。请谨慎使用，防止恶意代码的注入。更新源的排序不分先后。
+::: danger
+我们无法 100% 保证第三方更新源的安全。请谨慎使用，防止恶意代码的注入。
+:::
+:::tip
+更新源的排序不分先后。
+:::
 
 #### LittleSkin
 
