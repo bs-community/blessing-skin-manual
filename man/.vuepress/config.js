@@ -33,6 +33,7 @@ module.exports = {
           '/v3-to-v4',
           '/update-sources',
           '/cdn',
+          '/cli',
           '/css-js',
           '/i18n',
           '/v3-changelog',
