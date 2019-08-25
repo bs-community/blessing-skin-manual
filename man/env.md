@@ -58,7 +58,7 @@ Linux / macOS 用户直接 `cp .env.example .env` 就好了。
 
 ### 安全相关
 
-1. `PWD_METHOD` 用户密码加密方式，可选的值有：
+- `PWD_METHOD` 用户密码加密方式，可选的值有：
 	- `PHP_PASSWORD_HASH`（默认的，也是安全性最高的）
     - `MD5`
 	- `SALTED2MD5`（加盐与不加的区别，下同）
@@ -66,8 +66,8 @@ Linux / macOS 用户直接 `cp .env.example .env` 就好了。
 	- `SALTED2SHA256`
     - `SHA512`
 	- `SALTED2SHA512`
-2. `SALT` 盐用于 Token 和密码加密
-3. `APP_KEY` 用于框架内各种东西的加密，格式为 `"base64:".base64_encode(random_bytes(32))`
+- `SALT` 盐用于 Token 和密码加密
+- `APP_KEY` 用于框架内各种东西的加密，格式为 `"base64:".base64_encode(random_bytes(32))`
 
 **请注意，皮肤站安装好后请勿随意更改这些安全设置，否则会导致原有的用户无法登录。**
 
@@ -121,15 +121,15 @@ SENDMAIL_COMMAND = '/usr/sbin/sendmail -bs' #注意用引号包起来
 
 ### 驱动相关
 
-#### `CACHE_DRIVER`
+- `CACHE_DRIVER` 
 
 此项配置与缓存有关，默认为 `file`。可使用 `file`、 `memcached`、 `redis` 其中的一项。如果您打算使用 Redis，可直接在管理面板中「资源配置」页面直接启用 Redis 而无需手动修改此项配置。
 
-#### `SESSION_DRIVER`
+- SESSION_DRIVER` 
 
 此项配置与 Web 中的 Session（会话）有关，默认为 `file`。可使用 `file`、 `memcached`、 `cookie`、`redis` 其中的一项。。如果您打算使用 Redis，可直接在管理面板中「资源配置」页面直接启用 Redis 而无需手动修改此项配置。
 
-#### `QUEUE_DRIVER`
+- `QUEUE_DRIVER`
 
 默认情况下，Blessing Skin 将以同步的方式发送通知。如果您的站点有较多的用户，当向全部用户发送通知时，站点将会变慢甚至请求超时。为此，您需要在此配置队列以提高性能。
 
@@ -143,22 +143,22 @@ SENDMAIL_COMMAND = '/usr/sbin/sendmail -bs' #注意用引号包起来
 
 当您配置好下面提到的 Redis 配置项后，请只需要打开管理面板中「资源配置」页面并勾选「启用 Redis」，剩下的工作将由 Blessing Skin 自动完成。
 
-1. `REDIS_HOST` Redis 数据库的主机地址，通常为 127.0.0.1，请根据您的实际情况进行修改。
-2. `REDIS_PASSWORD` Redis 数据库密码。默认为 `null`，如果您有为 Redis 设置密码，请相应地修改此项。
-3. `REDIS_PORT` Redis 数据库端口，默认为 6379。
+- `REDIS_HOST` Redis 数据库的主机地址，通常为 127.0.0.1，请根据您的实际情况进行修改。
+- `REDIS_PASSWORD` Redis 数据库密码。默认为 `null`，如果您有为 Redis 设置密码，请相应地修改此项。
+- `REDIS_PORT` Redis 数据库端口，默认为 6379。
 
 如果您使用 unix socket 与 Redis 连接，那么还要这样修改：
 
-1. `REDIS_SCHEME` 修改为 `unix`，如果 `.env` 文件中没有这一项，请手动加上去。
-2. `REDIS_SOCKET_PATH` 要填写为 unix socket 路径。如果 `.env` 文件中没有这一项，请手动加上去。
+- `REDIS_SCHEME` 修改为 `unix`，如果 `.env` 文件中没有这一项，请手动加上去。
+- `REDIS_SOCKET_PATH` 要填写为 unix socket 路径。如果 `.env` 文件中没有这一项，请手动加上去。
 
 ### 插件相关
 
 通常您不需要修改这部分配置。
 
-`PLUGINS_DIR` 此配置项会影响插件的存放位置，Blessing Skin 中的插件市场会把插件安装在此处，并从这个目录中读取并加载插件。请确保这个目录有可读写权限。保留 `null` 以使用默认值。从 5.0.0 起，您可以定义多个不同的插件目录，用英文状态下的逗号分开不同的路径即可。
+- `PLUGINS_DIR` 此配置项会影响插件的存放位置，Blessing Skin 中的插件市场会把插件安装在此处，并从这个目录中读取并加载插件。请确保这个目录有可读写权限。保留 `null` 以使用默认值。从 5.0.0 起，您可以定义多个不同的插件目录，用英文状态下的逗号分开不同的路径即可。
 
-`PLUGINS_URL` 此配置项会影响插件中的前端资源文件 URL。建议保留 `null` 以使用默认值。
+- `PLUGINS_URL` 此配置项会影响插件中的前端资源文件 URL。建议保留 `null` 以使用默认值。
 
 ### 其它
 
