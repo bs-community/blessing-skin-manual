@@ -18,8 +18,5 @@
 尽管 v2.x 就已经可以满足一个小型服务器的需求，如果条件允许的话（蛤？这年头 PHP 7 不是标配吗？），推荐使用最新版本的 Blessing Skin。
 
 ::: warning
-当前 Blessing Skin Community 已停止针对 v4.x 之前的过时的版本的技术支持。如果你想要使用过时的版本，你需要做好不会得到来自 BLessing Skin Community 的支持的心理准备。
+当前 Blessing Skin Community 已停止针对 v4.x 之前的过时的版本的技术支持。如果你想要使用过时的版本，你需要做好不会得到来自 Blessing Skin Community 的支持的心理准备。
 :::
-
-
-
