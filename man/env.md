@@ -33,7 +33,7 @@ Linux / macOS 用户直接 `cp .env.example .env` 就好了。
 
 ## 配置文件字段详解
 
-为了支持国际化，我把 `.env` 的注释换成通用的英文了，但是似乎很多用户都云里雾里的，所以下面介绍一下各个字段的含义。
+为了支持国际化，我们把 `.env` 的注释换成通用的英文了，但是似乎很多用户都云里雾里的，所以下面介绍一下各个字段的含义。
 
 ### 调试开关
 
@@ -48,13 +48,13 @@ Linux / macOS 用户直接 `cp .env.example .env` 就好了。
 
 ### 数据库相关
 
-1. `DB_CONNECTION` 数据库的连接类型，目前支持 `mysql`、`sqlite`、`pgsql`，即分别为 MySQL、SQLite 和 PostgreSQL。
-2. `DB_HOST` 数据库主机，一般为 `localhost`
-3. `DB_PORT` 数据库端口
-4. `DB_DATABASE` 数据库名，自行修改
-5. `DB_USERNAME` 数据库用户名
-6. `DB_PASSWORD` 数据库用户密码
-7. `DB_PREFIX` 数据表前缀，当你有在一个数据库中安装多个皮肤站的需求时，请为每个皮肤站设置不同的数据表前缀
+- `DB_CONNECTION` 数据库的连接类型，目前支持 `mysql`、`sqlite`、`pgsql`，即分别为 MySQL、SQLite 和 PostgreSQL。
+- `DB_HOST` 数据库主机，一般为 `localhost`
+- `DB_PORT` 数据库端口
+- `DB_DATABASE` 数据库名，自行修改
+- `DB_USERNAME` 数据库用户名
+- `DB_PASSWORD` 数据库用户密码
+- `DB_PREFIX` 数据表前缀，当你有在一个数据库中安装多个皮肤站的需求时，请为每个皮肤站设置不同的数据表前缀
 
 ### 安全相关
 

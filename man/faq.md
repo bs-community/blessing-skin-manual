@@ -43,6 +43,47 @@ Blessing Skin 使用了 URL 重写来实现路由功能（即俗称的伪静态�
 
 如果所有页面（包括 `/index.php`）都是 404，请检查你自己的 Web 服务器配置。
 
+## require: open_basedir restriction in effect. File is not within the allow path(s).
+
+如果你的站点出现了如下错误：
+
+```
+require: open_basedir restriction in effect. File is not within the allow path(s).
+```
+
+**这是你的 PHP 设置出了问题，需要修改 php.ini 文件。**
+
+基本上你搜索一下就能找到解决方案。这里再复述一遍：
+
+1. 打开你的 php.ini 文件（不知道 php.ini 文件在哪儿？随便去哪里下载个 PHP 探针（搜索引擎是你的好朋友），打开 `phpinfo()` 就可以看到你目前的 php.ini 配置文件所在目录了）；
+2. 搜索 `open_basedir` 字样；
+3. 找到了吗？
+   1. 如果找到了，在 `=` 等于符号后面加上你的皮肤站根目录下的 `public` 目录的**完整的绝对路径**，然后保存并退出编辑；。
+      - 多个路径中间用 `:` 英文半角分号隔开。
+   2. 如果没找到，那么抱歉爱莫能助。
+4. 如果你使用的是 Nginx，请重启 PHP-FPM，Apache 用户一般不用再做什么了；
+5. 如果一切运转正常，你应该可以正常使用 Blessing Skin 了。
+
+## XXX() has been disabled for security reasons
+
+如果你的遇到了类似如下的错误：
+
+```
+XXX() has been disabled for security reasons
+```
+
+看到这条报错说明 Blessing Skin 所使用的一些函数在你的 PHP 中被禁用了，你需要在 php.ini 文件中解除这些函数的禁用。
+
+基本上你搜索以下就能找到很详细的解决方案（所以说在提问前先自己搜索一遍是多么有必要）。这里再复述一遍：
+
+1. 打开你的 php.ini 文件（不知道你的 php.ini 文件在哪儿？看上一条）；
+2. 搜索 `disable_functions` 字样；
+3. 找到之后，把 `=` 等于符号右边一长串字母和逗号组成的字符串里的 `XXX,` 字样删除；
+4. 记得在退出编辑前要保存！
+5. Nginx 用户请重启 PHP-FPM，Apache 用户应该不需要再做什么了；
+6. 好了，你可以正常使用 Blessing Skin 了。
+
+
 ## Deprecated $HTTP_RAW_POST_DATA
 
 如果你的站点出现了如下错误（一般只会发生在你点了某个按钮之后）：
@@ -53,13 +94,13 @@ Deprecated: Automatically populating $HTTP_RAW_POST_DATA is deprecated and will 
 
 ![error screenshot](https://i.loli.net/2018/02/10/5a7eb109a7b43.png)
 
-**这是你 PHP 设置出了问题，需要修改 `php.ini` 文件。** 如果你是虚拟主机，那么抱歉爱莫能助出门左拐请。
+**这是你 PHP 设置出了问题，需要修改 php.ini 文件。**
 
 基本上你把这个报错拿去翻译一下，就可以很清晰地知道如何操作了。我这里再复述一遍：
 
-1. 打开 `php.ini` 文件……你问我这个文件在哪？随便去哪里下载个 PHP 探针（搜索引擎是你的好朋友），打开 `phpinfo()` 就可以看到你目前的 `php.ini` 配置文件所在目录了；
+1. 打开 php.ini 文件（不知道 php.ini 文件在哪儿？看上一条）；
 2. 搜索 `always_populate_raw_post_data` 字样；
-3. 找到了吗？把 `=` 等于符号右边的数字设置为 `-1`（如果已经是 `-1` 了，请把行首的分号 `;` 删掉）；
+3. 找到之后，把 `=` 等于符号右边的数字设置为 `-1`（如果已经是 `-1` 了，请把行首的分号 `;` 删掉）；
 4. 如果你用的是 Nginx，请重启 php-fpm，Apache 用户一般不用做什么；
 5. 只要命运的齿轮没有出差错，你不会再看到类似的报错了。
 
@@ -81,7 +122,7 @@ PHP Fatal error: Maximum function nesting level of '100' reached, aborting! in /
 Warning: getdate(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone.
 ```
 
-请打开你的 `php.ini` 文件（不知道在哪的话请看上上条），找到 `date.timezone` 项的值并设置为 `Asia/Shanghai`。
+请打开你的 php.ini 文件（不知道在哪的话请看上上条），找到 `date.timezone` 项的值并设置为 `Asia/Shanghai`。
 
 如果 `date.timezone` 这一项的最前面有一个半角分号 `;` 的话，请务必去掉。
 
@@ -122,7 +163,7 @@ example.com/textures/{hash}
 
 ### 检查皮肤站是否配置正确
 
-怎么检查？访问 `http://你的皮肤站地址/你的游戏角色名.json`（此处以 CSL API 为例，USM 也差不多），如果一切正常，你会得到类似这样的内容（如果出错了，出门右转 FAQ）：
+怎么检查？访问 `http://你的皮肤站地址/你的游戏角色名.json`（此处以 CSL API 为例，USM 也差不多），如果一切正常，你会得到类似这样的内容：
 
 ```json
 {
@@ -135,7 +176,7 @@ example.com/textures/{hash}
 }
 ```
 
-然后把那一串字符复制出来，访问 `http://你的皮肤站地址/textures/那一串字符`，如果一切正常，你会看到你的皮肤图片：
+然后把那几串长长的字符串复制出来，分别访问 `http://你的皮肤站地址/textures/那一串字符串`，如果一切正常，你会看到你的皮肤图片：
 
 ![screenshot](https://i.loli.net/2018/02/09/5a7d81e639473.png)
 

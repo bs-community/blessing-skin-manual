@@ -8,24 +8,28 @@
 
 ## 检查你的机器是否符合安装需求
 
+流畅运行 Blessing Skin 对你的服务器的配置的要求非常低（除非你运营的是一个巨型皮肤站）。你需要检查的是你的运行环境。
+
 具体请查看 [README - 环境需求](https://github.com/bs-community/blessing-skin-server/blob/master/README.md#%E7%8E%AF%E5%A2%83%E8%A6%81%E6%B1%82)。
 
-Blessing Skin 有自带运行时环境检查（报错以 `[Error]` 开头），遇到这种情况就说明你的环境不符合需求。
+Blessing Skin 有自带一些运行时环境检查（报错以 `[Error]` 开头），遇到这种情况就说明你的环境不符合需求。
 
 ## 下载安装包
 
-首先你要明白，我提供的安装包是由两个部分组成的：
+首先你要明白，我们提供的安装包是由两个部分组成的：
 
-- Blessing Skin 皮肤站本体的源码
+- Blessing Skin 本体的源码
 - 依赖库以及前端构建文件
 
-如果你直接从 GitHub 上拉取代码是无法直接使用的，因为其中只包含了本体源码，而没有包含依赖库等其他必须的文件。所以，你必须 **下载完整安装包** 或者 [自行构建](https://github.com/bs-community/blessing-skin-server/blob/master/README.md#%E8%87%AA%E8%A1%8C%E6%9E%84%E5%BB%BA)（不是所有人都会）。
+直接从 GitHub 上拉取或者下载的代码是无法直接使用的，因为其中只包含了本体源码，而没有包含依赖库等其他必须的文件。所以，你必须 **下载完整安装包** 或者 [自行构建](https://github.com/bs-community/blessing-skin-server/blob/master/README.md#%E8%87%AA%E8%A1%8C%E6%9E%84%E5%BB%BA)（不是所有人都会）。
 
 所以，如果你没有相应的技术基础，请下载完整安装包。
 
 各版本的完整安装包可以在这里找到：[GitHub Releases](https://github.com/bs-community/blessing-skin-server/releases)
 
-注意，你应该下载类似 `blessing-skin-server-xxx.zip` 的文件，而不是下载 `Source Code`。
+::: tip
+你应该下载类似 `blessing-skin-server-xxx.zip` 的文件，而不是下载 `Source Code`。
+:::
 
 ## 解压安装包
 
