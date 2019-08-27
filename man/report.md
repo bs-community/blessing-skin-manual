@@ -10,15 +10,15 @@
 
 **首先**，你应该确定这到底是不是 Blessing Skin 的锅：机器宕机、网络问题、甚至是你的浏览器出错都会导致你无法正常使用。因此，在向开发者报告问题之前，你应该先以自己的经验判断一下，这到底是不是 Blessing Skin 的锅。如果你自己判断不了，就在互联网上搜索一下吧，_Google is your friend_。
 
-**其次**，你应该好好阅读一遍 [FAQ - 常见问题](/faq.md)，并确保你的问题不在此列。很多情况下你遇到的问题也曾经坑过不少人，并且他们已经总结出了解决方法：那你为什么不看一看呢？
+**其次**，你应该好好阅读一遍 [常见问题解答](/faq.md)，并确保你的问题不在此列。很多情况下你遇到的问题也曾经坑过不少人，并且他们已经总结出了解决方法：那你为什么不看一看呢？
 
 为了关爱星际选手，我再念三遍：
 
-<font size=3>👉 ！！提问前你应该好好阅读一遍 [FAQ - 常见问题](/faq.md)！！👈</font>
+<font size=3>👉 ！！提问前你应该好好阅读一遍 [常见问题解答](/faq.md)！！👈</font>
 
-<font size=4>👉 ！！提问前你应该好好阅读一遍 [FAQ - 常见问题](/faq.md)！！ 👈</font>
+<font size=4>👉 ！！提问前你应该好好阅读一遍 [常见问题解答](/faq.md)！！ 👈</font>
 
-<font size=5>👉 ！！提问前你应该好好阅读一遍 [FAQ - 常见问题](/faq.md)！！ 👈</font>
+<font size=5>👉 ！！提问前你应该好好阅读一遍 [常见问题解答](/faq.md)！！ 👈</font>
 
 确认你遇到的问题不在其中后，你可以着手准备错误报告了。
 
@@ -46,7 +46,9 @@
 
 如果是 Blessing Skin 程序的问题，应该会有错误信息提示，请把这个提示截图发给我。
 
-**注意，反馈之前请先将 `.env` 配置文件中的 `APP_DEBUG` 的值设置为 `true`，这样可以显示更多的调试信息。**
+::: tip 提示：
+反馈之前请先将 `.env` 配置文件中的 `APP_DEBUG` 的值设置为 `true`，这样可以显示更多的调试信息。
+:::
 
 ### 日志
 
@@ -56,13 +58,13 @@
 
 如果是游戏内皮肤无法显示等问题，你还需要带上你的皮肤 Mod 日志：
 
-1. CustomSkinLoader 的日志（位于 `.minecraft/CustomSkinLoader/CustomSkinLoader.log`）
-2. UniSkinMod 的日志（直接输出至 Minecraft 游戏日志，所以给我游戏日志就好）
+- CustomSkinLoader 的日志（位于 `.minecraft/CustomSkinLoader/CustomSkinLoader.log`）
+- UniSkinMod 的日志（直接输出至 Minecraft 游戏日志，所以给我游戏日志就好）
 
 如果是 Yggdrasil 外置登录的问题：
 
-1. 游戏服务器从启动开始的所有日志
-2. 游戏客户端从启动开始的所有日志
+- 游戏服务器从启动开始的所有日志
+- 游戏客户端从启动开始的所有日志
 
 ### 你的运行环境信息
 
@@ -77,6 +79,6 @@
 
 ## 我该如何联系开发者？
 
-1. GitHub Issues
-2. 加入 QQ 讨论群 [573741451](https://jq.qq.com/?_wv=1027&k=58jXtLn)
-3. 加入 Telegram 群组 [@blessing_skin](https://t.me/blessing_skin)
+- GitHub Issues
+- 加入 QQ 讨论群 [573741451](https://jq.qq.com/?_wv=1027&k=58jXtLn)
+- 加入 Telegram 群组 [@blessing_skin](https://t.me/blessing_skin)

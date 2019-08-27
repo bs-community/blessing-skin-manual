@@ -1,5 +1,9 @@
 # v3 更新日志
 
+::: warning 注意：
+这个页面不是 v4 更新日志。若要查看 v4 版本的更新日志，请查看 [GitHub Releases](https://github.com/bs-community/blessing-skin-server/releases) 页面。v3 版本已不再被 Blessing Skin Community 支持，所以这个页面不会得到更新。
+:::
+
 v3.5.0
 ==============
 - **[新增]** 姗姗来迟的官方「插件市场」

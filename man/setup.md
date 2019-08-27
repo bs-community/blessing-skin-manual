@@ -2,15 +2,15 @@
 
 虽然不会图文并茂，但我会尽量写详细点，希望你能看懂。
 
-::: tip
-如果你在安装过程中遇到任何问题，请先查阅 [常见问题](/faq.md)！
+::: tip 提示：
+如果你在安装过程中遇到任何问题，请先查阅 [常见问题解答](/faq.md)，确认你遇到的问题不在此列后，再依照 [报告问题的正确姿势](/report.md) 中的要求联系开发者。
 :::
 
 ## 检查你的机器是否符合安装需求
 
 流畅运行 Blessing Skin 对你的服务器的配置的要求非常低（除非你运营的是一个巨型皮肤站）。你需要检查的是你的运行环境。
 
-具体请查看 [README - 环境需求](https://github.com/bs-community/blessing-skin-server/blob/master/README.md#%E7%8E%AF%E5%A2%83%E8%A6%81%E6%B1%82)。
+具体请查看 [README - 环境要求](https://github.com/bs-community/blessing-skin-server/blob/master/README.md#%E7%8E%AF%E5%A2%83%E8%A6%81%E6%B1%82)。
 
 Blessing Skin 有自带一些运行时环境检查（报错以 `[Error]` 开头），遇到这种情况就说明你的环境不符合需求。
 
@@ -27,13 +27,13 @@ Blessing Skin 有自带一些运行时环境检查（报错以 `[Error]` 开头�
 
 各版本的完整安装包可以在这里找到：[GitHub Releases](https://github.com/bs-community/blessing-skin-server/releases)
 
-::: tip
-你应该下载类似 `blessing-skin-server-xxx.zip` 的文件，而不是下载 `Source Code`。
+::: tip 提示：
+你应该下载文件名类似 `blessing-skin-server-xxx.zip` 的文件，而不是下载 `Source Code`。
 :::
 
 ## 解压安装包
 
-解压到你喜欢的地方去，必须保证 `public/index.php` 在网站根目录下。
+把安装包解压到你喜欢的地方去，必须保证 `public/index.php` 在网站根目录下。
 
 ## 配置 URL 重写规则（伪静态）
 
@@ -56,8 +56,8 @@ location / {
 
 注意上面的 `root` 配置项，务必使它指向皮肤站的 `public` 目录。
 
-::: tip
-如果你用的是 LNMP 一键包、某某面板之类的东西添加的站点配置，请阅读 [printempw/blessing-skin-server#46 - 图片无法显示](https://github.com/printempw/blessing-skin-server/issues/46) 并查看你的配置文件中是不是也有类似的东西。
+::: tip 提示：
+如果你用的是 LNMP 一键包、某某面板之类的东西添加的站点配置，请阅读 [printempw/blessing-skin-server#46](https://github.com/printempw/blessing-skin-server/issues/46) 并查看你的配置文件中是不是也有类似的东西，否则可能导致无法正常显示图片。
 :::
 
 ## 测试伪静态是否生效
@@ -79,5 +79,3 @@ location / {
 ## 安装完成
 
 不出意外的话，你已经完成了 Blessing Skin 的安装，尽情使用吧。
-
-**如果你在安装过程中遇到任何问题，请先查阅 [常见问题](/faq.md)，确认你遇到的问题不在此列后，再依照 [报告问题的正确姿势](/report.md) 中的要求联系开发者。**

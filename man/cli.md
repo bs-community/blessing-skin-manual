@@ -1,6 +1,6 @@
 # CLI 用途
 
-Blessing Skin 允许您可以通过命令行对皮肤站进行一些操作。
+Blessing Skin 允许您通过命令行对皮肤站进行一些操作。
 
 ## 启用插件
 
@@ -30,11 +30,12 @@ $ php artisan plugin:disable <name>
 $ php artisan options:cache
 ```
 
-执行此命令后，Blessing Skin 将在 `storage/options` 目录下生成一个 `cache.php` 文件。
-此文件即为缓存。
+执行此命令后，Blessing Skin 将在 `storage/options` 目录下生成一个 `cache.php` 文件。此文件即为缓存。
 
 以后每次访问站点时，Blessing Skin 都会从这里加载所有的站点选项，而不读取数据库。
 
-当然，在这之后，你在站点管理面板中对任何设置进行的一切修改都不会生效（因为它们是写进数据库的）。
+::: tip 提示： 
+在生成缓存之后，你在站点管理面板中对任何设置进行的一切修改都不会生效（因为它们是写进数据库的）。如果你希望在更改设置后使新设置生效，重新执行这条命令就可以更新缓存。
+:::
 
-如果在更改设置后希望新设置生效，重新执行这条命令就可以更新缓存。如果希望停止缓存，直接删除 `storage/options/cache.php` 文件即可。
+如果希望停止缓存，直接删除 `storage/options/cache.php` 文件即可。
