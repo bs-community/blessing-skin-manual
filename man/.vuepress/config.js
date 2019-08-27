@@ -14,7 +14,8 @@ module.exports = {
   },
   themeConfig: {
     repo: 'bs-community/blessing-skin-manual',
-    docBranch: 'master',
+    docsBranch: 'master',
+    docsDir: 'man',
     editLinks: true,
     locales: {
       '/': {
