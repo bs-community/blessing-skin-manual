@@ -37,11 +37,11 @@ Blessing Skin 有自带一些运行时环境检查（报错以 `[Error]` 开头�
 
 ## 配置 URL 重写规则（伪静态）
 
+### Apache 用户
+
 大多数虚拟主机用户的 Web Server 都是 Apache，本程序自带开箱即用的 `.htaccess`，所以这些用户无需进行任何操作（前提是安装好并开启 URL 重写模块），直接进入下一步即可。
 
-如果你使用的是 Nginx 或者其他 Web Server，你需要手动配置 URL 重写规则。
-
-下面以 Nginx 为例：
+### Nginx 用户
 
 1. 找到你的 Nginx 站点配置文件（也就是你这个域名的 `server {}` 块）
 2. 在 `server {}` 块中适当的地方添加如下规则：
@@ -60,10 +60,6 @@ location / {
 如果你用的是 LNMP 一键包、某某面板之类的东西添加的站点配置，请阅读 [printempw/blessing-skin-server#46 - 图片无法显示](https://github.com/printempw/blessing-skin-server/issues/46) 并查看你的配置文件中是不是也有类似的东西。
 :::
 
-什么？你不知道你的 `nginx.conf` 在哪，也不知道该把这一段加在哪里？
-
-换 Apache 吧。
-
 ## 测试伪静态是否生效
 
 打开你的浏览器，访问 `http://你的皮肤站地址/setup`。
@@ -74,7 +70,7 @@ location / {
 
 ## 运行安装向导
 
-如果上个步骤中你配置的数据库连接信息没出错的话，现在访问皮肤站就可以看到欢迎页面了：
+现在访问皮肤站可以看到欢迎页面了：
 
 ![Welcome Page](https://i.loli.net/2018/02/08/5a7c1b7f4ab66.png)
 
