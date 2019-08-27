@@ -27,13 +27,15 @@
 3. 按下回车确认，文件名最后的 `.` 将会自动消失；
 4. 你已完成重命名操作（是的，Windows 就是这么神秘）。
 
+当然您也可以在 PowerShell 中执行 `Rename-Item .env.example .env` 或在 CMD 中执行 `copy .env.example .env`。
+
 --------------
 
-Linux / macOS 用户直接 `cp .env.example .env` 就好了。
+Linux 或 macOS 用户直接 `cp .env.example .env` 就好了。
 
 ## 配置文件字段详解
 
-为了支持国际化，我们把 `.env` 的注释换成通用的英文了，但是似乎很多用户都云里雾里的，所以下面介绍一下各个字段的含义。
+为了支持国际化，我们把 `.env` 的注释换成通用的英文了，但是为了方便中文用户，下面介绍一下各个字段的含义。
 
 ### 调试开关
 
@@ -44,7 +46,7 @@ Linux / macOS 用户直接 `cp .env.example .env` 就好了。
 
 #### `APP_ENV`
 
-生产环境下，请将 `APP_ENV` 设置为 `production`。仅在开发 Blessing Skin 时（如，您正在为 Blessing Skin 做贡献），才可将该配置项设为 `development`。（当 `APP_ENV` 为 `development` 时，所有前端资源均从 `webpack-dev-server` 中加载）
+生产环境下，请将 `APP_ENV` 设置为 `production`。仅在开发 Blessing Skin 时（如，您正在为 Blessing Skin 做贡献），才可将该配置项设为 `development`。（当 `WEBPACK_ENV` 为 `development` 时，所有前端资源均从 `webpack-dev-server` 中加载）
 
 ### 数据库相关
 
@@ -59,12 +61,13 @@ Linux / macOS 用户直接 `cp .env.example .env` 就好了。
 ### 安全相关
 
 - `PWD_METHOD` 用户密码加密方式，可选的值有：
-	- `PHP_PASSWORD_HASH`（默认的，也是安全性最高的）
-    - `MD5`
+	- `BCRYPT`（默认的）
+  - `PHP_PASSWORD_HASH`
+  - `MD5`
 	- `SALTED2MD5`（加盐与不加的区别，下同）
-    - `SHA256`
+  - `SHA256`
 	- `SALTED2SHA256`
-    - `SHA512`
+  - `SHA512`
 	- `SALTED2SHA512`
 - `SALT` 盐用于 Token 和密码加密
 - `APP_KEY` 用于框架内各种东西的加密，格式为 `"base64:".base64_encode(random_bytes(32))`
