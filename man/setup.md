@@ -1,6 +1,6 @@
 # 安装指南
 
-虽然不会图文并茂，但我会尽量写详细点，希望你能看懂。
+虽然不会图文并茂，但我们会尽量用通俗的语言写详细点，希望你能看懂。
 
 ::: tip 提示：
 如果你在安装过程中遇到任何问题，请先查阅 [常见问题解答](/faq.md)，确认你遇到的问题不在此列后，再依照 [报告问题的正确姿势](/report.md) 中的要求联系开发者。
@@ -23,7 +23,13 @@ Blessing Skin 有自带一些运行时环境检查（报错以 `[Error]` 开头�
 
 直接从 GitHub 上拉取或者下载的代码是无法直接使用的，因为其中只包含了本体源码，而没有包含依赖库等其他必须的文件。所以，你必须 **下载完整安装包** 或者 [自行构建](https://github.com/bs-community/blessing-skin-server/blob/master/README.md#%E8%87%AA%E8%A1%8C%E6%9E%84%E5%BB%BA)（不是所有人都会）。
 
-所以，如果你没有相应的技术基础，请下载完整安装包。
+为了关爱星际选手，我再念三遍：
+
+<font size=3>👉你必须下载完整安装包！👈</font>
+
+<font size=4>👉你必须下载完整安装包！!👈</font>
+
+<font size=5>👉你必须下载完整安装包！！！👈</font>
 
 各版本的完整安装包可以在这里找到：[GitHub Releases](https://github.com/bs-community/blessing-skin-server/releases)
 
@@ -33,17 +39,21 @@ Blessing Skin 有自带一些运行时环境检查（报错以 `[Error]` 开头�
 
 ## 解压安装包
 
-把安装包解压到你喜欢的地方去，必须保证 `public/index.php` 在网站根目录下。
+把安装包解压到你喜欢的地方去，必须保证 `index.php` 在网站根目录下的 `public` 目录下。
 
 ## 配置 URL 重写规则（伪静态）
 
 ### Apache 用户
 
-大多数虚拟主机用户的 Web Server 都是 Apache，本程序自带开箱即用的 `.htaccess`，所以这些用户无需进行任何操作（前提是安装好并开启 URL 重写模块），直接进入下一步即可。
+请将站点根目录设置为网站根目录下的 `public` 目录（而不是根目录），并确保你安装好并启用了 URL Rewrite 模块。
+
+Blessing Skin 自带开箱即用的 `.htaccess`，所以你无需额外配置 URL 重写规则，直接进入下一步即可。
 
 ### Nginx 用户
 
-1. 找到你的 Nginx 站点配置文件（也就是你这个域名的 `server {}` 块）
+1. 找到你的 Nginx 站点配置文件（也就是你这个域名的 `server {}` 块）  
+   不知道你的 Nginx 站点配置文件在哪儿？建议更换 Apache。
+   
 2. 在 `server {}` 块中适当的地方添加如下规则：
 
 ```nginx
