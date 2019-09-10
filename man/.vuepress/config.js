@@ -32,6 +32,7 @@ module.exports = {
           '/env',
           '/versions',
           '/v3-to-v4',
+          '/ui-text',
           '/update-sources',
           '/cdn',
           '/cli',
