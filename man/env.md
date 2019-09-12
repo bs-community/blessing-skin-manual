@@ -146,14 +146,10 @@ SENDMAIL_COMMAND = '/usr/sbin/sendmail -bs' #注意用引号包起来
 
 当您配置好下面提到的 Redis 配置项后，请只需要打开管理面板中「资源配置」页面并勾选「启用 Redis」，剩下的工作将由 Blessing Skin 自动完成。
 
+- `REDIS_CLIENT` 这一项的值只能为 `phpredis` 或 `predis`。如果您的站点有在使用 Redis，请安装 PHP 的 Redis 扩展，并将此值改为 `phpredis`。
 - `REDIS_HOST` Redis 数据库的主机地址，通常为 127.0.0.1，请根据您的实际情况进行修改。
 - `REDIS_PASSWORD` Redis 数据库密码。默认为 `null`，如果您有为 Redis 设置密码，请相应地修改此项。
 - `REDIS_PORT` Redis 数据库端口，默认为 6379。
-
-如果您使用 unix socket 与 Redis 连接，那么还要这样修改：
-
-- `REDIS_SCHEME` 修改为 `unix`，如果 `.env` 文件中没有这一项，请手动加上去。
-- `REDIS_SOCKET_PATH` 要填写为 unix socket 路径。如果 `.env` 文件中没有这一项，请手动加上去。
 
 ### 插件相关
 
