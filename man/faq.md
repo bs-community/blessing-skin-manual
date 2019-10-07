@@ -55,7 +55,7 @@ Blessing Skin 使用了 URL 重写来实现路由功能（即俗称的伪静态�
 
 如果你的站点出现了如下错误：
 
-```
+```text
 require: open_basedir restriction in effect. File is not within the allow path(s).
 ```
 
@@ -66,7 +66,7 @@ require: open_basedir restriction in effect. File is not within the allow path(s
 1. 打开你的 php.ini 文件（不知道 php.ini 文件在哪儿？随便去哪里下载个 PHP 探针（搜索引擎是你的好朋友），打开 `phpinfo()` 就可以看到你目前的 php.ini 配置文件所在目录了）；
 2. 搜索 `open_basedir` 字样；
 3. 找到了吗？
-   1. 如果找到了，在 `=` 等于符号后面加上你的皮肤站根目录下的 `public` 目录的**完整的绝对路径**，然后保存并退出编辑；。
+   1. 如果找到了，在 `=` 等于符号后面加上你的皮肤站根目录的**完整的绝对路径**，然后保存并退出编辑；
       - 多个路径中间用 `:` 英文半角分号隔开。
    2. 如果没找到，那么抱歉爱莫能助。
 4. 如果你使用的是 Nginx，请重启 PHP-FPM，Apache 用户一般不用再做什么了；
@@ -76,7 +76,7 @@ require: open_basedir restriction in effect. File is not within the allow path(s
 
 如果你的遇到了类似如下的错误：
 
-```
+```text
 XXX() has been disabled for security reasons
 ```
 
@@ -156,7 +156,7 @@ CrazyLogin：自 Blessing Skin Server v4 起，CrazyLogin 数据对接不受 Ble
 # 获取指定角色的皮肤/披风
 example.com/{skin|cape}/{username}.png
 # 获取指定角色的头像
-example.com/avatar/{size}/{username}.png
+example.com/avatar/player/{size}/{username}.png
 # 通过材质 ID 获取皮肤
 example.com/raw/{tid}.png
 # 通过材质 Hash 获取皮肤
