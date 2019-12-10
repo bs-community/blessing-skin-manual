@@ -30,6 +30,7 @@ module.exports = {
           '/report',
           '/mod',
           '/env',
+          '/build',
           '/versions',
           '/v3-to-v4',
           '/ui-text',
