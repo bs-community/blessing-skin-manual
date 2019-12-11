@@ -21,7 +21,7 @@ Blessing Skin 有自带一些运行时环境检查（报错以 `[Error]` 开头�
 - Blessing Skin 本体的源码
 - 依赖库以及前端构建文件
 
-直接从 GitHub 上拉取或者下载的代码是无法直接使用的，因为其中只包含了本体源码，而没有包含依赖库等其他必须的文件。所以，你必须 **下载完整安装包** 或者 [自行构建](https://github.com/bs-community/blessing-skin-server/blob/master/README.md#%E8%87%AA%E8%A1%8C%E6%9E%84%E5%BB%BA)（不是所有人都会）。
+直接从 GitHub 上拉取或者下载的代码是无法直接使用的，因为其中只包含了本体源码，而没有包含依赖库等其他必须的文件。所以，你必须 **下载完整安装包** 或者 [自行构建](build.md)（不是所有人都会）。
 
 为了关爱星际选手，我再念三遍：
 
@@ -46,7 +46,7 @@ Blessing Skin 有自带一些运行时环境检查（报错以 `[Error]` 开头�
 `APP_KEY` 被用于加密 Session 等数据，对 Blessing Skin 来说是不可缺少的。执行以下命令生成 app key：
 
 ```
-php artisan key:generate 
+php artisan key:generate
 ```
 
 如果没有生成 app key，访问页面时会出现「No application encryption key has been specified.」的错误提示。
@@ -61,9 +61,9 @@ Blessing Skin 自带开箱即用的 `.htaccess`，所以你无需额外配置 UR
 
 ### Nginx 用户
 
-1. 找到你的 Nginx 站点配置文件（也就是你这个域名的 `server {}` 块）  
+1. 找到你的 Nginx 站点配置文件（也就是你这个域名的 `server {}` 块）
    不知道你的 Nginx 站点配置文件在哪儿？建议更换 Apache。
-   
+
 2. 在 `server {}` 块中适当的地方添加如下规则：
 
 ```nginx
