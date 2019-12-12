@@ -8,7 +8,7 @@
 
 ## 检查你的机器是否符合安装需求
 
-流畅运行 Blessing Skin 对你的服务器的配置的要求非常低（除非你运营的是一个巨型皮肤站）。你需要检查的是你的运行环境。
+流畅运行 Blessing Skin 对你的服务器的配置的要求非常低（除非你运营的是一个巨型皮肤站）。你需要检查的是你的运行环境。（[这里] 有个不那么严谨的基准测试结果，仅供参考）
 
 具体请查看 [README - 环境要求](https://github.com/bs-community/blessing-skin-server/blob/master/README.md#%E7%8E%AF%E5%A2%83%E8%A6%81%E6%B1%82)。
 
