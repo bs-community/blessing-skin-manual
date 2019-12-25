@@ -62,6 +62,7 @@ Linux 或 macOS 用户直接 `cp .env.example .env` 就好了。
 
 - `PWD_METHOD` 用户密码加密方式，可选的值有：
 	- `BCRYPT`（默认的）
+  - `ARGON2I`（需要 Blessing Skin v5 或更高版本）
   - `PHP_PASSWORD_HASH`
   - `MD5`
 	- `SALTED2MD5`（加盐与不加的区别，下同）
@@ -124,11 +125,11 @@ SENDMAIL_COMMAND = '/usr/sbin/sendmail -bs' #注意用引号包起来
 
 ### 驱动相关
 
-- `CACHE_DRIVER` 
+- `CACHE_DRIVER`
 
 此项配置与缓存有关，默认为 `file`。可使用 `file`、 `memcached`、 `redis` 其中的一项。如果您打算使用 Redis，可直接在管理面板中「资源配置」页面直接启用 Redis 而无需手动修改此项配置。
 
-- SESSION_DRIVER` 
+- SESSION_DRIVER`
 
 此项配置与 Web 中的 Session（会话）有关，默认为 `file`。可使用 `file`、 `memcached`、 `cookie`、`redis` 其中的一项。。如果您打算使用 Redis，可直接在管理面板中「资源配置」页面直接启用 Redis 而无需手动修改此项配置。
 
