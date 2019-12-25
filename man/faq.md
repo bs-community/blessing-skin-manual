@@ -238,9 +238,9 @@ example.com/textures/{hash}
 去皮肤站数据库 `users` 表那个用户记录的 `permission` 字段设置为 `2`。
 
 :::tip Permission 字段说明：
-0： 正常  
--1：封禁  
-1：管理员  
+0： 正常
+-1：封禁
+1：管理员
 2：超级管理员
 :::
 
@@ -265,3 +265,7 @@ example.com/textures/{hash}
 :::
 
 参考链接：[printempw/blessing-skin-server#61](https://github.com/printempw/blessing-skin-server/issues/61)
+
+## Target class [App\Services\Cipher\xxx] does not exist.
+
+站点的密码算法设置不正确，请确保使用 Blessing Skin 支持的算法并且算法名没有拼写错误（区分大小写）。
