@@ -129,7 +129,7 @@ SENDMAIL_COMMAND = '/usr/sbin/sendmail -bs' #注意用引号包起来
 
 此项配置与缓存有关，默认为 `file`。可使用 `file`、 `memcached`、 `redis` 其中的一项。如果您打算使用 Redis，可直接在管理面板中「资源配置」页面直接启用 Redis 而无需手动修改此项配置。
 
-- SESSION_DRIVER`
+- `SESSION_DRIVER`
 
 此项配置与 Web 中的 Session（会话）有关，默认为 `file`。可使用 `file`、 `memcached`、 `cookie`、`redis` 其中的一项。。如果您打算使用 Redis，可直接在管理面板中「资源配置」页面直接启用 Redis 而无需手动修改此项配置。
 
