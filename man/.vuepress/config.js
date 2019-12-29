@@ -39,7 +39,6 @@ module.exports = {
           '/cdn',
           '/cli',
           '/css-js',
-          '/i18n',
           '/bench',
           '/v3-changelog',
         ]
