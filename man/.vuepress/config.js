@@ -51,7 +51,7 @@ module.exports = {
         lastUpdated: 'Last Updated',
         sidebar: [
           '/en/mod',
-          '/build',
+          '/en/build',
           '/en/v3-to-v4',
         ]
       },
