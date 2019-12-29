@@ -33,6 +33,7 @@ module.exports = {
           '/build',
           '/versions',
           '/v3-to-v4',
+          '/v4-to-v5',
           '/ui-text',
           '/update-sources',
           '/cdn',
