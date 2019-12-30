@@ -94,6 +94,10 @@ http://example.com/cape/*.png
 
 ## UniSkinMod
 
+::: tip
+从 Blessing Skin v5 起，如果想使用 Universal Skin API，您需要在插件市场中安装这个插件。
+:::
+
 ### 1.4 及以上版本（推荐）
 
 配置文件位于 `.minecraft/config/UniSkinMod/UniSkinMod.json`。
