@@ -145,8 +145,6 @@ SENDMAIL_COMMAND = '/usr/sbin/sendmail -bs' #注意用引号包起来
 
 如果条件允许，请为您的站点使用 Redis。Redis 作为内存数据库，能在一定程度上提升站点的性能。
 
-当您配置好下面提到的 Redis 配置项后，请只需要打开管理面板中「资源配置」页面并勾选「启用 Redis」，剩下的工作将由 Blessing Skin 自动完成。
-
 - `REDIS_CLIENT` 这一项的值只能为 `phpredis` 或 `predis`。如果您的站点有在使用 Redis，请安装 PHP 的 Redis 扩展，并将此值改为 `phpredis`。
 - `REDIS_HOST` Redis 数据库的主机地址，通常为 127.0.0.1，请根据您的实际情况进行修改。
 - `REDIS_PASSWORD` Redis 数据库密码。默认为 `null`，如果您有为 Redis 设置密码，请相应地修改此项。
