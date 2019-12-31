@@ -269,3 +269,17 @@ example.com/textures/{hash}
 ## Target class [App\Services\Cipher\xxx] does not exist.
 
 站点的密码算法设置不正确，请确保使用 Blessing Skin 支持的算法并且算法名没有拼写错误（区分大小写）。
+
+
+
+## 错误码：2054 ##
+
+**详细信息：无法连接至 MySQL/MariaDB 服务器，请检查你的配置。服务器返回的信息：SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client**
+
+MySQL 8默认使用了新的密码验证插件：caching_sha2_password，而之前的PHP版本中所带的mysqlnd无法支持这种验证。
+
+::: tip 解决方法：
+新建一个使用mysql_native_password方式的账户，并给予权限。
+或
+将现有账户验证方式改为mysql_native_password
+:::
