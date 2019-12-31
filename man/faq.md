@@ -274,6 +274,6 @@ example.com/textures/{hash}
 
 出错消息会像这样：无法连接至 MySQL/MariaDB 服务器，请检查你的配置。服务器返回的信息：SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client
 
-MySQL 8默认使用了新的密码验证插件： caching_sha2_password ，而之前的PHP版本中所带的 mysqlnd 无法支持这种验证。
+MySQL 8 默认使用了新的密码验证插件：caching_sha2_password，而之前的PHP版本中所带的 mysqlnd 无法支持这种验证。
 
-解决方法：新建一个使用 mysql_native_password 方式的账户，并给予权限。或将现有账户验证方式改为 mysql_native_password 。
+解决方法：新建一个使用 mysql_native_password 方式的账户，并给予权限；或将现有账户验证方式改为 mysql_native_password 。
