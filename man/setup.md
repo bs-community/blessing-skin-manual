@@ -41,6 +41,10 @@ Blessing Skin 有自带一些运行时环境检查（报错以 `[Error]` 开头�
 
 把安装包解压到你喜欢的地方去，必须保证 `index.php` 在网站根目录下的 `public` 目录下。
 
+## 复制配置文件 
+
+对于 Windows 用户，请将 `.env.example` 文件重命名为 `.env.`（注意末尾有一个小数点），此时 Windows 会自动把末尾的小数点去掉；其它操作系统的用户通过命令行 `cp .env.example .env` 即可。
+
 ## 生成 app key
 
 `APP_KEY` 被用于加密 Session 等数据，对 Blessing Skin 来说是不可缺少的。执行以下命令生成 app key：
