@@ -101,7 +101,7 @@ MAIL_PORT = 465
 MAIL_USERNAME = test@example.com
 # 密码
 MAIL_PASSWORD = secret
-# 加密方式，一般为 tls 或者 ssl
+# 加密方式，一般为 tls 或者 ssl。若没有请改为null
 MAIL_ENCRYPTION = tls
 ```
 
