@@ -28,4 +28,16 @@ https://dev.azure.com/blessing-skin/51010f6d-9f99-40f1-a262-0a67f788df32/_apis/g
 更新源的排序不分先后。
 :::
 
-暂无。
+### ZeroDream
+
+```
+# 国内服务器
+https://cmi.zerodream.net/bss/
+# 美国服务器
+https://cdn.worldofcraft.cn/bss/
+```
+国内服务器位于江苏宿迁，中国移动 100Mbps 对等网络；美国服务器位于美国堪萨斯州，1Gbps 对等网络，使用 CloudFlare 加速。
+
+文件更新的频率为每天一次，保持和官方 Azure 仓库同步。
+
+爱发电：[https://afdian.net/@Akkariin](https://afdian.net/@Akkariin)
