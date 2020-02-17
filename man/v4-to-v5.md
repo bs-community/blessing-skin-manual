@@ -20,3 +20,34 @@ QUEUE_DRIVER=redis
 ## 对于使用传统皮肤加载方式的用户
 
 我们从核心中移除了「传统加载方式」的功能，因此如果您希望继续使用此功能，可从插件市场中下载并安装「传统皮肤加载方式」插件。
+
+## 使用 Blessing Skin Shell
+
+如果您想使用 Blessing Skin Shell，请根据以下步骤修改 Web Server 的配置。
+
+### Nginx
+
+修改 `/etc/nginx/mime.types` 文件，添加以下一行内容：
+
+```
+application/wasm  wasm;
+```
+
+然后重新启动 Web Server。
+
+### Apache
+
+我们已经在 `.htaccess` 进行了配置，如果对您不起作用，可以考虑以下方法。
+
+一种方法是修改 `/etc/mime.types`，在这个文件中添加以下一行：
+
+```
+application/wasm  wasm
+```
+
+还有一种方法是修改您的 Apache 配置文件，添加以下一行：
+
+```
+AddType application/wasm .wasm
+```
+
