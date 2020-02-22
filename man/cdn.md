@@ -18,9 +18,28 @@
 注意，我们无法 100% 保证第三方 CDN 的安全。请谨慎使用，防止恶意代码的注入。
 :::
 
-|名称|地址|
-|-|-|
-|hempflower|https://bs-mirror.i-creator.cn/v4/|
+### hempflower
+
+> 此 CDN 由 [OreCraft](http://www.orecraft.cn) 提供。 如果此 CDN 对您有帮助，可以通过 [爱发电](https://afdian.net/@hempflower) 打赏。
+>
+> 如果在 CDN 支持的版本中没有找到您需要的，您可以联系 QQ 1993996310 更新。
+
+地址：`https://bs-mirror.i-creator.cn/:version/public`
+
+其中 `:version` 替换成 BS 版本。目前此 CDN 地址适用于以下版本:
+
+- 4.0.4
+- 4.1.0
+- 4.1.1
+- 4.1.2
+- 4.1.3
+- 4.1.4
+- 4.2.0
+- 4.2.1
+- 4.3.6
+- 4.4.0
+
+替换后的地址应类似于：`https://bs-mirror.i-creator.cn/4.0.4/public`
 
 ::: tip 想要提交新的公共 CDN？
 请在 [bs-community/blessing-skin-manual](https://github.com/bs-community/blessing-skin-manual) 下提一个 Issue 或直接发起 Pull Request。
