@@ -132,7 +132,7 @@ SENDMAIL_COMMAND='/usr/sbin/sendmail -bs' #注意用引号包起来
 
 此项配置与 Web 中的 Session（会话）有关，默认为 `file`。可使用 `file`、 `memcached`、 `cookie`、`redis` 其中的一项。
 
-- `QUEUE_DRIVER`
+- `QUEUE_CONNECTION`
 
 默认情况下，Blessing Skin 将以同步的方式发送通知。如果您的站点有较多的用户，当向全部用户发送通知时，站点将会变慢甚至请求超时。为此，您需要在此配置队列以提高性能。
 
