@@ -89,36 +89,35 @@ php artisan key:generate
 
 邮件配置主要用用户邮箱验证与发送密码重置邮件。
 
-如果你使用 SMTP，请添加以下字段（内容自行修改）：
+#### 如果你使用 SMTP，请添加以下字段（内容自行修改）：
+
+- `MAIL_DRIVER` 为 `smtp`
+- `MAIL_HOST` 为邮件服务器地址
+- `MAIL_PORT` 为邮件服务器端口，默认为 465
+- `MAIL_USERNAME` 为邮件服务器认证所需的用户名
+- `MAIL_PASSWORD` 为邮件服务器认证所需的密码
+- `MAIL_ENCRYPTION` 为加密方式
+- `MAIL_FROM_ADDRESS` 为发件人的邮件地址
+- `MAIL_FROM_NAME` 为发件人的名称，默认为空，可以填写成站点名
+
+#### 如果您使用 SendGrid：
+
+请在 `MAIL_USERNAME` 中填写 API Key，在 `MAIL_FROM_ADDRESS` 和 `MAIL_FROM_NAME` 中填写发件人的信息。
+
+#### 如果您使用 Mailgun，请添加以下字段：
 
 ```
-MAIL_DRIVER = smtp
-# 邮件主机地址
-MAIL_HOST = smtp.example.com
-# 邮件主机端口
-MAIL_PORT = 465
-# 邮件发送人（填完整邮箱地址）
-MAIL_USERNAME = test@example.com
-# 密码
-MAIL_PASSWORD = secret
-# 加密方式，一般为 tls 或者 ssl，如果没有就填 null。
-MAIL_ENCRYPTION = tls
+MAIL_DRIVER=mailgun
+MAIL_USERNAME=test@example.com
+MAILGUN_DOMAIN=example.com
+MAILGUN_SECRET=api-key
 ```
 
-**如果你使用 Mailgun，请添加以下字段：**
+#### 如果您使用 sendmail，请添加以下字段：
 
 ```
-MAIL_DRIVER = mailgun
-MAIL_USERNAME = test@example.com
-MAILGUN_DOMAIN = example.com
-MAILGUN_SECRET = api-key
-```
-
-**如果你使用 sendmail，请添加以下字段：**
-
-```
-MAIL_DRIVER = sendmail
-SENDMAIL_COMMAND = '/usr/sbin/sendmail -bs' #注意用引号包起来
+MAIL_DRIVER=sendmail
+SENDMAIL_COMMAND='/usr/sbin/sendmail -bs' #注意用引号包起来
 ```
 
 将 `MAIL_DRIVER` 设置为 `null` 即可停用所有邮件相关的功能。
