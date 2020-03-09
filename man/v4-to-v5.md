@@ -13,6 +13,10 @@ QUEUE_DRIVER=redis
 
 当然，您也可以单独控制上述三项是否使用 Redis。
 
+## 邮件发送相关
+
+请把 .env 文件中的 `MAIL_DRIVER`  改为 `MAIL_MAILER` 。
+
 ## 对于使用 Universal Skin API 的用户
 
 我们从核心中移除了 Universal Skin API 的功能，因此如果您希望继续使用此功能，可从插件市场中下载并安装「Universal Skin API」插件。

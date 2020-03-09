@@ -91,7 +91,7 @@ php artisan key:generate
 
 #### 如果你使用 SMTP，请添加以下字段（内容自行修改）：
 
-- `MAIL_DRIVER` 为 `smtp`
+- `MAIL_MAILER` 为 `smtp`（v4 及以前的用户，这一项应为 `MAIL_DRIVER`）
 - `MAIL_HOST` 为邮件服务器地址
 - `MAIL_PORT` 为邮件服务器端口，默认为 465
 - `MAIL_USERNAME` 为邮件服务器认证所需的用户名
