@@ -13,6 +13,8 @@ QUEUE_DRIVER=redis
 
 当然，您也可以单独控制上述三项是否使用 Redis。
 
+另外，默认的 Redis 客户端已经改为 PhpRedis，请您安装好 PhpRedis 这个 PHP 扩展。如果您因为某些原因不能安装此扩展，请从插件市场下载并安装「Predis」插件。
+
 ## 邮件发送相关
 
 请把 .env 文件中的 `MAIL_DRIVER`  改为 `MAIL_MAILER` 。
