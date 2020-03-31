@@ -41,6 +41,18 @@
 
 替换后的地址应类似于：`https://bs-mirror.i-creator.cn/4.0.4/public`
 
+### [bairuo.top](https://blog.bairuo.top)
+
+地址：`https://bs-mirrors.bairuo.top/:version/public/app`
+
+支持 v4 所有版本。
+
+由白渃提供。
+
+QQ：3337980633，添加时注明 Blessing Skin。
+
+i发电：https://afdian.net/@TheBaiRuo
+
 ::: tip 想要提交新的公共 CDN？
 请在 [bs-community/blessing-skin-manual](https://github.com/bs-community/blessing-skin-manual) 下提一个 Issue 或直接发起 Pull Request。
 :::
