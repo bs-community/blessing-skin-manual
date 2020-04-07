@@ -281,3 +281,47 @@ MySQL 8 默认使用了新的密码验证插件：caching_sha2_password，而之
 ## 页面的样式失效
 
 请检查您的浏览器地址栏中是否包含 `index.php`，如果有，请去掉。
+
+## 升级的时候出现 503 错误
+
+有两种解决方法：
+
+### 使用命令行
+
+打开终端，进入到皮肤站所在目录，输入 `php artisan update` 即可完成升级。
+
+### 在 503 页面登录
+
+当出现 503 错误页面时，页面中会有一个「登录」按钮。点击打开登录页面然后像往常一样进行登录。
+
+在登录之后，如果刚才登录的是管理员账号，那么这个升级过程就可以继续进行。
+
+## 无法打开 Web CLI
+
+请根据以下步骤修改 Web Server 的配置。
+
+### Nginx
+
+修改 `/etc/nginx/mime.types` 文件，添加以下一行内容：
+
+```
+application/wasm  wasm;
+```
+
+然后重新启动 Web Server。
+
+### Apache
+
+我们已经在 `.htaccess` 进行了配置，如果对您不起作用，可以考虑以下方法。
+
+一种方法是修改 `/etc/mime.types`，在这个文件中添加以下一行：
+
+```
+application/wasm  wasm
+```
+
+还有一种方法是修改您的 Apache 配置文件，添加以下一行：
+
+```
+AddType application/wasm .wasm
+```
