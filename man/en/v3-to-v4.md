@@ -12,14 +12,14 @@ Don't forget to restart your web service to take new effect after updated the co
 
 Open your  `httpd.conf` file and find `DocumentRoot` and `Directory` item. Suppose your original configuration is like this (other parts of the configuration are omitted):
 
-```config
+```apacheconf
 DocumentRoot "E:/Apps/xampp/htdocs"
 <Directory "E:/Apps/xampp/htdocs">
 ```
 
 Update it as:
 
-```config
+```apacheconf
 DocumentRoot "E:/Apps/xampp/htdocs/public"
 <Directory "E:/Apps/xampp/htdocs/public">
 ```
@@ -28,7 +28,7 @@ DocumentRoot "E:/Apps/xampp/htdocs/public"
 
 Open `nginx.conf` and modify the `root` configuration item of the `server` block. Suppose your original configuration is like this (other parts of the configuration are omitted):
 
-```config
+```nginx
 server {
     root /var/www;
 }
@@ -36,7 +36,7 @@ server {
 
 Update it as:
 
-```config
+```nginx
 server {
     root /var/www/public;
 }

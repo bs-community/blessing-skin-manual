@@ -20,14 +20,14 @@
 
 编辑您的 `httpd.conf` 文件，找到 `DocumentRoot` 和 `Directory` 配置项。假设旧的配置是这样的（忽略配置文件中的其它部分）：
 
-```config
+```apacheconf
 DocumentRoot "E:/Apps/xampp/htdocs"
 <Directory "E:/Apps/xampp/htdocs">
 ```
 
 则改为：
 
-```config
+```apacheconf
 DocumentRoot "E:/Apps/xampp/htdocs/public"
 <Directory "E:/Apps/xampp/htdocs/public">
 ```
@@ -36,7 +36,7 @@ DocumentRoot "E:/Apps/xampp/htdocs/public"
 
 修改您的 `nginx.conf` 文件。修改 `server` 块下的 `root` 项。例如，假设原来的配置是这样的（忽略配置文件中的其它部分）：
 
-```config
+```nginx
 server {
     root /var/www;
 }
@@ -44,7 +44,7 @@ server {
 
 则改为：
 
-```config
+```nginx
 server {
     root /var/www/public;
 }

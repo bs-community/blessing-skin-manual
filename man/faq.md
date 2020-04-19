@@ -42,7 +42,7 @@ Blessing Skin 使用了 URL 重写来实现路由功能（即俗称的伪静态�
 如果有，请编辑 .env 文件，将 `APP_DEBUG` 这一项的值改为 `true`，保存退出后再次打开皮肤站就能看到更详细的调试信息，读一读页面最顶上的报错应该就知道是什么问题了。
 
 ::: warning
-解决报错后，请再次编辑 .env 文件，将 `APP_DEBUG` 这一项的值改为 `false`，否则可能泄露重要机密信息。 
+解决报错后，请再次编辑 .env 文件，将 `APP_DEBUG` 这一项的值改为 `false`，否则可能泄露重要机密信息。
 :::
 
 ## 404 Not Found
@@ -55,7 +55,7 @@ Blessing Skin 使用了 URL 重写来实现路由功能（即俗称的伪静态�
 
 如果你的站点出现了如下错误：
 
-```text
+```
 require: open_basedir restriction in effect. File is not within the allow path(s).
 ```
 
@@ -76,7 +76,7 @@ require: open_basedir restriction in effect. File is not within the allow path(s
 
 如果你的遇到了类似如下的错误：
 
-```text
+```
 XXX() has been disabled for security reasons
 ```
 
@@ -96,7 +96,7 @@ XXX() has been disabled for security reasons
 
 如果你的站点出现了如下错误（一般只会发生在你点了某个按钮之后）：
 
-```text
+```
 Deprecated: Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
 ```
 
@@ -116,7 +116,7 @@ Deprecated: Automatically populating $HTTP_RAW_POST_DATA is deprecated and will 
 
 如果出现了类似这样的错误信息：
 
-```text
+```
 PHP Fatal error: Maximum function nesting level of '100' reached, aborting! in /opt/app-root/src/vendor/composer/ClassLoader.php on line 344, referer: http://domain.com/setup/info
 ```
 
@@ -126,7 +126,7 @@ PHP Fatal error: Maximum function nesting level of '100' reached, aborting! in /
 
 如果出现了类似这样的错误信息：
 
-```text
+```
 Warning: getdate(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone.
 ```
 
