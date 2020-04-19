@@ -1,0 +1,65 @@
+title = 'Blessing Skin 用户手册'
+evergreen = true
+
+[locales]
+'/' = { lang = 'zh-CN', title = 'Blessing Skin 用户手册' }
+'/en/' = { lang = 'en-US', title = 'Blessing Skin Manual' }
+
+[themeConfig]
+repo = 'bs-community/blessing-skin-manual'
+docsBranch = 'master'
+docsDir = 'man'
+editLinks = true
+
+[themeConfig.locales.'/']
+selectText = '选择语言'
+label = '简体中文'
+docsDir = 'man'
+editLinkText = '帮助我们完善这个页面'
+lastUpdated = '最后更新'
+
+[[themeConfig.locales.'/'.nav]]
+text = 'Blessing Skin'
+link = '/'
+[[themeConfig.locales.'/'.nav]]
+text = 'Yggdrasil API'
+link = '/yggdrasil-api/'
+
+[themeConfig.locales.'/'.sidebar]
+'/yggdrasil-api/' = [
+  '/yggdrasil-api/introduction',
+  '/yggdrasil-api/setup',
+  '/yggdrasil-api/authlib-injector',
+  '/yggdrasil-api/troubleshooting',
+  '/yggdrasil-api/migration',
+]
+'/' = [
+  '/setup',
+  '/faq',
+  '/report',
+  '/mod',
+  '/env',
+  '/build',
+  '/versions',
+  '/v3-to-v4',
+  '/v4-to-v5',
+  '/ui-text',
+  '/update-sources',
+  '/cdn',
+  '/cli',
+  '/css-js',
+  '/bench',
+  '/v3-changelog',
+]
+
+[themeConfig.locales.'/en/']
+selectText = 'Languages'
+label = 'English'
+docsDir = 'man/en'
+editLinkText = 'Edit this page on GitHub'
+lastUpdated = 'Last Updated'
+sidebar = [
+  '/en/mod',
+  '/en/build',
+  '/en/v3-to-v4',
+]
