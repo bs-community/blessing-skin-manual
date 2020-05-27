@@ -53,6 +53,17 @@ QQ：3337980633，添加时注明 Blessing Skin。
 
 i发电：https://afdian.net/@TheBaiRuo
 
+### s1.pangdidi.cn
+
+CDN 是 CloudFlare 的 Enterprise，并开启中国网络，全球都有节点。
+
+地址：https://s1.pangdidi.cn/CDN/blessing-skin-server/:version/public/app/
+
+其中 `:version` 替换成 BS 版本。
+
+由 [FeiYuab](https://github.com/FeiYuab) 提供。
+
 ::: tip 想要提交新的公共 CDN？
 请在 [bs-community/blessing-skin-manual](https://github.com/bs-community/blessing-skin-manual) 下提一个 Issue 或直接发起 Pull Request。
 :::
+
