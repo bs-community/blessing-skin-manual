@@ -57,9 +57,9 @@ i发电：https://afdian.net/@TheBaiRuo
 
 CDN 是 CloudFlare 的 Enterprise，并开启中国网络，全球都有节点。
 
-地址：https://s1.pangdidi.cn/CDN/blessing-skin-server/:version/public/app/
+地址：https://s1.pangdidi.cn/CDN/blessing-skin-server/cdn.json
 
-其中 `:version` 替换成 BS 版本。
+请先从上面的 JSON 列表中根据您当前所使用的 Blessing Skin 版本选择合适的地址，再填入到管理面板中。
 
 由 [FeiYuab](https://github.com/FeiYuab) 提供。
 
