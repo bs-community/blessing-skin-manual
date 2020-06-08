@@ -24,6 +24,9 @@ link = '/'
 [[themeConfig.locales.'/'.nav]]
 text = 'Yggdrasil API'
 link = '/yggdrasil-api/'
+[[themeConfig.locales.'/'.nav]]
+text = 'Web API'
+link = '/api/'
 
 [themeConfig.locales.'/'.sidebar]
 '/yggdrasil-api/' = [
@@ -32,6 +35,11 @@ link = '/yggdrasil-api/'
   '/yggdrasil-api/authlib-injector',
   '/yggdrasil-api/troubleshooting',
   '/yggdrasil-api/migration',
+]
+'/api/' = [
+  '/api/basis',
+  '/api/oauth',
+  '/api/auth',
 ]
 '/' = [
   '/setup',
