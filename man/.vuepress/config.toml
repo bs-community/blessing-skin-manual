@@ -67,6 +67,7 @@ docsDir = 'man/en'
 editLinkText = 'Edit this page on GitHub'
 lastUpdated = 'Last Updated'
 sidebar = [
+  '/en/setup',
   '/en/mod',
   '/en/build',
   '/en/v3-to-v4',
