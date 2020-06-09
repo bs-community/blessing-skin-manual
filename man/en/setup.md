@@ -6,7 +6,7 @@ Requirements are listed [here](https://github.com/bs-community/blessing-skin-ser
 
 Blessing Skin will check your environment before setup. If you encountered some errors prefixed with `[Error]`, it means your environment doesn't match our requirements.
 
-::: Suggestion
+::: tip Suggestion
 
 We don't recommend you to use Windows Server. Using Windows Server will impact the performance of Blessing Skin, and some strange errors which never appeared in Linux will be occurred.
 
@@ -16,7 +16,7 @@ We don't recommend you to use Windows Server. Using Windows Server will impact t
 
 Archives can be downloaded at [GitHub Releases](https://github.com/bs-community/blessing-skin-server/releases).
 
-::: Tip
+::: tip Tip
 
 The file you will download should be `blessing-skin-server-xxx.zip`, not `Source Code`.
 
