@@ -30,24 +30,9 @@ Blessing Skin 有自带一些运行时环境检查（报错以 `[Error]` 开头�
 
 ## 下载安装包
 
-首先你要明白，我们提供的安装包是由两个部分组成的：
-
-- Blessing Skin 本体的源码
-- 依赖库以及前端构建文件
-
-直接从 GitHub 上拉取或者下载的代码是无法直接使用的，因为其中只包含了本体源码，而没有包含依赖库等其他必须的文件。所以，你必须 **下载完整安装包** 或者 [自行构建](build.md)（不是所有人都会）。
-
-为了关爱星际选手，我再念三遍：
-
-<font size=3>👉你必须下载完整安装包！👈</font>
-
-<font size=4>👉你必须下载完整安装包！!👈</font>
-
-<font size=5>👉你必须下载完整安装包！！！👈</font>
-
 各版本的完整安装包可以在这里找到：[GitHub Releases](https://github.com/bs-community/blessing-skin-server/releases)
 
-::: tip 提示：
+::: tip 提示
 你应该下载文件名类似 `blessing-skin-server-xxx.zip` 的文件，而不是下载 `Source Code`。
 :::
 
