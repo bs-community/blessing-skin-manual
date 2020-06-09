@@ -8,7 +8,7 @@ Blessing Skin will check your environment before setup. If you encountered some 
 
 ::: tip Suggestion
 
-We don't recommend you to use Windows Server. Using Windows Server will impact the performance of Blessing Skin, and some strange errors which never appeared in Linux will be occurred.
+We don't recommend you to use Windows Server. Using Windows Server will impact the performance of Blessing Skin, and some strange errors which never appear in Linux will be occurred.
 
 :::
 
@@ -64,7 +64,7 @@ Please note that the root of your web server must point to the `public` director
 
 ## Enter Setup Wizard
 
-Open your website with `https://example.com/setup`. If you encountered "404 Not Found", you should configure URL rewrite correctly.
+Open your website with `https://example.com/setup`. If you encountered "404 Not Found", you should go back to previous step and  configure URL rewrite correctly.
 
 If everything goes well, you will see the welcome page. Just follow the wizard to finish the setup.
 
