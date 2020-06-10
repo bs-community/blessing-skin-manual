@@ -55,5 +55,3 @@ Another solution is modify your Apache configuration file, and append a new line
 ```
 AddType application/wasm .wasm
 ```
-
-
