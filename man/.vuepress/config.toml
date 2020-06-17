@@ -54,6 +54,7 @@ link = '/api/'
   '/ui-text',
   '/update-sources',
   '/cdn',
+  '/flarum',
   '/cli',
   '/css-js',
   '/bench',
@@ -74,4 +75,5 @@ sidebar = [
   '/en/v3-to-v4',
   '/en/v4-to-v5',
   '/en/versions',
+  '/en/flarum',
 ]
