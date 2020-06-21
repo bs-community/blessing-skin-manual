@@ -57,3 +57,7 @@ application/wasm  wasm
 AddType application/wasm .wasm
 ```
 
+## 「关闭注册」功能
+
+如果您关闭了皮肤站的注册功能（即不允许任何新用户进行注册），那么您需要在插件市场中下载「关闭注册功能」插件，因为该功能已从核心中被移除。
+

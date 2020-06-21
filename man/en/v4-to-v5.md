@@ -55,3 +55,7 @@ Another solution is modify your Apache configuration file, and append a new line
 ```
 AddType application/wasm .wasm
 ```
+
+## Disabling registration
+
+If you have disabled registration (disallow any users to register), you may need to install "Disable Registration" plugin from Plugins Market, since we've extracted this function from core.
