@@ -41,6 +41,7 @@ link = '/api/'
   '/api/oauth',
   '/api/auth',
   '/api/user',
+  '/api/players',
 ]
 '/' = [
   '/setup',
