@@ -19,3 +19,26 @@
 对于每个请求，客户端都应该发送 `Accept` 且值为 `application/json` 以便明确响应内容必须为 JSON。
 
 在默认情况下，消息的文本将是 Blessing Skin 配置中指定的语言（默认为 `en` 即英语）。如果需要返回中文，请在 HTTP 请求头部中添加 `Accept-Language` 且值为 `zh-CN`。
+
+## 根
+
+使用这个 API 可以获取关于当前皮肤站的一些基本信息。
+
+```
+GET /api
+```
+
+### 参数
+
+无。
+
+### 响应
+
+```json
+{
+  "blessing_skin": "<version of Blessing Skin>",
+  "spec": 0,
+  "copyright": "<copyright text>",
+  "site_name": "My Skin Server"
+}
+```
