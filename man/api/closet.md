@@ -31,6 +31,14 @@ Status: 200
   "data": [
     {
       "tid": 1,
+      "name": "<texture name>",
+      "type": "steve",
+      "hash": "<texture file hash>",
+      "size": 5,
+      "uploader": 2,
+      "public": true,
+      "upload_at": "2020-01-01 00:00:00",
+      "likes": 2,
       "pivot": {
         "item_name": "<closet item name>"
       }
