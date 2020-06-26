@@ -42,6 +42,7 @@ link = '/api/'
   '/api/auth',
   '/api/user',
   '/api/players',
+  '/api/closet',
 ]
 '/' = [
   '/setup',
