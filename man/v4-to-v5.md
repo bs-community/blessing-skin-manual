@@ -61,3 +61,6 @@ AddType application/wasm .wasm
 
 如果您关闭了皮肤站的注册功能（即不允许任何新用户进行注册），那么您需要在插件市场中下载「关闭注册功能」插件，因为该功能已从核心中被移除。
 
+## 头像 API 更新
+
+头像 API 已被更改，具体用法可参考 [API 文档](./api/avatars-and-previews.md)。

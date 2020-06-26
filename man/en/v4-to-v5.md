@@ -59,3 +59,7 @@ AddType application/wasm .wasm
 ## Disabling registration
 
 If you have disabled registration (disallow any users to register), you may need to install "Disable Registration" plugin from Plugins Market, since we've extracted this function from core.
+
+## Changes of Avatar API
+
+Avatar API has been changed. More details can be checked at [API Documentation](../api/avatars-and-previews.md).
