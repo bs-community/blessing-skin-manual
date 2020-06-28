@@ -2,6 +2,12 @@
 
 Blessing Skin 允许您通过命令行对皮肤站进行一些操作。
 
+::: tip
+
+这里的 CLI 是指服务器上的真实 Shell，不是 Blessing Skin Shell（即 Web CLI）。
+
+:::
+
 ## 启用插件
 
 通过以下命令可以启用一个插件：
