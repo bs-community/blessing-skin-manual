@@ -67,7 +67,7 @@ Status: 200
 获取单个通知的标题和内容，并将该通知标记为「已读」。
 
 ```
-GET /api/user/notifications/{id}
+POST /api/user/notifications/{id}
 ```
 
 ### 参数
