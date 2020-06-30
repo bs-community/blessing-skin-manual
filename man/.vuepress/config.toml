@@ -59,7 +59,7 @@ link = '/api/'
   '/update-sources',
   '/cdn',
   '/flarum',
-  '/cli',
+  '/artisan-cli',
   '/css-js',
   '/bench',
   '/v3-changelog',

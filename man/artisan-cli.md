@@ -1,4 +1,4 @@
-# CLI 用途
+# Artisan CLI
 
 Blessing Skin 允许您通过命令行对皮肤站进行一些操作。
 
