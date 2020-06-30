@@ -6,7 +6,7 @@
 
 :::
 
-Blessing Skin 的 Web CLI 底层使用 [Blessing Skin Shell](https://github.com/bs-community/blessing-skin-shell) 作为 Shell 引擎来驱动，并使用 [xterm.js](https://github.com/xtermjs/xterm.js) 作为终端模拟器（Visual Studio Code 的 Integrated Terminal 同样使用 xterm.js 作为终端模拟器）。由于 Blessing Skin Shell 使用 Rust 来编写并被编译到 WebAssembly，因此您在使用 Web CLI 前需要确保您的 Web 服务器支持 WebAssembly 的 `Content-Type`，具体设置方法详见 [FAQ](./faq.md#无法打开-Web-CLI)。
+Blessing Skin 的 Web CLI 底层使用 [Blessing Skin Shell](https://github.com/bs-community/blessing-skin-shell) 作为 Shell 引擎来驱动，并使用 [xterm.js](https://github.com/xtermjs/xterm.js) 作为终端模拟器（Visual Studio Code 的 Integrated Terminal 同样使用 xterm.js 作为终端模拟器）。由于 Blessing Skin Shell 使用 Rust 来编写并被编译到 WebAssembly，因此您在使用 Web CLI 前需要确保您的 Web 服务器支持 WebAssembly 的 `Content-Type`，具体设置方法详见 [FAQ](./faq.md#无法打开-web-cli)。
 
 这里我们会一一介绍 Blessing Skin 的 Web CLI 核心功能，以及包含哪些可用的命令。
 
