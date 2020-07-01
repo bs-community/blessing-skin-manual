@@ -37,7 +37,7 @@ Linux 或 macOS 用户直接 `cp .env.example .env` 就好了。
 
 为了支持国际化，我们把 `.env` 的注释换成通用的英文了，但是为了方便中文用户，下面介绍一下各个字段的含义。
 
-### 调试开关
+### 应用基本选项
 
 #### `APP_DEBUG`
 
@@ -47,6 +47,10 @@ Linux 或 macOS 用户直接 `cp .env.example .env` 就好了。
 #### `APP_ENV`
 
 生产环境下，请将 `APP_ENV` 设置为 `production`。仅在开发 Blessing Skin 时（如，您正在为 Blessing Skin 做贡献），才可将该配置项设为 `development`。（当 `WEBPACK_ENV` 为 `development` 时，所有前端资源均从 `webpack-dev-server` 中加载）
+
+#### `APP_FALLBACK_LOCALE`
+
+降级语言设置。如果 Blessing Skin 无法从浏览器和客户端中检测用户使用哪种语言，Blessing Skin 将使用这个选项所指定的值作为语言，默认为 `en` 即英语。
 
 ### 数据库相关
 
