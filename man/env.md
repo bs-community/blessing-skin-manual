@@ -54,7 +54,7 @@ Linux 或 macOS 用户直接 `cp .env.example .env` 就好了。
 
 ### 数据库相关
 
-- `DB_CONNECTION` 数据库的连接类型，目前支持 `mysql`、`sqlite`、`pgsql`，即分别为 MySQL、SQLite 和 PostgreSQL。
+- `DB_CONNECTION` 数据库的连接类型，目前支持 `mysql`、`sqlite`、`pgsql`，即分别为 MySQL（或 MariaDB）、SQLite 和 PostgreSQL。
 - `DB_HOST` 数据库主机，一般为 `localhost`
 - `DB_PORT` 数据库端口
 - `DB_DATABASE` 数据库名，自行修改
