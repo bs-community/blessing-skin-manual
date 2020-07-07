@@ -95,7 +95,7 @@ location / {
 
 现在访问皮肤站可以看到欢迎页面了：
 
-![Welcome Page](https://i.loli.net/2018/02/08/5a7c1b7f4ab66.png)
+![Screenshot_20200707_085439.png](https://i.loli.net/2020/07/07/WGu1oVlTF6AJOw9.png)
 
 跟着安装向导填写必要信息即可快速完成安装。
 

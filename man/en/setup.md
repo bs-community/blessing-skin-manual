@@ -66,7 +66,11 @@ Please note that the root of your web server must point to the `public` director
 
 Open your website with `https://example.com/setup`. If you encountered "404 Not Found", you should go back to previous step and  configure URL rewrite correctly.
 
-If everything goes well, you will see the welcome page. Just follow the wizard to finish the setup.
+If everything goes well, you will see the welcome page like this:
+
+![Screenshot_20200707_085516.png](https://i.loli.net/2020/07/07/AtLzUwGhc4vp6fg.png)
+
+Then, just follow the wizard.
 
 ## Complete
 
