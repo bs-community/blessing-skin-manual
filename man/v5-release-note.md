@@ -16,7 +16,7 @@
 
 ![Screenshot_20200707_095136.png](https://i.loli.net/2020/07/07/mtLUuMNwWGrAPsz.png)
 
-此外，我们还基本新版的 AdminLTE 调整了皮肤库等的页面：
+此外，我们还基于新版的 AdminLTE 调整了皮肤库等的页面：
 
 ![Screenshot_20200707_095807.png](https://i.loli.net/2020/07/07/XfIW29ASv43zhTu.png)
 
