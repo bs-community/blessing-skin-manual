@@ -58,6 +58,7 @@ link = '/api/'
   '/ui-text',
   '/update-sources',
   '/cdn',
+  '/oauth',
   '/flarum',
   '/artisan-cli',
   '/web-cli',
