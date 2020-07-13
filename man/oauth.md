@@ -171,3 +171,5 @@ GITHUB_REDIRECT_URI=https://localhost/auth/login/github/callback
 用户在注册或登录时，即可选择「GitHub」来登录：
 
 ![Screenshot_20200713_181510.png](https://i.loli.net/2020/07/13/HG4d6oacFrk5hgD.png)
+
+![Screenshot_20200713_183554.png](https://i.loli.net/2020/07/13/Ci8qelT3cUFOZKm.png)
