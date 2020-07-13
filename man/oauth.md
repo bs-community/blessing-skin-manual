@@ -123,3 +123,51 @@ LITTLESKIN_REDIRECT_URI=https://localhost/auth/login/littleskin/callback
 ![Screenshot_20200713_174959.png](https://i.loli.net/2020/07/13/esklFQ3MngJVEpa.png)
 
 ![Screenshot_20200713_175019.png](https://i.loli.net/2020/07/13/WqEN9c34yXZbCrL.png)
+
+## GitHub
+
+### 注册应用
+
+打开 GitHub，进入设置页面，然后点击左侧栏中的「Develop settings」：
+
+![Screenshot_20200713_180312.png](https://i.loli.net/2020/07/13/XadcJiyp9TlvC8R.png)
+
+在随后的页面中点击左侧栏的「OAuth Apps」：
+
+![Screenshot_20200713_180406.png](https://i.loli.net/2020/07/13/fNKvULY1ijC7dZ2.png)
+
+点击「Register a new application」，并填写表单：
+
+![Screenshot_20200713_180644.png](https://i.loli.net/2020/07/13/t5KRSWIvjw4gu3n.png)
+
+其中，「Application name」填写为您的皮肤站名称；「Homepage URL」为您的皮肤站首页 URL；「Authorization callback URL」则根据您的皮肤站地址相应地修改域名，但后面的 `/auth/login/github/callback` 不需要改变。
+
+点击「Register application」并继续。此时将获得 Client ID 和 Client Secret：
+
+![Screenshot_20200713_180923.png](https://i.loli.net/2020/07/13/jxz5ZYhiIPfvgqe.png)
+
+### 安装插件
+
+进入 Blessing Skin 的插件市场，下载安装并开启「使用 GitHub 登录」插件。
+
+### 配置插件
+
+插件的配置通过修改 `.env` 文件来进行。在 `.env` 文件中添加以下三项配置：
+
+- `GITHUB_KEY` - 对应 GitHub 提供的「Client ID」
+- `GITHUB_SECRET` - 对应 GitHub 提供的「Client Secret」
+- `GITHUB_REDIRECT_URI` - 对应我们刚刚填写的「Authorization callback URL」
+
+根据我们在前面操作的结果，可以像这样填写：（请根据您的实际情况进行修改）
+
+```
+GITHUB_KEY=44551e99fbe2ad35d411
+GITHUB_SECRET=65409736106e5fb47eace316dc1b62309f580e47
+GITHUB_REDIRECT_URI=https://localhost/auth/login/github/callback
+```
+
+### 完成
+
+用户在注册或登录时，即可选择「GitHub」来登录：
+
+![Screenshot_20200713_181510.png](https://i.loli.net/2020/07/13/HG4d6oacFrk5hgD.png)
