@@ -128,7 +128,7 @@ LITTLESKIN_REDIRECT_URI=https://localhost/auth/login/littleskin/callback
 
 ### 注册应用
 
-打开 GitHub，进入设置页面，然后点击左侧栏中的「Develop settings」：
+打开 GitHub，进入设置页面，然后点击左侧栏中的「Developer settings」：
 
 ![Screenshot_20200713_180312.png](https://i.loli.net/2020/07/13/XadcJiyp9TlvC8R.png)
 
