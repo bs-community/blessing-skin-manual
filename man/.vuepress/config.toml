@@ -64,6 +64,7 @@ link = '/api/'
   '/web-cli',
   '/css-js',
   '/bench',
+  '/v5-release-note',
   '/v3-changelog',
 ]
 
