@@ -134,6 +134,8 @@ Web CLI 是一个仅对管理员可见的一个在线命令行工具。管理员
 
 我们以插件的形式增加了第三方登录的功能。现在，您可以让您的用户使用他们的 GitHub 账号或 Microsoft Live 账号或 LittleSkin 账号或 Google 账号来直接登录 Blessing Skin，而不需要注册、不需要输入密码登录。
 
+![Screenshot_20200714_111131.png](https://i.loli.net/2020/07/14/ymQshrNnB4pAq7g.png)
+
 ### 新的密码哈希算法
 
 我们增加了新的密码哈希算法 Argon2i。不过，默认的算法仍然是 Bcrypt，因此如果要使用就需要修改 `.env` 文件。
