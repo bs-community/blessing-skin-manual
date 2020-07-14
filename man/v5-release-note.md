@@ -140,7 +140,7 @@ Web CLI 是一个仅对管理员可见的一个在线命令行工具。管理员
 
 ### 第三方登录
 
-我们以插件的形式增加了第三方登录的功能。现在，您可以让您的用户使用他们的 GitHub 账号或 Microsoft Live 账号或 LittleSkin 账号或 Google 账号来直接登录 Blessing Skin，而不需要注册、不需要输入密码登录。
+我们以插件的形式增加了第三方登录的功能。现在，您可以让您的用户使用他们的 GitHub 账号或 Microsoft Live 账号或 LittleSkin 账号或 Google 账号来直接登录 Blessing Skin，而不需要注册、不需要输入密码登录。具体使用方法可阅读本手册的 [第三方登录](./oauth.md) 一文。
 
 ![Screenshot_20200714_111131.png](https://i.loli.net/2020/07/14/ymQshrNnB4pAq7g.png)
 
