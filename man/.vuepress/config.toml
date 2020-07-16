@@ -62,6 +62,7 @@ link = '/api/'
   '/flarum',
   '/artisan-cli',
   '/web-cli',
+  '/search-syntax',
   '/css-js',
   '/bench',
   '/v5-release-note',
