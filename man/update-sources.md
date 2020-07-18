@@ -41,3 +41,9 @@ https://cdn.worldofcraft.cn/bss/
 文件更新的频率为每天一次，保持和官方 Azure 仓库同步。
 
 爱发电：[https://afdian.net/@Akkariin](https://afdian.net/@Akkariin)
+
+### bs-cdn.yecdn.com
+
+地址: `https://bs-cdn.yecdn.com/update.json`
+
+如果您在使用过程中遇到了问题，欢迎通过 Telegram 联系我: [@ZoharWang](https://t.me/ZoharWang)
