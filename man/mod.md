@@ -69,7 +69,7 @@ CustomSkinLoader 13.1 经过作者的完全重写，支持了 CSL API，并且�
 
 `"type"` 字段按照您的后台中配置的首选 API 来填（`CustomSkinAPI` 或 `UniSkinAPI`），CSL 13.1 及以上版本支持三种加载方式。
 
-如果还是不会填的话，请查看 CSL 的 [MCBBS 发布贴](http://www.mcbbs.net/thread-269807-1-1.html)。
+如果还是不会填的话，请查看 [修改 CustomSkinLoader 配置文件](/config-csl.md)，或  CustomSkinLoader 的 [MCBBS 发布帖](http://www.mcbbs.net/thread-269807-1-1.html)。
 
 ### 12.9 及以下版本
 
