@@ -202,6 +202,8 @@ CrazyLogin：自 Blessing Skin Server v4 起，CrazyLogin 数据对接不受 Ble
 
 站点的密码算法设置不正确，请确保使用 Blessing Skin 支持的算法并且算法名没有拼写错误（区分大小写）。
 
+如果您有安装并开启「密码算法转换」插件并且遇到了这个错误，请先认真阅读该插件的 Readme 并正确配置该插件。
+
 ## MySQL 错误码：2054
 
 出错消息会像这样：无法连接至 MySQL/MariaDB 服务器，请检查您的配置。服务器返回的信息：SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client
