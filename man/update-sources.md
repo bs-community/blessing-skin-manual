@@ -13,7 +13,7 @@
 ## 官方更新源
 
 ```
-https://dev.azure.com/blessing-skin/51010f6d-9f99-40f1-a262-0a67f788df32/_apis/git/repositories/a9ff8df7-6dc3-4ff8-bb22-4871d3a43936/Items?path=%2Fupdate_2.json
+https://dev.azure.com/blessing-skin/51010f6d-9f99-40f1-a262-0a67f788df32/_apis/git/repositories/a9ff8df7-6dc3-4ff8-bb22-4871d3a43936/Items?path=%2Fupdate.json
 ```
 
 官方更新源位于 Azure DevOps。你不需要手动添加官方更新源，默认情况下即是从官方更新源获取更新。
@@ -28,22 +28,14 @@ https://dev.azure.com/blessing-skin/51010f6d-9f99-40f1-a262-0a67f788df32/_apis/g
 更新源的排序不分先后。
 :::
 
-### ZeroDream
-
-```
-# 国内服务器
-https://cmi.zerodream.net/bss/
-# 美国服务器
-https://cdn.worldofcraft.cn/bss/
-```
-国内服务器位于江苏宿迁，中国移动 100Mbps 对等网络；美国服务器位于美国堪萨斯州，1Gbps 对等网络，使用 CloudFlare 加速。
-
-文件更新的频率为每天一次，保持和官方 Azure 仓库同步。
-
-爱发电：[https://afdian.net/@Akkariin](https://afdian.net/@Akkariin)
-
 ### bs-cdn.yecdn.com
 
 地址: `https://bs-cdn.yecdn.com/update.json`
 
-如果您在使用过程中遇到了问题，欢迎通过 Telegram 联系我: [@ZoharWang](https://t.me/ZoharWang)
+如果您在使用过程中遇到了问题，欢迎通过 Telegram 联系: [@ZoharWang](https://t.me/ZoharWang)
+
+### paperjun.xyz
+
+地址：`https://paperjun.xyz/blessingskin.json`
+
+使用了 CloudFlare 进行 CDN 加速，适合美国附近的服务器使用，在国内的服务器也能得到良好的下载速度。
