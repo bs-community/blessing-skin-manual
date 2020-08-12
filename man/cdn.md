@@ -73,6 +73,12 @@ CDN 是 CloudFlare 的 Enterprise 套餐，并开启中国网络，全球都有�
 
 如果您在使用本 CDN 的过程中遇到了问题，欢迎通过 Telegram 联系我: [@ZoharWang](https://t.me/ZoharWang)
 
+### paperjun.xyz
+
+资源链接：`https://paperjun.xyz/:version/`
+
+完整的使用方法：https://help.paperjun.xyz/howto:blessingskin-cdn-config.html
+
 ::: tip 想要提交新的公共 CDN？
 请在 [bs-community/blessing-skin-manual](https://github.com/bs-community/blessing-skin-manual) 下提一个 Issue 或直接发起 Pull Request。
 :::
