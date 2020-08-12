@@ -32,10 +32,14 @@ https://dev.azure.com/blessing-skin/51010f6d-9f99-40f1-a262-0a67f788df32/_apis/g
 
 地址: `https://bs-cdn.yecdn.com/update.json`
 
+![](https://blessing-skin-manual.vercel.app/api/update?url=https://bs-cdn.yecdn.com/update.json)
+
 如果您在使用过程中遇到了问题，欢迎通过 Telegram 联系: [@ZoharWang](https://t.me/ZoharWang)
 
 ### paperjun.xyz
 
 地址：`https://paperjun.xyz/blessingskin.json`
+
+![](https://blessing-skin-manual.vercel.app/api/update?url=https://paperjun.xyz/blessingskin.json)
 
 使用了 CloudFlare 进行 CDN 加速，适合美国附近的服务器使用，在国内的服务器也能得到良好的下载速度。
