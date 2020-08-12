@@ -1,13 +1,21 @@
 import fetch from 'node-fetch'
 import { NowRequest, NowResponse } from '@vercel/node'
 
-type Query = { cdn: string; version: string }
+type Query = { cdn: string; version?: string }
+type UpdateInfo = { latest: string }
+
+const OFFICIAL =
+  'https://dev.azure.com/blessing-skin/51010f6d-9f99-40f1-a262-0a67f788df32/_apis/git/repositories/a9ff8df7-6dc3-4ff8-bb22-4871d3a43936/Items?path=%2Fupdate.json'
 
 export default async (request: NowRequest, response: NowResponse) => {
   response.setHeader('Content-Type', 'image/svg+xml')
 
   const { cdn, version } = request.query as Query
-  const host = cdn.replace(':version', version)
+  const ver =
+    version ||
+    (await fetch(OFFICIAL).then((r): Promise<UpdateInfo> => r.json())).latest
+
+  const host = cdn.replace(':version', ver)
 
   const res = await fetch(`https://${host}/app/manifest.json`, {
     headers: {
@@ -17,7 +25,7 @@ export default async (request: NowRequest, response: NowResponse) => {
   })
   if (res.status >= 300) {
     const badge = await fetch(
-      `https://img.shields.io/badge/${version}-unavailable-red`
+      `https://img.shields.io/badge/${ver}-unavailable-red`
     )
     badge.body.pipe(response)
     return
@@ -30,18 +38,18 @@ export default async (request: NowRequest, response: NowResponse) => {
       typeof manifest['index.js'] === 'string' /** v4 */
     ) {
       const badge = await fetch(
-        `https://img.shields.io/badge/${version}-working-brightgreen`
+        `https://img.shields.io/badge/${ver}-working-brightgreen`
       )
       badge.body.pipe(response)
     } else {
       const badge = await fetch(
-        `https://img.shields.io/badge/${version}-incorrect-red`
+        `https://img.shields.io/badge/${ver}-incorrect-red`
       )
       badge.body.pipe(response)
     }
   } catch (_) {
     const badge = await fetch(
-      `https://img.shields.io/badge/${version}-incorrect-red`
+      `https://img.shields.io/badge/${ver}-incorrect-red`
     )
     badge.body.pipe(response)
   }

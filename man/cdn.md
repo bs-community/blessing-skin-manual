@@ -26,7 +26,7 @@
 
 地址：`https://bs-mirror.i-creator.cn/:version/public`
 
-![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=bs-mirror.i-creator.cn/:version/public&version=5.0.0)
+![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=bs-mirror.i-creator.cn/:version/public)
 ![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=bs-mirror.i-creator.cn/:version/public&version=4.4.0)
 
 其中 `:version` 替换成 BS 版本。替换后的地址应类似于：`https://bs-mirror.i-creator.cn/4.0.4/public`
@@ -37,7 +37,7 @@
 
 支持 v4 所有版本。
 
-![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=bs-mirrors.bairuo.top/:version/public&version=5.0.0)
+![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=bs-mirrors.bairuo.top/:version/public)
 ![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=bs-mirrors.bairuo.top/:version/public&version=4.4.0)
 
 由白渃提供。
@@ -52,7 +52,7 @@ CDN 是 CloudFlare 的 Enterprise 套餐，并开启中国网络，全球都有�
 
 地址: https://s1.pangdidi.cn/CDN/blessing-skin-server/:version/public
 
-![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=s1.pangdidi.cn/CDN/blessing-skin-server/:version/public&version=5.0.0)
+![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=s1.pangdidi.cn/CDN/blessing-skin-server/:version/public)
 ![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=s1.pangdidi.cn/CDN/blessing-skin-server/:version/public&version=4.4.0)
 
 请将地址中的 `:version` 替换为皮肤站当前所使用的版本。[点击这里可查看支持的版本](https://s1.pangdidi.cn/CDN/blessing-skin-server/versions.json)。
@@ -65,7 +65,7 @@ CDN 是 CloudFlare 的 Enterprise 套餐，并开启中国网络，全球都有�
 
 地址: `https://bs-cdn.yecdn.com/:version/public`
 
-![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=bs-cdn.yecdn.com/:version/public&version=5.0.0)
+![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=bs-cdn.yecdn.com/:version/public)
 ![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=bs-cdn.yecdn.com/:version/public&version=4.4.0)
 
 请将地址中的 `:version` 替换为皮肤站当前所使用的版本。[点击查看当前支持的版本](https://bs-cdn.yecdn.com/versions)
@@ -76,7 +76,7 @@ CDN 是 CloudFlare 的 Enterprise 套餐，并开启中国网络，全球都有�
 
 资源链接：`https://paperjun.xyz/:version`
 
-![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=paperjun.xyz/:version&version=5.0.0)
+![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=paperjun.xyz/:version)
 ![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=paperjun.xyz/:version&version=4.4.0)
 
 完整的使用方法：[https://help.paperjun.xyz/howto:blessingskin-cdn-config.html]()
