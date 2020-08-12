@@ -10,6 +10,12 @@
     "build": "vuepress build man"
   },
   "devDependencies": {
+    "@types/node-fetch": "^2.5.7",
+    "@vercel/node": "^1.7.4",
+    "typescript": "^3.9.7",
     "vuepress": "^1.5.0"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0"
   }
 }
