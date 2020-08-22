@@ -5,6 +5,7 @@
 ### Fixed
 
 - Fixed calling `route` function when using IPv6.
+- Fixed re-enabling an enabled plugin.
 
 ## 5.1.0
 
