@@ -7,6 +7,7 @@
 - Fixed calling `route` function when using IPv6.
 - Fixed re-enabling an enabled plugin.
 - Fixed that front-end i18n files of plugins can't be updated.
+- Fixed that default value isn't used when calling `option_localized` function.
 
 ## 5.1.0
 
