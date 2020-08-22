@@ -55,6 +55,7 @@ link = '/api/'
   '/versions',
   '/v3-to-v4',
   '/v4-to-v5',
+  '/change-log',
   '/ui-text',
   '/update-sources',
   '/cdn',
@@ -66,7 +67,6 @@ link = '/api/'
   '/css-js',
   '/bench',
   '/v5-release-note',
-  '/v3-changelog',
 ]
 
 [themeConfig.locales.'/en/']
@@ -82,6 +82,7 @@ sidebar = [
   '/en/build',
   '/en/v3-to-v4',
   '/en/v4-to-v5',
+  '/en/change-log',
   '/en/versions',
   '/en/flarum',
 ]
