@@ -226,3 +226,18 @@ Another solution is modify your Apache configuration file, and append a new line
 ```
 AddType application/wasm .wasm
 ```
+
+## MySQL reports "Specified key was too long..."
+
+This problem usually occurs on Windows.
+
+The best solution is using Linux as the operating system for your server. This not only solves this problem, but also avoids some other weird problems which only occur on Windows.
+
+However, you may want to solve this problem temporarily. You can modify configuration file of MySQL. Open `my.ini`, then find `[mysql]` section, and append two lines below:
+
+```ini
+innodb_large_prefix=ON
+innodb_file_format=Barracuda
+```
+
+Save the file and restart MySQL service.

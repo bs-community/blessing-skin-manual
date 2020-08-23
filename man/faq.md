@@ -259,3 +259,18 @@ application/wasm  wasm
 ```
 AddType application/wasm .wasm
 ```
+
+## MySQL 提示「Specified key was too long...」
+
+这往往发生在 Windows 系统上。
+
+最彻底的解决办法是使用 Linux 作为服务器的操作系统（但请不要使用宝塔之类的面板软件），这不仅能解决这个问题，还可以避免其它只会出现在 Windows 中的问题。
+
+临时的解决办法是修改 MySQL 的配置文件。打开 `my.ini` 文件，在 `[mysqld]` 下面加两行：
+
+```ini
+innodb_large_prefix=ON
+innodb_file_format=Barracuda
+```
+
+保存并重新启动 MySQL。
