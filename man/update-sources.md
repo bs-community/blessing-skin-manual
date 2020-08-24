@@ -38,8 +38,8 @@ https://dev.azure.com/blessing-skin/51010f6d-9f99-40f1-a262-0a67f788df32/_apis/g
 
 ### api.paperjun.xyz
 
-地址：`https://apipaperjun.xyz/blessingskin.php`
+地址：`https://api.paperjun.xyz/blessingskin.php`
 
-![](https://blessing-skin-manual.vercel.app/api/update?url=https://paperjun.xyz/blessingskin.json)
+![](https://blessing-skin-manual.vercel.app/api/update?url=https://api.paperjun.xyz/blessingskin.php)
 
 更多信息：[链接到我的博客](https://blog.paperjun.xyz/knowledgebase_blessingskin_update_source.html)
