@@ -8,6 +8,7 @@
 - Fixed re-enabling an enabled plugin.
 - Fixed that front-end i18n files of plugins can't be updated.
 - Fixed that default value isn't used when calling `option_localized` function.
+- Fixed that texture is missing from uploader's closet when it's set to be private.
 
 ## 5.1.0
 
