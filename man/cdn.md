@@ -79,9 +79,8 @@ CDN 是 CloudFlare 的 Enterprise 套餐，并开启中国网络，全球都有�
 ![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=cdn.paperjun.xyz/blessingskin-cdn/:version)
 ![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=cdn.paperjun.xyz/blessingskin-cdn/:version&version=4.4.0)
 
-完整的使用方法：[https://blog.paperjun.xyz/knowledgebase_blessingskin_cdn_config.html](blog.paperjun.xyz/knowledgebase_blessingskin_cdn_config.html)
+完整的使用方法：[https://blog.paperjun.xyz/knowledgebase_blessingskin_cdn_config.html](https://blog.paperjun.xyz/knowledgebase_blessingskin_cdn_config.html)
 
 ::: tip 想要提交新的公共 CDN？
 请在 [bs-community/blessing-skin-manual](https://github.com/bs-community/blessing-skin-manual) 下提一个 Issue 或直接发起 Pull Request。
 :::
-
