@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 5.1.1
+
 ### Fixed
 
 - Fixed calling `route` function when using IPv6.
