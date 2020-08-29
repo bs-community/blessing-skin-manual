@@ -2,7 +2,35 @@
 
 ## Environment Requirements
 
-Requirements are listed [here](https://github.com/bs-community/blessing-skin-server/blob/master/README_EN.md#requirements).
+### Basic Requirements
+
+Blessing Skin supports Nginx or Apache only, and it doesn't support IIS. PHP version must be 7.3 or above.
+
+### Required PHP Extensions
+
+Make sure the extensions below are installed and enabled correctly:
+
+- OpenSSL
+- PDO
+- Mbstring
+- Tokenizer
+- GD
+- XML
+- Ctype
+- JSON
+- fileinfo
+- zip
+
+ ### Required Functions
+
+These functions below can't be disabled. Please check your `php.ini` before installation:
+
+- `symlink`
+- `readlink`
+- `putenv`
+- `realpath`
+
+### Other
 
 Blessing Skin will check your environment before setup. If you encountered some errors prefixed with `[Error]`, it means your environment doesn't match our requirements.
 

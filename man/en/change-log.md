@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Changed
+
+- Relaxed check of "disabled functions".
+
 ## 5.1.1
 
 ### Fixed

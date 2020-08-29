@@ -8,9 +8,37 @@
 
 ## 检查你的机器是否符合安装需求
 
+### 基本要求
+
 流畅运行 Blessing Skin 对你的服务器的配置的要求非常低（除非你运营的是一个巨型皮肤站）。你需要检查的是你的运行环境。
 
-具体请查看 [README - 环境要求](https://github.com/bs-community/blessing-skin-server/blob/master/README.md#%E7%8E%AF%E5%A2%83%E8%A6%81%E6%B1%82)。
+Blessing Skin 只支持 Nginx 或 Apache 作为 Web 服务器，不支持 IIS。PHP 版本必须为 7.3 或以上。
+
+### 必需的 PHP 扩展
+
+请确保这些扩展已经安装并开启：
+
+- OpenSSL
+- PDO
+- Mbstring
+- Tokenizer
+- GD
+- XML
+- Ctype
+- JSON
+- fileinfo
+- zip
+
+ ### 必须开启的函数
+
+这些函数不能被禁用，请在安装前检查您的 `php.ini`：
+
+- `symlink`
+- `readlink`
+- `putenv`
+- `realpath`
+
+### 其它
 
 Blessing Skin 有自带一些运行时环境检查（报错以 `[Error]` 开头），遇到这种情况就说明你的环境不符合需求。
 
