@@ -241,3 +241,7 @@ innodb_file_format=Barracuda
 ```
 
 Save the file and restart MySQL service.
+
+## Setup reports "Table 'notifications' already exists" when installing or upgrading
+
+Just open your database and delete the table `notifications`.
