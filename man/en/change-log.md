@@ -5,6 +5,11 @@
 ### Changed
 
 - Relaxed check of "disabled functions".
+- Require submitting email when verifying email.
+
+### Fixed
+
+- Fixed missing UI text.
 
 ## 5.1.1
 
