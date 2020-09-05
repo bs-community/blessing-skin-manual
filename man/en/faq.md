@@ -41,7 +41,7 @@ Then, edit your `.env` file. Set `APP_DEBUG` to `true`. You will get more inform
 
 ::: warning
 
-Once your problem is addressed, don't forget to disable debug mode by settting `APP_DEBUG` to `false`. Otherwise, some information will be exposed.
+Once your problem is addressed, don't forget to disable debug mode by setting `APP_DEBUG` to `false`. Otherwise, some information will be exposed.
 
 :::
 
