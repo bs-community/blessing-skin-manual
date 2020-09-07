@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Added
+
+- Support `.well-known/change-password`
+
 ### Changed
 
 - Relaxed check of "disabled functions".

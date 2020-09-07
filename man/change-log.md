@@ -2,6 +2,10 @@
 
 ## 未发布
 
+### 新增
+
+- 支持 `.well-known/change-password`
+
 ### 调整
 
 - 放松对禁用函数的限制
