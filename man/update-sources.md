@@ -36,10 +36,10 @@ https://dev.azure.com/blessing-skin/51010f6d-9f99-40f1-a262-0a67f788df32/_apis/g
 
 如果您在使用过程中遇到了问题，欢迎通过 Telegram 联系: [@ZoharWang](https://t.me/ZoharWang)
 
-### api.paperjun.xyz
+### bs-cdn.paperjun.xyz
 
-地址：`https://api.paperjun.xyz/blessingskin.php`
+地址：`https://bs-cdn.paperjun.xyz/update.php`
 
-![](https://blessing-skin-manual.vercel.app/api/update?url=https://api.paperjun.xyz/blessingskin.php)
+![](https://blessing-skin-manual.vercel.app/api/update?url=https://bs-cdn.paperjun.xyz/update.php)
 
-更多信息：[链接到我的博客](https://blog.paperjun.xyz/knowledgebase_blessingskin_update_source.html)
+更多信息：[从我们的社交网站上获得信息](https://social.paperjun.xyz/cgi-bin/bs-helper/20200925202010)
