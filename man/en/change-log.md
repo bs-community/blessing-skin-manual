@@ -14,6 +14,7 @@
 ### Fixed
 
 - Fixed missing UI text.
+- Fixed that super administrator can delete self.
 
 ## 5.1.1
 
