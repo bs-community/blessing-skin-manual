@@ -10,6 +10,7 @@
 
 - Relaxed check of "disabled functions".
 - Require submitting email when verifying email.
+- Improved UX of forms.
 
 ### Fixed
 
