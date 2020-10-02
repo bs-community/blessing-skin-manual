@@ -63,3 +63,5 @@
 
 - GitHub Issues
 - 加入 Telegram 群组 [@blessing_skin](https://t.me/blessing_skin)
+
+<iframe src="https://discord.com/widget?id=761226550921658380&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
