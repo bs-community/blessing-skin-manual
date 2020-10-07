@@ -18,15 +18,7 @@ ExtraList 是 CustomSkinLoader 14.4 引入的一项特性，提供了快捷的�
 
 ## 在线修改配置文件
 
-您可以使用 CustomSkinLoade GUI 在线修改配置文件。
-
-![CSL GUI](https://cdn.jsdelivr.net/gh/bs-community/blessing-skin-manual@master/man/csl-gui.png) 
-
-地址：https://bs-community.github.io/customskinloader-gui-react
-
-点击右上角的「打开配置文件」按钮即可打开现有的 CustomSkinLoader 配置文件并编辑。但因其年久失修，可能不支持一些新版本 CustomSkinLoader 才支持的特性。
-
-如果想接手维护，请联系：[Pig Fang](https://github.com/g-plane)。
+您可以使用 CustomSkinLoade GUI 在线修改配置文件。它提供图形化界面来让您调整 CustomSkinLoader 的配置文件。直接访问 [https://mc-csl.netlify.app/](https://mc-csl.netlify.app/]) 即可。
 
 ## 手动修改配置文件
 
