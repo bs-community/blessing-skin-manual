@@ -2,6 +2,8 @@
 
 ## 未发布
 
+## 5.2.0
+
 ### 新增
 
 - 支持 `.well-known/change-password`
