@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+### Changed
+
+- PHP version requirement increased to 7.4.0.
+
+### Fixed
+
+- Don't render avatar for non-skin texture.
+
 ## 5.2.0
 
 ### Added
