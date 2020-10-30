@@ -23,7 +23,7 @@ composer install
 cp .env.example .env
 php artisan key:generate
 yarn
-pwsh ./scripts/build.ps1
+pwsh ./tools/build.ps1
 ```
 
 如果传递 `-Simple` 参数给 `build.ps1` 脚本，则只会运行 webpack 来编译代码，而不会复制首页背景以及生成 commit 信息。

@@ -23,7 +23,7 @@ composer install
 cp .env.example .env
 php artisan key:generate
 yarn
-pwsh ./scripts/build.ps1
+pwsh ./tools/build.ps1
 ```
 
 If you pass the parameter `-Simple` to script `build.ps`, it will only run webpack to compile code without copying background image of home page and generating commit information.
