@@ -87,9 +87,9 @@ CDN 是 CloudFlare 的 Enterprise 套餐，并开启中国网络，全球都有�
 
 [支持版本](https://github.com/ShallowAi/bs-public/branches)
 
-![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=cdn.jsdelivr.net/gh/ShallowAi/bs-public@:version/)
-![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=cdn.jsdelivr.net/gh/ShallowAi/bs-public@:version&version=4.4.0/)
-![](https://data.jsdelivr.com/v1/package/gh/ShallowAi/bs-public/badge)
+![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=cdn.jsdelivr.net/gh/ShallowAi/bs-public@:version)
+![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=cdn.jsdelivr.net/gh/ShallowAi/bs-public@:version&version=4.4.0)
+![](https://data.jsdelivr.com/v1/package/gh/ShallowAi/bs-public/badge?style=rounded)
 
 > 此 CDN 是由 jsDelivr 提供的 Github 开源项目 加速服务, 包含全球节点. [@ShallowAi](https://github.com/ShallowAi/)
 
