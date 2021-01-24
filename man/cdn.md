@@ -81,6 +81,18 @@ CDN 是 CloudFlare 的 Enterprise 套餐，并开启中国网络，全球都有�
 
 完整的使用方法：[https://blog.paperjun.xyz/knowledgebase_blessingskin_cdn_config.html](https://blog.paperjun.xyz/knowledgebase_blessingskin_cdn_config.html)
 
+## cdn.jsdelivr.net
+
+地址：`https://cdn.jsdelivr.net/gh/ShallowAi/bs-public@:version/`
+
+[支持版本](https://github.com/ShallowAi/bs-public/branches)
+
+![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=cdn.jsdelivr.net/gh/ShallowAi/bs-public@:version/)
+![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=cdn.jsdelivr.net/gh/ShallowAi/bs-public@:version&version=4.4.0/)
+![](https://data.jsdelivr.com/v1/package/gh/ShallowAi/bs-public/badge)
+
+> 此 CDN 是由 jsDelivr 提供的 Github 开源项目 加速服务, 包含全球节点. [@ShallowAi](https://github.com/ShallowAi/)
+
 ::: tip 想要提交新的公共 CDN？
 请在 [bs-community/blessing-skin-manual](https://github.com/bs-community/blessing-skin-manual) 下提一个 Issue 或直接发起 Pull Request。
 :::
