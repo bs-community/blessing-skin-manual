@@ -85,7 +85,8 @@ CDN 是 CloudFlare 的 Enterprise 套餐，并开启中国网络，全球都有�
 
 地址：`https://cdn.jsdelivr.net/gh/ShallowAi/bs-public@:version/`
 
-[支持版本](https://github.com/ShallowAi/bs-public/branches)
+请将地址中的 `:version` 替换为您所使用的皮肤站版本号. [在这里查看支持的版本](https://github.com/ShallowAi/bs-public/branches)
+例如: `https://cdn.jsdelivr.net/gh/ShallowAi/bs-public@5.2.0/`
 
 ![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=cdn.jsdelivr.net/gh/ShallowAi/bs-public@:version)
 ![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=cdn.jsdelivr.net/gh/ShallowAi/bs-public@:version&version=4.4.0)
