@@ -10,6 +10,10 @@
 
 - Don't render avatar for non-skin texture.
 
+### Removed
+
+- Removed authentication with JWT.
+
 ## 5.2.0
 
 ### Added
