@@ -10,6 +10,8 @@
 ### Fixed
 
 - Don't render avatar for non-skin texture.
+- Fixed panic on empty notification content.
+- Fixed wrong order of loading front-end localization file.
 
 ### Removed
 
