@@ -42,4 +42,11 @@ https://dev.azure.com/blessing-skin/51010f6d-9f99-40f1-a262-0a67f788df32/_apis/g
 
 ![](https://blessing-skin-manual.vercel.app/api/update?url=https://bs-cdn.paperjun.xyz/update.php)
 
+### cdn.monika.love
+
+地址：`https://cdn.monika.love/bs/update.json`
+
+![](https://blessing-skin-manual.vercel.app/api/update?url=https://cdn.monika.love/bs/update.json)
+
+
 更多信息：[从我们的社交网站上获得信息](https://social.paperjun.xyz/cgi-bin/bs-helper/20200925202010)
