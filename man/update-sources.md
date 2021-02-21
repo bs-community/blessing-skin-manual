@@ -49,3 +49,9 @@ https://dev.azure.com/blessing-skin/51010f6d-9f99-40f1-a262-0a67f788df32/_apis/g
 地址：`https://cdn.monika.love/bs/update.json`
 
 ![](https://blessing-skin-manual.vercel.app/api/update?url=https://cdn.monika.love/bs/update.json)
+
+### bs-cdn-d0.crabapi.cn
+
+地址：`https://bs-cdn-d0.crabapi.cn/update.json`
+
+![](https://blessing-skin-manual.vercel.app/api/update?url=https://bs-cdn-d0.crabapi.cn/update.json)
