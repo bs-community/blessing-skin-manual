@@ -31,25 +31,26 @@ export default async (request: NowRequest, response: NowResponse) => {
     return
   }
 
+  const escapedVersion = ver.replace('-', '--')
   try {
     const manifest: Record<string, unknown> = await res.json()
     if (
-      typeof manifest['app.js'] === 'string' /** v5 or later */ ||
-      typeof manifest['index.js'] === 'string' /** v4 */
+      typeof manifest['app.js'] === 'string' /* v5 or later */ ||
+      typeof manifest['index.js'] === 'string' /* v4 */
     ) {
       const badge = await fetch(
-        `https://img.shields.io/badge/${ver}-working-brightgreen`
+        `https://img.shields.io/badge/${escapedVersion}-working-brightgreen`
       )
       badge.body.pipe(response)
     } else {
       const badge = await fetch(
-        `https://img.shields.io/badge/${ver}-incorrect-red`
+        `https://img.shields.io/badge/${escapedVersion}-incorrect-red`
       )
       badge.body.pipe(response)
     }
   } catch (_) {
     const badge = await fetch(
-      `https://img.shields.io/badge/${ver}-incorrect-red`
+      `https://img.shields.io/badge/${escapedVersion}-incorrect-red`
     )
     badge.body.pipe(response)
   }

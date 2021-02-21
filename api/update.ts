@@ -19,8 +19,9 @@ export default async (request: NowRequest, response: NowResponse) => {
     const resp = await fetch(url)
     const info: UpdateInfo = await resp.json()
     const color = info.latest === latest ? 'brightgreen' : 'yellow'
+    const version = info.latest.replace('-', '--')
     const badge = await fetch(
-      `https://img.shields.io/badge/latest-${info.latest}-${color}`
+      `https://img.shields.io/badge/latest-${version}-${color}`
     )
     badge.body.pipe(response)
   } catch (_) {
