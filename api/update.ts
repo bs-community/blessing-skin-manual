@@ -9,6 +9,7 @@ const OFFICIAL =
 
 export default async (request: NowRequest, response: NowResponse) => {
   response.setHeader('Content-Type', 'image/svg+xml')
+  response.setHeader('Cache-Control', 'no-cache')
 
   const official = await fetch(OFFICIAL)
   const { latest }: UpdateInfo = await official.json()
