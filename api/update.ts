@@ -1,5 +1,5 @@
 import fetch from 'node-fetch'
-import { NowRequest, NowResponse } from '@vercel/node'
+import type { NowRequest, NowResponse } from '@vercel/node'
 
 type Query = { url: string }
 type UpdateInfo = { latest: string }
