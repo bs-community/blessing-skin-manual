@@ -14,6 +14,7 @@
 - Fixed wrong order of loading front-end localization file.
 - Fixed category changed when clicking current category tab in closet.
 - Fixed page isn't updated when switching category in closet.
+- Fixed no checks for capes size.
 
 ### Removed
 
