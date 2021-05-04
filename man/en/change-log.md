@@ -15,6 +15,7 @@
 - Fixed category changed when clicking current category tab in closet.
 - Fixed page isn't updated when switching category in closet.
 - Fixed no checks for capes size.
+- Fixed resolving report with non-existing user.
 
 ### Removed
 
