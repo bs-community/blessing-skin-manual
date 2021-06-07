@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Added
+
+- Dark mode.
+
 ### Changed
 
 - PHP version requirement increased to 7.4.0.
