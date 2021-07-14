@@ -23,7 +23,7 @@ CSS：
 CSS（其中参数自行调整，详见 [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow)）：
 
 ```css
-.previewer canvas {
+#previewer canvas {
   filter: drop-shadow(-5px 5px 10px rgba(0, 0, 0, 0.3));
 }
 ```
