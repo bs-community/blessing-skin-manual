@@ -86,7 +86,7 @@ php artisan key:generate
 
 ### Apache 用户
 
-请将站点根目录设置为网站根目录下的 `public` 目录（而不是根目录），并确保你安装好并启用了 URL Rewrite 模块。
+请将站点根目录设置为网站根目录下的 `public` 目录（而不是根目录），并确保你安装好并启用了 URL Rewrite 模块。同时请检查 Apache 的配置文件中 `AllowOverride` 的值，如果值为 `None` 请把它改成 `FileInfo`。
 
 Blessing Skin 自带开箱即用的 `.htaccess`，所以你无需额外配置 URL 重写规则，直接进入下一步即可。
 
