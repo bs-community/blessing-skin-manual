@@ -5,6 +5,7 @@
 ### Added
 
 - Dark mode.
+- New player name rule: allow valid UTF-8 string.
 
 ### Changed
 
