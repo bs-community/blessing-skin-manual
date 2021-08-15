@@ -6,6 +6,7 @@
 
 - 黑暗模式
 - 新角色名规则：允许有效的 UTF-8 字符串
+- 俄语翻译（感谢 [他们](https://github.com/bs-community/blessing-skin-server/pull/319)）
 
 ### 调整
 

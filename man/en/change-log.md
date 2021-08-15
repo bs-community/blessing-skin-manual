@@ -6,6 +6,7 @@
 
 - Dark mode.
 - New player name rule: allow valid UTF-8 string.
+- Russian translations. (Thanks [translators](https://github.com/bs-community/blessing-skin-server/pull/319))
 
 ### Changed
 
