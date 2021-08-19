@@ -12,6 +12,7 @@
 
 - PHP version requirement increased to 7.4.0.
 - Disallow to upload single-layer Alex skin.
+- Use a "Lock" icon to indicate a private texture in skin library.
 
 ### Fixed
 
