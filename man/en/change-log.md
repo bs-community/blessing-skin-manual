@@ -23,6 +23,7 @@
 - Fixed page isn't updated when switching category in closet.
 - Fixed no checks for capes size.
 - Fixed resolving report with non-existing user.
+- Fixed duplicated logout modal at home page.
 
 ### Removed
 
