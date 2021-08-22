@@ -54,7 +54,19 @@ java -Xmx1024M -Xms1024M -javaagent:authlib-injector-1.1.18-daa6fb4.jar=https://
 - Minecraft 游戏本体正确加载了 authlib-injector
 - Minecraft 服务端加载了 authlib-injector（必须 `online-mode=true`）
 
+::: warning
+
 **以上三者必须使用同一个 Yggdrasil API。**
+**包括服务器的地址与客户端的地址必须一致**
+
+列如：
+test1.com和test2.com域名解析指向同一皮肤站的ip
+服务器使用https://test1.com/api/yggdrasil
+而客户端使用https://test2.com/api/yggdrasil
+
+**则将会出现服务器中的玩家皮肤无法加载的问题**
+
+::: warning
 
 否则会出现：
 
