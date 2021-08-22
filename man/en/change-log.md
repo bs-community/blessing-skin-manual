@@ -14,6 +14,7 @@
 - Disallow to upload single-layer Alex skin.
 - Use a "Lock" icon to indicate a private texture in skin library.
 - Changed font of usage information in Administration Panel.
+- Split chart of Administration Panel.
 
 ### Fixed
 
