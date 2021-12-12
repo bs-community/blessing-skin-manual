@@ -10,7 +10,7 @@
 
 ### Changed
 
-- PHP version requirement increased to 7.4.0.
+- PHP version requirement increased to 8.0.2.
 - Disallow to upload single-layer Alex skin.
 - Use a "Lock" icon to indicate a private texture in skin library.
 - Changed font of usage information in Administration Panel.
@@ -146,7 +146,7 @@
 - Fixed that error stack doesn't show paths from plugins when AJAX has an error.
 - Fixed that error page doesn't display when using an unsupported hash algorithm.
 - Fixed fallback when unknown locale is detected.
-- Fixed compatibility with PHP 7.4.
+- Fixed compatibility with new PHP.
 - Fixed the display problem for too long texture name.
 - Fixed that dependencies and conflicts haven't been checked before installing plugin.
 - Fixed retrieving search keyword from query string in skin library.
