@@ -7,7 +7,8 @@ So far, we've released:
 - v3.0.x
 - v3.x (Stable)
 - v4.x (Stable)
-- v5.x (Under Development)
+- v5.x (Stable)
+- v6.x (Under Development)
 
 | Version | PHP Version Requirement | One User Multi Players | Skin Library & Closet | Plugin System  |
 | ------- | ----------------------- | ---------------------- | --------------------- | -------------- |
