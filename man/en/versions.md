@@ -16,6 +16,6 @@ So far, we've released:
 | v3.x    | 5.5.9                   | ✅                      | ✅                     | ✅ (Since v3.2) |
 | v4.x    | 7.1.8                   | ✅                      | ✅                     | ✅              |
 | v5.x    | 7.2.5                   | ✅                      | ✅                     | ✨              |
-| v6.x    | 8.0.2                   | ✅                      | Partially Supported   | ✅              |
+| v6.x    | 8.0.2                   | ✅                      |                       | ✅              |
 
 While we've released more than one stable release, it's recommended to use the latest one, since we only provide technical support for the latest version.
