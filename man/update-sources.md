@@ -36,6 +36,14 @@ https://dev.azure.com/blessing-skin/51010f6d-9f99-40f1-a262-0a67f788df32/_apis/g
 
 如果您在使用过程中遇到了问题，欢迎通过 Telegram 联系: [@ZoharWang](https://t.me/ZoharWang)
 
+### update.snowflake.moe
+
+地址: `https://update.snowflake.moe/blessing-skin/update/update.json`
+
+![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.snowflake.moe/blessing-skin/update/update.json)
+
+如果您在使用过程中遇到了问题，欢迎给我发邮件联系: [@SANYIMOE](mailto:abcd2890000456@126.com)
+
 ### bs-cdn.paperjun.xyz
 
 地址：`https://bs-cdn.paperjun.xyz/update.php`
