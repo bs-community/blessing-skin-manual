@@ -38,7 +38,13 @@ https://dev.azure.com/blessing-skin/51010f6d-9f99-40f1-a262-0a67f788df32/_apis/g
 
 ### update.snowflake.moe
 
-地址: `https://update.snowflake.moe/blessing-skin/update/update.json`
+最新版: `https://update.snowflake.moe/blessing-skin/update/update.json`
+
+正式版: `https://update.snowflake.moe/blessing-skin/update/update-official.json`
+
+BETA版: `https://update.snowflake.moe/blessing-skin/update/update-beta.json`
+
+RC版: `https://update.snowflake.moe/blessing-skin/update/update-dev.json`
 
 ![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.snowflake.moe/blessing-skin/update/update.json)
 
