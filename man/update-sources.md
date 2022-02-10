@@ -24,8 +24,16 @@ https://dev.azure.com/blessing-skin/51010f6d-9f99-40f1-a262-0a67f788df32/_apis/g
 我们无法 100% 保证第三方更新源的安全。请谨慎使用，防止恶意代码的注入。
 :::
 
-:::tip 提示：
+::: tip 提示：
 更新源的排序不分先后。
+:::
+
+::: 更新源维护者请看
+
+我们会不定期检查各个第三方更新源的可用情况，并清理其中不可用的更新源。
+
+如果您发现您曾经在此添加过的更新源不存在，请检查您的更新源是否可用，并在处理完成后告知我们。
+
 :::
 
 ### bs-cdn.yecdn.com
@@ -52,25 +60,11 @@ RC版: `https://update.snowflake.moe/blessing-skin/update/update-dev.json`
 
 如果您在使用过程中遇到了问题，欢迎给我发邮件联系: [@SANYIMOE](mailto:abcd2890000456@126.com)
 
-### bs-cdn.paperjun.xyz
-
-地址：`https://bs-cdn.paperjun.xyz/update.php`
-
-![](https://blessing-skin-manual.vercel.app/api/update?url=https://bs-cdn.paperjun.xyz/update.php)
-
-更多信息：[从我们的社交网站上获得信息](https://social.paperjun.xyz/cgi-bin/bs-helper/20200925202010)
-
 ### cdn.monika.love
 
 地址：`https://cdn.monika.love/bs/update.json`
 
 ![](https://blessing-skin-manual.vercel.app/api/update?url=https://cdn.monika.love/bs/update.json)
-
-### bs-cdn-d0.crabapi.cn
-
-地址：`https://bs-cdn-d0.crabapi.cn/update.json`
-
-![](https://blessing-skin-manual.vercel.app/api/update?url=https://bs-cdn-d0.crabapi.cn/update.json)
 
 ### static-cdn.zerodream.net
 
