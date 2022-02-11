@@ -47,18 +47,23 @@ https://dev.azure.com/blessing-skin/51010f6d-9f99-40f1-a262-0a67f788df32/_apis/g
 ### update.snowflake.moe
 
 最新版: `https://update.snowflake.moe/blessing-skin/update/update.json`
+
 ![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.snowflake.moe/blessing-skin/update/update.json)
 
-STABLE版: `https://update.snowflake.moe/blessing-skin/update/update-stable.json`
+stable 版: `https://update.snowflake.moe/blessing-skin/update/update-stable.json`
+
 ![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.snowflake.moe/blessing-skin/update/update-stable.json)
 
-BETA版: `https://update.snowflake.moe/blessing-skin/update/update-beta.json`
-![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.snowflake.moe/blessing-skin/update/update-beta.json)
+rc 版: `https://update.snowflake.moe/blessing-skin/update/update-rc.json`
 
-RC版: `https://update.snowflake.moe/blessing-skin/update/update-rc.json`
 ![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.snowflake.moe/blessing-skin/update/update-rc.json)
 
-ALPHA版: `https://update.snowflake.moe/blessing-skin/update/update-alpha.json`
+beta 版: `https://update.snowflake.moe/blessing-skin/update/update-beta.json`
+
+![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.snowflake.moe/blessing-skin/update/update-beta.json)
+
+alpha版: `https://update.snowflake.moe/blessing-skin/update/update-alpha.json`
+
 ![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.snowflake.moe/blessing-skin/update/update-alpha.json)
 
 如果您在使用过程中遇到了问题，欢迎给我发邮件联系: [@SANYIMOE](mailto:abcd2890000456@126.com)
