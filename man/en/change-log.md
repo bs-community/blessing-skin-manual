@@ -27,6 +27,8 @@
 - Fixed no checks for capes size.
 - Fixed resolving report with non-existing user.
 - Fixed duplicated logout modal at home page.
+- Fixed displaying "Texture policy".
+- Fixed that page wasn't reset when search query changed in Skin Library.
 
 ### Removed
 
