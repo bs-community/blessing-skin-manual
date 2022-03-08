@@ -44,27 +44,27 @@ https://dev.azure.com/blessing-skin/51010f6d-9f99-40f1-a262-0a67f788df32/_apis/g
 
 如果您在使用过程中遇到了问题，欢迎通过 Telegram 联系: [@ZoharWang](https://t.me/ZoharWang)
 
-### update.snowflake.moe
+### update.mojy.xyz
 
-最新版: `https://update.snowflake.moe/blessing-skin/update/update.json`
+最新版: `https://update.mojy.xyz/blessing-skin/update/update.json`
 
-![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.snowflake.moe/blessing-skin/update/update.json)
+![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.mojy.xyz/blessing-skin/update/update.json)
 
-stable 版: `https://update.snowflake.moe/blessing-skin/update/update-stable.json`
+stable 版: `https://update.mojy.xyz/blessing-skin/update/update-stable.json`
 
-![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.snowflake.moe/blessing-skin/update/update-stable.json)
+![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.mojy.xyz/blessing-skin/update/update-stable.json)
 
-rc 版: `https://update.snowflake.moe/blessing-skin/update/update-rc.json`
+rc 版: `https://update.mojy.xyz/blessing-skin/update/update-rc.json`
 
-![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.snowflake.moe/blessing-skin/update/update-rc.json)
+![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.mojy.xyz/blessing-skin/update/update-rc.json)
 
-beta 版: `https://update.snowflake.moe/blessing-skin/update/update-beta.json`
+beta 版: `https://update.mojy.xyz/blessing-skin/update/update-beta.json`
 
-![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.snowflake.moe/blessing-skin/update/update-beta.json)
+![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.mojy.xyz/blessing-skin/update/update-beta.json)
 
-alpha版: `https://update.snowflake.moe/blessing-skin/update/update-alpha.json`
+alpha版: `https://update.mojy.xyz/blessing-skin/update/update-alpha.json`
 
-![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.snowflake.moe/blessing-skin/update/update-alpha.json)
+![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.mojy.xyz/blessing-skin/update/update-alpha.json)
 
 如果您在使用过程中遇到了问题，欢迎给我发邮件联系: [@SANYIMOE](mailto:abcd2890000456@126.com)
 
