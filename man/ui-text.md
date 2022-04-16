@@ -56,7 +56,7 @@
 
 ## 被 JavaScript 渲染的文本
 
-由于 Blessing Skin 的不少页面都使用 Vue.js 进行渲染，因此它们无法直接获取 `admin.yml`、`user.yml`、`skinlib.yml` 等语言文件的内容。
+由于 Blessing Skin 的不少页面都使用 React 进行渲染，因此它们无法直接获取 `admin.yml`、`user.yml`、`skinlib.yml` 等语言文件的内容。
 对于这部分的语言文本，它们均为于 `front-end.yml`。上面提到的「签到」按钮就属于这种情况。
 
 ## 一点点技巧
