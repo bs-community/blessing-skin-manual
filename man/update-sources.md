@@ -77,6 +77,7 @@ alpha版: `https://update.mojy.xyz/blessing-skin/update/update-alpha.json`
 ### static-cdn.zerodream.net
 
 地址：`https://static-cdn.zerodream.net/bss/`
+
 ![](https://blessing-skin-manual.vercel.app/api/update?url=https://static-cdn.zerodream.net/bss/)
 
 该地址带可选参数：
@@ -93,3 +94,11 @@ https://static-cdn.zerodream.net/bss/{channel}/{version}/{subversion}/{build}
 4. build 构建编号，例如 1，对应的就是 6.0.0-rc.1 中的最后一位
 
 更新源服务器代码已开源在 [kasuganosoras/bss-update](https://github.com/kasuganosoras/bss-update)。
+
+### cdn.mc9y.com
+
+最新版：`https://cdn.mc9y.com/bs/update.json`
+
+![](https://blessing-skin-manual.vercel.app/api/update?url=https://cdn.mc9y.com/bs/update.json)
+
+指定版本：`https://cdn.mc9y.com/bs/{version}/update.json`
