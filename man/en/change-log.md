@@ -7,6 +7,7 @@
 - Dark mode.
 - New player name rule: allow valid UTF-8 string.
 - Russian translations. (Thanks [translators](https://github.com/bs-community/blessing-skin-server/pull/319))
+- New footer copyright option.
 
 ### Changed
 
@@ -16,6 +17,7 @@
 - Changed font of usage information in Administration Panel.
 - Split chart of Administration Panel.
 - Changed date format of charts in Administration Panel.
+- Sort closet items by texture ID in descending order.
 
 ### Fixed
 
