@@ -8,6 +8,7 @@
 - New player name rule: allow valid UTF-8 string.
 - Russian translations. (Thanks [translators](https://github.com/bs-community/blessing-skin-server/pull/319))
 - New footer copyright option.
+- OAuth scope options.
 
 ### Changed
 
@@ -31,6 +32,7 @@
 - Fixed duplicated logout modal at home page.
 - Fixed displaying "Texture policy".
 - Fixed that page wasn't reset when search query changed in Skin Library.
+- WebP compatibility.
 
 ### Removed
 
