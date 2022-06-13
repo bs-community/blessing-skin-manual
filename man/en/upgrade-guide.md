@@ -1,5 +1,9 @@
 # Upgrade Guide
 
+## From v5 To v6
+
+No manual operations are required.
+
 ## From v4 To v5
 
 ### Redis users
