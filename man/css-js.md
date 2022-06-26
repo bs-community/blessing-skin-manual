@@ -42,8 +42,22 @@ document.querySelector('.main-button').textContent = 'xxx'
 
 JavaScript:
 
+导航栏左侧添加
+
 ```js
-const navL = document.querySelector('.collapse > ul:nth-child(1)') // 导航栏左侧
+const navL = document.querySelector('.navbar-header') // 导航栏左侧
+
+const link = document.createElement('a')
+link.href = 'https://localhost/'
+link.className = 'navbar-brand'
+link.textContent = 'Home'
+
+navL.appendChild(link)
+```
+
+导航栏右侧添加
+
+```js
 const navR = document.querySelector('.navbar-custom-menu > ul:nth-child(1)') // 导航栏右侧
 
 const item = document.createElement('li')
