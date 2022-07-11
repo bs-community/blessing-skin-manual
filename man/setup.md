@@ -12,13 +12,13 @@
 
 流畅运行 Blessing Skin 对你的服务器的配置的要求非常低（除非你运营的是一个巨型皮肤站）。你需要检查的是你的运行环境。
 
-Blessing Skin 只支持 Nginx 或 Apache 作为 Web 服务器，不支持 IIS。PHP 版本必须为 7.3 或以上。
+Blessing Skin 只支持 Nginx 或 Apache 作为 Web 服务器，不支持 IIS。PHP 版本必须为 8.0.2 或以上。
 
 ### 必需的 PHP 扩展
 
 请确保这些扩展已经安装并开启：
 
-- OpenSSL
+- OpenSSL >= 1.1.1 (TLS 1.3)
 - PDO
 - Mbstring
 - Tokenizer
