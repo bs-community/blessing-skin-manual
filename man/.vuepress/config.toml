@@ -74,13 +74,53 @@ label = 'English'
 docsDir = 'man/en'
 editLinkText = 'Edit this page on GitHub'
 lastUpdated = 'Last Updated'
-sidebar = [
-  '/en/setup',
-  '/en/faq',
-  '/en/mod',
-  '/en/build',
-  '/en/upgrade-guide',
-  '/en/change-log',
-  '/en/versions',
-  '/en/flarum',
+
+[[themeConfig.locales.'/en/'.nav]]
+text = 'Blessing Skin'
+link = '/en/'
+[[themeConfig.locales.'/en/'.nav]]
+text = 'Yggdrasil API'
+link = '/en/yggdrasil-api/'
+[[themeConfig.locales.'/en/'.nav]]
+text = 'Web API'
+link = '/en/api/'
+
+[themeConfig.locales.'/en/'.sidebar]
+'/en/yggdrasil-api/' = [
+  '/en/yggdrasil-api/introduction',
+  '/yggdrasil-api/setup',
+  '/yggdrasil-api/authlib-injector',
+  '/yggdrasil-api/troubleshooting',
+  '/yggdrasil-api/migration',
+]
+'/en/api/' = [
+  '/api/basis',
+  '/api/oauth',
+  '/api/auth',
+  '/api/user',
+  '/api/players',
+  '/api/closet',
+  '/api/avatars-and-previews',
+]
+'/en/' = [
+  '/setup',
+  '/faq',
+  '/report',
+  '/mod',
+  '/env',
+  '/build',
+  '/versions',
+  '/upgrade-guide',
+  '/change-log',
+  '/ui-text',
+  '/update-sources',
+  '/cdn',
+  '/oauth',
+  '/flarum',
+  '/artisan-cli',
+  '/web-cli',
+  '/search-syntax',
+  '/css-js',
+  '/bench',
+  '/v5-release-note',
 ]
