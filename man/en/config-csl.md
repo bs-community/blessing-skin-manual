@@ -1,34 +1,34 @@
-# 修改 CustomSkinLoader 配置文件
+# Modify the CustomSkinLoader configuration file
 
-如果您想从 CustomSkinLoader 的默认加载列表之外的皮肤站加载材质，您需要修改配置文件。
+If you want to load materials from a skin station other than the CustomSkinLoader's default load list, you will need to modify the configuration file.
 
-CustomSkinLoader 的配置文件位于 `.minecraft/CustomSkinLoader/` 目录下，文件名为 `CustomSkinLoader.json`（如果启用了版本隔离，则是在 `.minecraft/versions/{version}/CustomSkinLoader/` 目录下，其中 `{version}` 为对应的版本）。
+The configuration file for CustomSkinLoader is located in the `.minecraft/CustomSkinLoader/` directory with the file name `CustomSkinLoader.json` (if version isolation is enabled, in the `.minecraft/versions/{version}/CustomSkinLoader/` directory, where `{version}` is the corresponding version).
 
-## ExtraList
+##ExtraList
 
-ExtraList 是 CustomSkinLoader 14.4 引入的一项特性，提供了快捷的添加皮肤站的功能。
+ExtraList is a feature introduced in CustomSkinLoader 14.4 that provides a quick and easy way to add skin stations.
 
-对于一般用户来说，只需要将皮肤站提供的 ExtraList 文件放入 `.minecraft/CustomSkinLoader/ExtraList/` 目录下（同样的，如果启用了版本隔离，则是在 `.minecraft/versions/{version}/CustomSkinLoader/ExtraList/` 目录下）并启动游戏即可。
+For normal users, just put the ExtraList files provided by the skin station in the `.minecraft/CustomSkinLoader/ExtraList/` directory (similarly, if version isolation is enabled, in `.minecraft/versions/{version} /CustomSkinLoader/ExtraList/` directory) and start the game.
 
-在使用 ExtraList 添加皮肤站时，如果需要一次添加多个皮肤站且需要对皮肤站进行排序，则需要将 ExtraList 文件重命名至对应的顺序。
+When adding skin stations using ExtraList, if you need to add multiple skin stations at a time and you need to sort the skin stations, you need to rename the ExtraList file to the corresponding order.
 
-启动游戏后，ExtraList 文件将会被删除，这是正常现象。此时皮肤站即已被添加进加载列表中的最顶端。
+After launching the game, the ExtraList file will be deleted, this is normal. The skin station has now been added to the very top of the load list.
 
-如果想要了解如何编写 ExtraList 文件，请查看：https://github.com/xfl03/CustomSkinLoaderAPI/blob/master/ExtraList/ExtraList-zh_CN.md
+If you want to know how to write an ExtraList file, please check: https://github.com/xfl03/CustomSkinLoaderAPI/blob/master/ExtraList/ExtraList-en_US.md
 
-## 在线修改配置文件
+## Modify the configuration file online
 
-您可以使用 CustomSkinLoade GUI 在线修改配置文件。它提供图形化界面来让您调整 CustomSkinLoader 的配置文件。直接访问 [https://mc-csl.netlify.app/](https://mc-csl.netlify.app/]) 即可。
+You can modify configuration files online using the CustomSkinLoade GUI. It provides a graphical interface to allow you to adjust the CustomSkinLoader's configuration file. Just visit [https://mc-csl.netlify.app/](https://mc-csl.netlify.app/]) directly.
 
-## 手动修改配置文件
+## Manually modify the configuration file
 
-我们推荐使用专业的代码编辑器（如 [Notepad++](https://notepad-plus-plus.org)、[Visual Studio Code](https://code.visualstudio.com)、[Sublime Text](https://www.sublimetext.com/)）修改配置文件。
+We recommend using a professional code editor (such as [Notepad++](https://notepad-plus-plus.org), [Visual Studio Code](https://code.visualstudio.com), [Sublime Text](https ://www.sublimetext.com/)) to modify the configuration file.
 
-CustomSkinLoader 的配置文件使用 JSON 格式，并对格式有着严格的要求。如果配置文件的格式有误，则会重置到默认配置文件。修改完配置文件后，可以使用 [BeJSON](https://www.bejson.com/) 对配置文件内容进行格式化校验。
+The configuration file of CustomSkinLoader uses JSON format and has strict requirements on the format. If the configuration file is formatted incorrectly, it will reset to the default configuration file. After modifying the configuration file, you can use [BeJSON](https://www.bejson.com/) to format and verify the content of the configuration file.
 
-**不建议没有相关经验的小白手动修改配置文件。**
+**It is not recommended for Xiaobai with no relevant experience to manually modify the configuration file. **
 
-配置文件中有以下几个配置项：
+The configuration file contains the following configuration items:
 
 - `version`
 - `enable`
@@ -56,29 +56,29 @@ CustomSkinLoader 的配置文件使用 JSON 格式，并对格式有着严格的
 - `enableLocalProfileCache`
 - `enableCacheAutoClean`
 
-其中除 `version`、`loadlist`、`threadPoolSize` 和 `cacheExpiry` 外的配置项的值均应为布尔值（`true` 或 `false`，分别表示「启用」和「禁用」）。
+The values ​​of configuration items except `version`, `loadlist`, `threadPoolSize` and `cacheExpiry` should be boolean values ​​(`true` or `false`, respectively "enable" and "disable").
 
-根据 CustomSkinLoader 版本不同，适用的配置项也有可能不同。不是所有的配置项都必须填写。
+Depending on the version of CustomSkinLoader, the applicable configuration items may be different. Not all configuration items must be filled in.
 
 ### `version`
 
-该配置项表示 CustomSkinLoader 的版本。**请不要修改此项！**
+This configuration item represents the version of CustomSkinLoader. **Please do not modify this! **
 
 ### `enable`
 
-该配置项表示是否启用 CustomSkinLoader。
+This configuration item indicates whether to enable CustomSkinLoader.
 
 ### `loadlist`
 
-该配置项即加载列表，内容与顺序决定了皮肤来源与加载顺序。CustomSkinLoader 会以上到下的顺序尝试获取皮肤。其中子配置项的意义请见下方：
+This configuration item is the loading list, and the content and order determine the skin source and loading order. CustomSkinLoader will try to get skins in top-to-bottom order. The meanings of the sub-configuration items are as follows:
 
 #### `name`
 
-该配置项表示皮肤站名称。
+This configuration item indicates the name of the skin station.
 
 #### `type`
 
-该配置项表示皮肤站的 API 类型。可选的值有：
+This configuration item represents the API type of the skin station. Optional values ​​are:
 
 - `MojangAPI`
 - `CustomSkinAPI`
@@ -87,106 +87,106 @@ CustomSkinLoader 的配置文件使用 JSON 格式，并对格式有着严格的
 - `GlitchlessAPI`
 - `Legacy`
 
-请根据皮肤站的 API 实现来选择正确的值。不同 API 的意义不同，其对应的剩余的配置项和值也不同。
+Please choose the correct value according to the API implementation of the skin station. Different APIs have different meanings, and the corresponding remaining configuration items and values ​​are also different.
 
-同时，除 `MojangAPI` 外的所有 API 均可指定 User-Agent，将 `userAgent` 配置项的值设为您想指定的 User-Agent 即可。
+At the same time, all APIs except `MojangAPI` can specify User-Agent, just set the value of `userAgent` configuration item to the User-Agent you want to specify.
 
 ##### `MojangAPI`
 
-使用 Yggdrasil API 加载材质。需要配置以下两个配置项：
+Load materials using the Yggdrasil API. The following two configuration items need to be configured:
 
-- `apiRoot`：Yggdrasil API 的根（Root）地址；
-- `sessionRoot`：Yggdrasil API 的会话服务器（Session Server）的地址。
+- `apiRoot`: the root address of the Yggdrasil API;
+- `sessionRoot`: The address of the Session Server of the Yggdrasil API.
 
 ##### `CustomSkinAPI`
 
-使用 CustomSkinAPI 加载材质。仅需要配置一个配置项：`root`，表示皮肤站的 CustomSkinAPI 的根（Root）地址。
+Load materials using CustomSkinAPI. Only one configuration item needs to be configured: `root`, which represents the root address of the CustomSkinAPI of the skin station.
 
 ##### `UniSkinAPI`
 
-使用 UniSkinAPI 加载材质。仅需要配置一个配置项：`root`，表示皮肤站的 UniSkinAPI 的根（Root）地址。
+Load materials using UniSkinAPI. Only one configuration item needs to be configured: `root`, which represents the root (Root) address of the UniSkinAPI of the skin station.
 
 ##### `Elyby`
 
-从 [Ely.By](https://ely.by) 加载材质。无需配置其它配置项。
+Load materials from [Ely.By](https://ely.by). No other configuration items need to be configured.
 
 ##### `GlitchlessAPI`
 
-使用 GlitchlessAPI 加载材质。仅需要配置一个配置项：`root`，表示皮肤站的 GlitchlessAPI 的根（Root）地址。
+Load materials using the Glitchless API. Only one configuration item needs to be configured: `root`, which represents the root address of the GlitchlessAPI of the skin station.
 
 ##### `Legacy`
 
-使用传统方式加载皮肤。需要配置以下几个配置项：
+Load skins in the traditional way. The following configuration items need to be configured:
 
-- `checkPNG`：检查图像文件的格式是否为 PNG，值为布尔值；
-- `skin`：皮肤文件地址；
-- `model`：皮肤模型，可选值的有：
-    - `default`：默认模型，即 Steve 模型；
-    - `slim`：纤细模型，即 Alex 模型，仅 1.8 及以上的 Minecraft 支持；
-    - `auto`：自动判断材质模型；
-- `cape`：披风文件地址；
-- `elytra`：鞘翅文件地址，仅 1.9 以上的 Minecraft 支持。
+- `checkPNG`: Check if the format of the image file is PNG, the value is a boolean value;
+- `skin`: skin file address;
+- `model`: skin model, optional values ​​are:
+    - `default`: the default model, the Steve model;
+    - `slim`: Slim model, the Alex model, only supported by Minecraft 1.8 and above;
+    - `auto`: automatically determine the material model;
+- `cape`: cape file address;
+- `elytra`: elytra file address, only supported by Minecraft 1.9+.
 
-其中 `skin`、`cape` 和 `elytra` 配置项的值中，可使用 `{USERNAME}` 或 `{UUID}` 占位符来表示玩家的名称或 UUID。
+The `skin`, `cape` and `elytra` configuration items can use `{USERNAME}` or `{UUID}` placeholders to represent the player's name or UUID.
 
 ### `enableSkull`
 
-表示是否启用头颅加载。默认启用。
+Indicates whether head loading is enabled. Enabled by default.
 
 ### `enableDynamicSkull`
 
-表示是否允许动态头颅。默认启用。
+Indicates whether dynamic heads are allowed. Enabled by default.
 
 ### `enableTransparentSkin`
 
-表示是否允许透明皮肤。默认启用。
+Indicates whether transparent skin is allowed. Enabled by default.
 
 ### `ignoreHttpsCertificate`
 
-表示是否忽略 HTTPS 证书检查结果。默认禁用。
+Indicates whether to ignore the HTTPS certificate check result. Disabled by default.
 
-启用此项后，即使皮肤站的 HTTPS 证书无效，仍会从该皮肤站加载皮肤。
+When enabled, skins will still be loaded from the skin site even if the skin site's HTTPS certificate is invalid.
 
-通常情况下不建议启用此项，否则可能会带来一定的安全隐患。
+It is generally not recommended to enable this option, otherwise it may bring certain security risks.
 
 ### `forceLoadAllTextures`
 
-表示是否强制加载一个玩家的所有材质。即，是否加载皮肤又加载披风后才停止加载。默认禁用。
+Indicates whether to force loading of all textures for a player. That is, whether the skin is loaded and the cape is loaded before it stops loading. Disabled by default.
 
-禁用此项时，一旦玩家成功从加载列表内的某一皮肤站成功加载某一材质（皮肤或披风），即会停止继续加载；启用此项时，若玩家未能从某一皮肤站加载所有材质，则会继续尝试从加载列表内剩余的皮肤站加载材质，直到成功加载所有材质或加载列表内无更多皮肤站。
+When disabled, once the player successfully loads a texture (skin or cape) from a skin station in the loadlist, it will stop loading; when enabled, if the player fails to load all the materials from a skin station textures, it will continue to try to load textures from the remaining skin stations in the loadlist until all textures are successfully loaded or there are no more skin stations in the loadlist.
 
 ### `enableCape`
 
-表示是否允许加载披风。默认启用。
+Indicates whether to allow capes to be loaded. Enabled by default.
 
 ### `threadPoolSize`
 
-表示加载皮肤和头颅的线程池大小。默认为 `1`，推荐的值的范围为 `1` 到 `16`。
+Indicates the thread pool size for loading skins and heads. Defaults to `1`, the recommended range of values ​​is `1` to `16`.
 
-游玩在线人数较多的服务器时，可以适当增大该项的值，但也请不要设置得太高。
+When playing a server with a large number of online users, the value of this item can be appropriately increased, but please do not set it too high.
 
 ### `cacheExpiry`
 
-表示玩家信息缓存的过期时间，单位为秒。默认为 `30`。
+Indicates the expiration time of the player information cache, in seconds. Defaults to `30`.
 
->  玩家信息缓存中包含了玩家的材质的地址，但不包含材质文件。
+> The player info cache contains the address of the player's texture, but not the texture file.
 
-设置为 `-5` 或更低即相当于关闭玩家信息缓存。不建议设置得太小或太大。
+Setting it to `-5` or lower is equivalent to turning off the player info cache. Setting too small or too large is not recommended.
 
 ### `enableUpdateSkull`
 
-表示是否开启头颅更新。默认禁用。
+Indicates whether to enable head update. Disabled by default.
 
-头颅更新容易引起卡顿，不建议启用此项。
+Head updates can easily cause lag, so it is not recommended to enable this.
 
 ### `enableLocalProfileCache`
 
-表示是否启用本地皮肤缓存（不是上面 `cacheExpiry` 设置项中提到的玩家信息缓存）。默认禁用。
+Indicates whether to enable the local skin cache (not the player info cache mentioned in the `cacheExpiry` setting above). Disabled by default.
 
-启用此项后可在无网络时继续使用缓存的皮肤。不建议在网络状态稳定（例如能一直接入网络的台式机）时仍然开启。
+Enable to continue using cached skins without internet connection. It is not recommended to turn it on when the network status is stable (such as a desktop computer that can always access the network).
 
 ### `enableCacheAutoClean`
 
-表示是否在 Minecraft 启动时自动清理 **所有** 玩家信息缓存。默认禁用。
+Indicates whether to automatically clear **all** player info caches when Minecraft starts. Disabled by default.
 
-如果启用了本地皮肤缓存，则本项将被强制禁用。
+If local skin caching is enabled, this item will be forced to be disabled.

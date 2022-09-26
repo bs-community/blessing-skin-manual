@@ -1,147 +1,147 @@
-# 头像与材质预览图
+# Avatar and material preview
 
 ::: tip
 
-这一部分的 API 不需要经过用户登录和认证。
+This part of the API does not require user login and authentication.
 
 :::
 
-## 根据角色名获取头像
+## Get the avatar based on the character name
 
-通过这个 API，可以获取该角色所使用的皮肤对应的头像。
+Through this API, you can get the avatar corresponding to the skin used by the character.
 
-```
+````
 GET /avatar/player/{name}
-```
+````
 
-其中 `{name}` 参数为角色名。
+The `{name}` parameter is the role name.
 
-### 参数
+### Parameters
 
-| 名称   | 类型      | 描述                                                         |
-| ------ | --------- | ------------------------------------------------------------ |
-| `size` | `integer` | 头像大小。注意这不是最终生成的图片尺寸大小。                 |
-| `3d`   | `any`     | 当此参数存在时，将生成一个类似有「3D」效果的头像，而不是头像的正面图。 |
-| `png`  | `any`     | 当此参数存在时，将返回 PNG 格式图片；否则返回 WebP 格式。（但如果服务器的 GD 扩展不支持 WebP 则仍返回 PNG） |
+| Name | Type | Description |
+| ------ | --------- | -------------------------------- ---------------------------- |
+| `size` | `integer` | Avatar size. Note that this is not the final image size. |
+| `3d` | `any` | When this parameter is present, a "3D"-like avatar will be generated instead of a front view of the avatar. |
+| `png` | `any` | When this parameter exists, it will return the image in PNG format; otherwise, it will return in WebP format. (but still returns PNG if the server's GD extension does not support WebP) |
 
-### 响应
+### Response
 
-如果角色不存在，返回 404；如果材质不存在，返回 404；正常返回 200。
+Returns 404 if the character does not exist; returns 404 if the material does not exist; returns 200 normally.
 
-可通过响应头的 `Content-Type` 字段来判断图片格式。
+The image format can be determined by the `Content-Type` field of the response header.
 
-## 根据用户 UID 获取头像
+## Get avatar based on user UID
 
-通过这个 API，可以获取该用户所设置的头像。
+Through this API, you can get the avatar set by the user.
 
-```
+````
 GET /avatar/user/{uid}
-```
+````
 
-其中 `{uid}` 参数为用户 UID。
+Where the `{uid}` parameter is the user UID.
 
-### 参数
+### Parameters
 
-| 名称   | 类型      | 描述                                                         |
-| ------ | --------- | ------------------------------------------------------------ |
-| `size` | `integer` | 头像大小。注意这不是最终生成的图片尺寸大小。                 |
-| `3d`   | `any`     | 当此参数存在时，将生成一个类似有「3D」效果的头像，而不是头像的正面图。 |
-| `png`  | `any`     | 当此参数存在时，将返回 PNG 格式图片；否则返回 WebP 格式。（但如果服务器的 GD 扩展不支持 WebP 则仍返回 PNG） |
+| Name | Type | Description |
+| ------ | --------- | -------------------------------- ---------------------------- |
+| `size` | `integer` | Avatar size. Note that this is not the final image size. |
+| `3d` | `any` | When this parameter is present, a "3D"-like avatar will be generated instead of a front view of the avatar. |
+| `png` | `any` | When this parameter exists, it will return the image in PNG format; otherwise, it will return in WebP format. (but still returns PNG if the server's GD extension does not support WebP) |
 
-### 响应
+### Response
 
-如果用户不存在，返回一个默认头像（HTTP 状态码为 200）；如果材质不存在，返回 404；正常返回 200。
+If the user does not exist, return a default avatar (HTTP status code is 200); if the material does not exist, return 404; return 200 normally.
 
-可通过响应头的 `Content-Type` 字段来判断图片格式。
+The image format can be determined by the `Content-Type` field of the response header.
 
-## 根据材质 TID 生成头像
+## Generate avatar based on material TID
 
-通过这个 API，可以生成并返回该材质对应的头像图片。
+Through this API, the avatar image corresponding to the material can be generated and returned.
 
-```
+````
 GET /avatar/{tid}
-```
+````
 
-其中 `{tid}` 参数为材质 TID。
+where the `{tid}` parameter is the material TID.
 
-### 参数
+### Parameters
 
-| 名称   | 类型      | 描述                                                         |
-| ------ | --------- | ------------------------------------------------------------ |
-| `size` | `integer` | 头像大小。注意这不是最终生成的图片尺寸大小。                 |
-| `3d`   | `any`     | 当此参数存在时，将生成一个类似有「3D」效果的头像，而不是头像的正面图。 |
-| `png`  | `any`     | 当此参数存在时，将返回 PNG 格式图片；否则返回 WebP 格式。（但如果服务器的 GD 扩展不支持 WebP 则仍返回 PNG） |
+| Name | Type | Description |
+| ------ | --------- | -------------------------------- ---------------------------- |
+| `size` | `integer` | Avatar size. Note that this is not the final image size. |
+| `3d` | `any` | When this parameter is present, a "3D"-like avatar will be generated instead of a front view of the avatar. |
+| `png` | `any` | When this parameter exists, it will return the image in PNG format; otherwise, it will return in WebP format. (but still returns PNG if the server's GD extension does not support WebP) |
 
-### 响应
+### Response
 
-如果材质不存在，返回 404；正常返回 200。
+Returns 404 if the material does not exist; returns 200 normally.
 
-可通过响应头的 `Content-Type` 字段来判断图片格式。
+The image format can be determined by the `Content-Type` field of the response header.
 
-## 根据材质文件 hash 生成头像
+## Generate avatar according to the material file hash
 
-通过这个 API，可以生成并返回该材质对应的头像图片并且不需要事先知道材质的 TID。
+Through this API, the avatar image corresponding to the material can be generated and returned without knowing the TID of the material in advance.
 
-```
+````
 GET /avatar/hash/{hash}
-```
+````
 
-其中 `{hash}` 参数为材质文件的 hash 值。
+The `{hash}` parameter is the hash value of the material file.
 
-### 参数
+### Parameters
 
-| 名称   | 类型      | 描述                                                         |
-| ------ | --------- | ------------------------------------------------------------ |
-| `size` | `integer` | 头像大小。注意这不是最终生成的图片尺寸大小。                 |
-| `3d`   | `any`     | 当此参数存在时，将生成一个类似有「3D」效果的头像，而不是头像的正面图。 |
-| `png`  | `any`     | 当此参数存在时，将返回 PNG 格式图片；否则返回 WebP 格式。（但如果服务器的 GD 扩展不支持 WebP 则仍返回 PNG） |
+| Name | Type | Description |
+| ------ | --------- | -------------------------------- ---------------------------- |
+| `size` | `integer` | Avatar size. Note that this is not the final image size. |
+| `3d` | `any` | When this parameter is present, a "3D"-like avatar will be generated instead of a front view of the avatar. |
+| `png` | `any` | When this parameter exists, it will return the image in PNG format; otherwise, it will return in WebP format. (but still returns PNG if the server's GD extension does not support WebP) |
 
-### 响应
+### Response
 
-如果材质不存在，返回 404；正常返回 200。
+Returns 404 if the material does not exist; returns 200 normally.
 
-可通过响应头的 `Content-Type` 字段来判断图片格式。
+The image format can be determined by the `Content-Type` field of the response header.
 
-## 根据材质 TID 生成材质预览图
+## Generate material preview based on material TID
 
-生成并返回材质的正面和背面的预览图。
+Generates and returns a preview of the front and back of the material.
 
-```
+````
 GET /preview/{tid}
-```
+````
 
-其中 `{tid}` 参数为材质 TID。
+Where the `{tid}` parameter is the material TID.
 
-### 参数
+### Parameters
 
-| 名称   | 类型      | 描述                                                         |
-| ------ | --------- | ------------------------------------------------------------ |
-| `png`  | `any`     | 当此参数存在时，将返回 PNG 格式图片；否则返回 WebP 格式。（但如果服务器的 GD 扩展不支持 WebP 则仍返回 PNG） |
+| Name | Type | Description |
+| ------ | --------- | -------------------------------- ---------------------------- |
+| `png` | `any` | When this parameter exists, it will return the image in PNG format; otherwise, it will return in WebP format. (but still returns PNG if the server's GD extension does not support WebP) |
 
-### 响应
+### Response
 
-如果材质不存在，返回 404；正常返回 200。
+Returns 404 if the material does not exist; returns 200 normally.
 
-可通过响应头的 `Content-Type` 字段来判断图片格式。
+The image format can be determined by the `Content-Type` field of the response header.
 
-## 根据材质文件 hash 生成材质预览图
+## Generate a material preview image based on the material file hash
 
-生成并返回材质的正面和背面的预览图，并且不需要事先知道材质的 TID。
+Generates and returns a preview of the front and back of a material without prior knowledge of the material's TID.
 
-```
+````
 GET /preview/hash/{hash}
-```
+````
 
-其中 `{hash}` 参数为材质文件的 hash 值。
+The `{hash}` parameter is the hash value of the material file.
 
-### 参数
+### Parameters
 
-| 名称  | 类型  | 描述                                                         |
-| ----- | ----- | ------------------------------------------------------------ |
-| `png` | `any` | 当此参数存在时，将返回 PNG 格式图片；否则返回 WebP 格式。（但如果服务器的 GD 扩展不支持 WebP 则仍返回 PNG） |
+| Name | Type | Description |
+| ----- | ----- | ------------------------------------- ----------------------- |
+| `png` | `any` | When this parameter exists, it will return the image in PNG format; otherwise, it will return in WebP format. (but still returns PNG if the server's GD extension does not support WebP) |
 
-### 响应
+### Response
 
-如果材质不存在，返回 404；正常返回 200。
+Returns 404 if the material does not exist; returns 200 normally.
 
-可通过响应头的 `Content-Type` 字段来判断图片格式。
+The image format can be determined by the `Content-Type` field of the response header.

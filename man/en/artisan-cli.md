@@ -1,79 +1,79 @@
 # Artisan CLI
 
-Blessing Skin 允许您通过命令行对皮肤站进行一些操作。
+Blessing Skin allows you to do some things with the skin station via the command line.
 
 ::: tip
 
-这里的 CLI 是指服务器上的真实 Shell，不是 Blessing Skin Shell（即 Web CLI）。
+The CLI here refers to the real shell on the server, not the Blessing Skin Shell (ie Web CLI).
 
 :::
 
-## 启用插件
+## enable plugin
 
-通过以下命令可以启用一个插件：
+A plugin can be enabled with the following command:
 
-```
+````
 $ php artisan plugin:enable <name>
-```
+````
 
-其中 `name` 参数是必须的，为插件的唯一标识符（即插件信息中的 `name` 字段），如 `mojang-verification`。
+The `name` parameter is required, which is the unique identifier of the plugin (that is, the `name` field in the plugin information), such as `mojang-verification`.
 
-## 禁用插件
+## disable plugin
 
-通过以下命令可以禁用一个插件：
+A plugin can be disabled with the following command:
 
-```
+````
 $ php artisan plugin:disable <name>
-```
+````
 
-其中 `name` 参数是必须的，为插件的唯一标识符（即插件信息中的 `name` 字段），如 `mojang-verification`。
+The `name` parameter is required, which is the unique identifier of the plugin (that is, the `name` field in the plugin information), such as `mojang-verification`.
 
-## 缓存站点选项
+## Cache site options
 
-此命令没有参数，用法如下：
+This command has no parameters and is used as follows:
 
-```
+````
 $ php artisan options:cache
-```
+````
 
-执行此命令后，Blessing Skin 将在 `storage` 目录下生成一个 `options.php` 文件。此文件即为缓存。
+After executing this command, Blessing Skin will generate an `options.php` file in the `storage` directory. This file is the cache.
 
-以后每次访问站点时，Blessing Skin 都会从这里加载所有的站点选项，而不读取数据库。
+Every time you visit the site in the future, Blessing Skin will load all site options from here without reading the database.
 
-::: tip 提示：
-在生成缓存之后，你在站点管理面板中对任何设置进行的一切修改都不会生效（因为它们是写进数据库的）。如果你希望在更改设置后使新设置生效，重新执行这条命令就可以更新缓存。
+::: tip:
+After the cache is generated, any changes you make to any settings in the site admin panel will not take effect (as they are written to the database). If you want the new settings to take effect after changing the settings, re-execute this command to update the cache.
 :::
 
-如果希望停止缓存，直接删除 `storage/options.php` 文件即可。
+If you want to stop caching, just delete the `storage/options.php` file.
 
-## （重新）生成 APP_KEY
+## (re)generate APP_KEY
 
-`APP_KEY` 用于对用户的 Session 等数据进行加密，因此它是必须的。
+`APP_KEY` is used to encrypt the user's Session and other data, so it is required.
 
-在首次安装 Blessing Skin 之前，您应该执行以下命令来生成 `APP_KEY`:
+Before installing Blessing Skin for the first time, you should execute the following command to generate `APP_KEY`:
 
-```
+````
 $ php artisan key:generate
-```
+````
 
-如果对现有的站点执行上述命令，则会重新生成 `APP_KEY`，但要注意用户登录状态会失效。（密码不会受到影响）
+If the above command is executed on an existing site, the `APP_KEY` will be regenerated, but be aware that the user login status will be invalidated. (password will not be affected)
 
-## （重新）生成盐
+## (re)generate salt
 
-如果您使用的密码加密算法使用了盐，则可以通过下面的命令来生成新的盐：
+If the password encryption algorithm you are using uses a salt, you can generate a new salt with the following command:
 
-```
+````
 $ php artisan salt:random
-```
+````
 
-## 安装 Blessing Skin
+## Install Blessing Skin
 
-您可以以命令行的方式来安装 Blessing Skin。要注意的是，在执行安装前，请手动配置好 `.env` 文件，包括数据库连接等信息。
+You can install Blessing Skin from the command line. It should be noted that before performing the installation, please manually configure the `.env` file, including database connection and other information.
 
-命令用法如下：
+The command usage is as follows:
 
-```
+````
 $ php artisan bs:install <email> <password> <nickname>
-```
+````
 
-这将自动完成 Blessing Skin 的安装，并根据您给定的邮箱、密码和昵称来创建一个超级管理员。
+This will automatically complete the installation of Blessing Skin and create a super administrator based on your given email, password and nickname.

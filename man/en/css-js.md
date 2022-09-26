@@ -1,51 +1,51 @@
-# 自定义 CSS、JavaScript
+# Custom CSS, JavaScript
 
-Blessing Skin 后台的「个性化」配置页面提供了「自定义 CSS JavaScript」功能，可以将自定义代码插入每一个页面中，可以方便快捷地修改皮肤站的默认样式、实现某些特殊的功能等等。
+The "Personalization" configuration page in the background of Blessing Skin provides the "custom CSS JavaScript" function, which can insert custom code into each page, which can easily and quickly modify the default style of the skin station, realize some special functions, etc. .
 
-这个功能比较简单，原理就是直接将自定义的 CSS、JavaScript 代码插入到每个页面中的 `<style>` 与 `<script>` 标签中。想要实现更加复杂的功能的话，你可以为 Blessing Skin 写一个插件。
+This function is relatively simple. The principle is to directly insert custom CSS and JavaScript code into the `<style>` and `<script>` tags in each page. For more complex functionality, you can write a plugin for Blessing Skin.
 
-## 自定义登录/注册页背景图片
+## Custom login/registration page background image
 
-CSS：
+CSS:
 
-```css
-/* 修改成自己的图片地址 */
+````css
+/* Modify to your own image address */
 .login-page {
     background-image: url("http://i2.muimg.com/1949/e560362e63a9080e.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 0;
 }
-```
+````
 
-## 为 3D 皮肤预览中的模型添加阴影
+## Add shadow to model in 3D skin preview
 
-CSS（其中参数自行调整，详见 [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow)）：
+CSS (in which the parameters are adjusted by themselves, see [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow) for details):
 
-```css
+````css
 #previewer canvas {
   filter: drop-shadow(-5px 5px 10px rgba(0, 0, 0, 0.3));
 }
-```
+````
 
 ![Screenshot_20200628_101205.png](https://i.loli.net/2020/06/28/sZVIqLtxUA5SwYR.png)
 
-## 自定义关闭注册后首页的按钮文字
+## Customize the button text of the home page after closing the registration
 
 JavaScript:
 
-```js
+````js
 document.querySelector('.main-button').textContent = 'xxx'
-```
+````
 
-## 添加首页导航链接
+## Add homepage navigation link
 
 JavaScript:
 
-导航栏左侧添加
+Add to the left of the navigation bar
 
-```js
-const navL = document.querySelector('.navbar-header') // 导航栏左侧
+````js
+const navL = document.querySelector('.navbar-header') // left side of navigation bar
 
 const link = document.createElement('a')
 link.href = 'https://localhost/'
@@ -53,12 +53,12 @@ link.className = 'navbar-brand'
 link.textContent = 'Home'
 
 navL.appendChild(link)
-```
+````
 
-导航栏右侧添加
+Add to the right of the navigation bar
 
-```js
-const navR = document.querySelector('.navbar-custom-menu > ul:nth-child(1)') // 导航栏右侧
+````js
+const navR = document.querySelector('.navbar-custom-menu > ul:nth-child(1)') // right side of navigation bar
 
 const item = document.createElement('li')
 item.className = 'nav-item'
@@ -70,4 +70,4 @@ link.textContent = 'Home'
 item.appendChild(link)
 
 navL.appendChild(item)
-```
+````

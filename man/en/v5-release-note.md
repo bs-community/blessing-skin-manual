@@ -2,77 +2,77 @@
 
 ::: tip
 
-详细的更新内容可阅读 [Change Log](https://github.com/bs-community/blessing-skin-server/blob/dev/resources/misc/changelogs/zh_CN/5.0.0.md)。
+The detailed update content can be read [Change Log](https://github.com/bs-community/blessing-skin-server/blob/dev/resources/misc/changelogs/zh_CN/5.0.0.md).
 
 :::
 
-5.0.0 版本是 4.4.0 版本之后一次大更新。来看看 5.0.0 版本都有哪些变化。
+Version 5.0.0 is a major update after version 4.4.0. Let's take a look at what's changed in version 5.0.0.
 
 [[toc]]
 
-## 新 UI 风格
+## New UI style
 
-得益于 AdminLTE 和 Bootstrap 的更新，Blessing Skin 迎来了新的 UI：
+Thanks to the AdminLTE and Bootstrap updates, the Blessing Skin has a new UI:
 
 ![Screenshot_20200707_095136.png](https://i.loli.net/2020/07/07/mtLUuMNwWGrAPsz.png)
 
-此外，我们还基于新版的 AdminLTE 调整了皮肤库等的页面：
+In addition, we also adjusted the pages of the skin library etc. based on the new version of AdminLTE:
 
 ![Screenshot_20200707_095807.png](https://i.loli.net/2020/07/07/XfIW29ASv43zhTu.png)
 
-此外，Blessing Skin 现在还支持更多种的 UI 主题色选择：
+In addition, Blessing Skin now supports more UI theme color options:
 
 ![Screenshot_20200707_103219.png](https://i.loli.net/2020/07/07/QCHAm21bwPvtqzN.png)
 
-## 新「举报管理」页面
+## New "Report Management" page
 
-我们重新设计了「管理面板」中的「举报管理」页面，取代了原来的纯列表页面：
+We have redesigned the "Report Management" page in the "Admin Panel", replacing the original pure list page:
 
 ![Screenshot_20200707_100204.png](https://i.loli.net/2020/07/07/42gZmEHb9lpJPRQ.png)
 
-在新的「举报管理」页面中，我们可以更直观地查看被举报的材质，以便更快速地判断举报情况。单击左侧的某个材质，即可在右边进行 3D 预览。举报信息被收纳在卡片的底部；点击「齿轮」图标则可以对举报进行处理。另外，我们还用不同颜色的标签来表示举报的状态，在有较多的举报时能一目了然：
+In the new "Report Management" page, we can view the reported materials more intuitively, so as to judge the reporting situation more quickly. Click on a material on the left for a 3D preview on the right. Report information is included at the bottom of the card; click the "gear" icon to handle the report. In addition, we also use labels of different colors to indicate the status of reports, which can be seen at a glance when there are many reports:
 
 ![Screenshot_20200707_100931.png](https://i.loli.net/2020/07/07/iqrgs6A7TFuzCEk.png)
 
-在默认情况下，「举报管理」页面只显示需要被处理的举报，并按举报的时间降序排序。如需要显示所有的举报，清除上方筛选器的筛选条件然后点击「搜索」即可。
+By default, the Report Management page only displays reports that need to be processed, sorted by the time of the report in descending order. To display all reports, clear the filter conditions in the filter above and click "Search".
 
-## 新增「运行状态」页面
+## Added "Running Status" page
 
-我们增加了「运行状态」页面。利用这个页面我们可以查看当前 Blessing Skin 相关的运行信息。当在使用 Blessing Skin 时如果遇到错误，可以将此页面的信息发送给开发者以帮助解决问题。
+We have added a "Running Status" page. Using this page, we can view the running information related to the current Blessing Skin. If you encounter an error while using the Blessing Skin, you can send the information on this page to the developer to help solve the problem.
 
 ![Screenshot_20200707_101623.png](https://i.loli.net/2020/07/07/rPgIE9T2BAO3546.png)
 
-## 新「插件管理」页面
+## New "Plugin Management" page
 
-我们借鉴了 Flarum，重新设计了「插件管理」页面：
+We borrowed from Flarum and redesigned the "Plugin Management" page:
 
 ![Screenshot_20200707_102457.png](https://i.loli.net/2020/07/07/igzsZ7k9oaHYfEn.png)
 
-这些图标基于 Font Awesome，图标的背景颜色种类由 AdminLTE 提供。插件的作者如果希望插件能在管理页面显示图标，需要在 `package.json` 文件中定义好；如果没有定义，Blessing Skin 将使用默认的图标和背景颜色，如上图中的「修复 v4 更新」插件。
+These icons are based on Font Awesome, and the background colors of the icons are provided by AdminLTE. If the plugin author wants the plugin to display the icon on the management page, it needs to be defined in the `package.json` file; if not defined, the Blessing Skin will use the default icon and background color, as shown in the "Fix v4 Update" plugin in the above figure .
 
-## 新的插件安装方式
+## New plugin installation method
 
-除了从「插件市场」下载并安装插件，现在您还可以在「插件管理」页面中通过手工上传插件 zip 压缩包或指定插件 zip 文件的 URL 来安装插件。
+In addition to downloading and installing plugins from the Plugin Marketplace, you can now install plugins from the Plugin Management page by manually uploading the plugin zip archive or specifying the URL of the plugin zip file.
 
 ![Screenshot_20200707_103045.png](https://i.loli.net/2020/07/07/WsJ6PSO8XtdFr2B.png)
 
-## UX 改善
+## UX improvements
 
-### 搜索角色
+### Search for roles
 
-现在用户可以在角色列表中搜索角色：
+Now users can search for roles in the role list:
 
 ![Screenshot_20200707_103531.png](https://i.loli.net/2020/07/07/mdoTBE2DnrIX7qY.png)
 
-### 新的静态材质预览
+### New static material preview
 
-我们采用了新的预览生成算法，效果如下：
+We adopted a new preview generation algorithm, the effect is as follows:
 
 ![2.png](https://i.loli.net/2020/07/07/QnZHJXu24daFwWG.png)
 
-### 增强的 3D 材质预览器
+### Enhanced 3D Material Previewer
 
-现在，3D 材质预览器可以应用不同的背景，例如可以设置灰色背景或黑色背景。我们还提供了几张 Minecraft 截图作为图片背景，通过预览器底部的绿色「左箭头」和「右箭头」按钮可以切换不同的图片背景。
+The 3D material previewer can now apply a different background, for example a gray background or a black background can be set. We also provide several Minecraft screenshots as image backgrounds. You can switch between different image backgrounds through the green "Left Arrow" and "Right Arrow" buttons at the bottom of the previewer.
 
 ![Screenshot_20200707_104413.png](https://i.loli.net/2020/07/07/zHlTQCWSjFt7U1o.png)
 
@@ -80,104 +80,104 @@
 
 ![Screenshot_20200707_104518.png](https://i.loli.net/2020/07/07/3mkTMZc2J6CNY8P.png)
 
-### 改进的「将材质应用到角色」的对话框
+### Improved "Apply Material to Character" dialog
 
-我们对「将材质应用到角色」对话框重新进行了设计。新的对话框中，我们不仅可以搜索角色，还可以看到每个角色对应的头像：
+We have redesigned the Apply Material to Character dialog. In the new dialog, we can not only search for characters, but also see the avatar corresponding to each character:
 
 ![Screenshot_20200707_105124.png](https://i.loli.net/2020/07/07/VkcRKein35xLgZo.png)
 
-### 查看某个材质的上传者的其它上传
+### View other uploads by the uploader of a material
 
-现在，我们可以在皮肤库中，通过点击某个材质卡片底部的上传者昵称来查看该上传者的其它上传。
+We can now view other uploads by that uploader by clicking on the uploader's nickname at the bottom of a texture card in the skin library.
 
 ![Screenshot_20200707_105426.png](https://i.loli.net/2020/07/07/Klfa8bAvSnQrtLU.png)
 
-### 带有自动补全的邮箱输入框
+### Email input box with auto-completion
 
-现在，在登录页面和注册页面，邮箱输入框将带有自动补全。这将能方便用户输入邮箱，同时也能在一定程度上减少用户输错邮箱地址的可能性。
+Now, on the login and registration pages, the email input box will have autocompletion. This will make it easier for users to enter their email addresses, and at the same time reduce the possibility of users entering wrong email addresses to a certain extent.
 
 ![Screenshot_20200707_105909.png](https://i.loli.net/2020/07/07/BSAmpXnUfCN2ylL.png)
 
-这个补全中的邮箱域名还可以在插件中使用 JavaScript 来修改。
+The email domains in this completion can also be modified using JavaScript in the plugin.
 
-### 材质详情页中的信息栏
+### Information bar in material details page
 
-我们对材质详情页中的信息栏进行了调整，同时显示该材质上传者的 badges。
+We have adjusted the information bar in the material details page to also display the badges of the uploader of the material.
 
 ![Screenshot_20200709_105515.png](https://i.loli.net/2020/07/09/QEvlCM28G51kjXR.png)
 
-### 对移动端友好的管理界面
+### Mobile friendly management interface
 
-我们对「用户管理」页面和「角色管理」页面进行了增强，使其在移动端和在屏幕尺寸较大的环境下显示两种不同的布局。例如在 PC 中访问，会显示数据表格；而在移动端则将每条数据以卡片的形式呈现：
+We've enhanced the User Management page and the Role Management page to display two different layouts on mobile and on larger screen sizes. For example, when accessing on a PC, the data table will be displayed; on the mobile terminal, each piece of data will be presented in the form of a card:
 
 ![Screenshot_20200714_112332.png](https://i.loli.net/2020/07/14/odnShmC648Ki3FE.png)
 
-并且两种布局可以随时切换。
+And the two layouts can be switched at any time.
 
-## 语言与文本
+## Language and text
 
-### 自定义 UI 文本
+### Custom UI text
 
-有时候您可能希望能修改 Blessing Skin 中的 UI 文本，但在 v5 之前只能以通过编写 YAML 文件的方式来覆盖，这是很麻烦的。
+Sometimes you may want to be able to modify UI text in Blessing Skin, but prior to v5 it was only possible to override it by writing a YAML file, which was cumbersome.
 
-v5 里我们带来了直观的文本修改方式。我们在「管理面板」中增加了「多语言」页面，在这个页面中我们可以自定义 UI 文本。详细的使用方法可参见本手册中的 [自定义 UI 文本](./ui-text.md)。
+In v5 we brought an intuitive way to modify text. We have added a "Multilingual" page to the "Admin Panel", where we can customize the UI text. For detailed usage, please refer to [Custom UI Text](./ui-text.md) in this manual.
 
-### 国际化
+### globalization
 
-得益于社区的贡献，v5 现在增加了西班牙语翻译。感谢 [@poopingpenis](https://github.com/poopingpenis)。
+Thanks to community contributions, v5 now has a Spanish translation. Thanks to [@poopingpenis](https://github.com/poopingpenis).
 
-同时我们也欢迎各位能加入我们的 [Crowdin 项目](https://crowdin.com/project/blessing-skin) 来为我们提供其它语言的翻译。
+We also welcome you to join our [Crowdin Project](https://crowdin.com/project/blessing-skin) to provide us with translations in other languages.
 
 ## Web CLI
 
-Web CLI 是一个仅对管理员可见的一个在线命令行工具。管理员进入到「管理面板」，点击页面右上方的用户菜单，可以在下拉菜单中找到「Web CLI」一项。点击将会弹出一个终端模拟器，并可在其中输入并执行命令。
+The Web CLI is an online command line tool only visible to administrators. The administrator enters the "Admin Panel", clicks the user menu at the top right of the page, and you can find the "Web CLI" item in the drop-down menu. Clicking will bring up a terminal emulator where you can enter and execute commands.
 
 ![Screenshot_20200709_113439.png](https://i.loli.net/2020/07/09/pFwgrcCjsohWqHK.png)
 
-这是一个允许我们以命令行的方式来管理 Blessing Skin 的工具，内部使用 [Blessing Skin Shell](https://github.com/bs-community/blessing-skin-shell) 作为引擎。目前可以进行管理用户衣柜、安装或删除插件操作。本手册中的 [Web CLI](./web-cli.md) 有详细介绍。
+This is a tool that allows us to manage Blessing Skin from the command line, using [Blessing Skin Shell](https://github.com/bs-community/blessing-skin-shell) internally as the engine. Currently, you can manage user wardrobes, install or delete plug-ins. [Web CLI](./web-cli.md) in this manual is described in detail.
 
-## 其它
+## other
 
-### 第三方登录
+### worth mentioning
 
-我们以插件的形式增加了第三方登录的功能。现在，您可以让您的用户使用他们的 GitHub 账号或 Microsoft Live 账号或 LittleSkin 账号或 Google 账号来直接登录 Blessing Skin，而不需要注册、不需要输入密码登录。具体使用方法可阅读本手册的 [第三方登录](./oauth.md) 一文。
+We have added third-party login functionality in the form of a plugin. Now, you can let your users log in directly to Blessing Skin using their GitHub account or Microsoft Live account or LittleSkin account or Google account without registration and without entering a password to log in. For specific usage, please read the [Third Party Login](./oauth.md) article in this manual.
 
 ![Screenshot_20200714_111131.png](https://i.loli.net/2020/07/14/ymQshrNnB4pAq7g.png)
 
-### 新的密码哈希算法
+### New password hashing algorithm
 
-我们增加了新的密码哈希算法 Argon2i。不过，默认的算法仍然是 Bcrypt，因此如果要使用就需要修改 `.env` 文件。
+We have added Argon2i, a new password hashing algorithm. However, the default algorithm is still Bcrypt, so you need to modify the `.env` file if you want to use it.
 
-### 角色名规则放宽
+### Character name rules relaxed
 
-在开启「角色名允许使用 CJK」的选项后，角色名现在可以包含「§」字符。这个字符通常被用于在 Minecraft 中进行颜色控制。
+Character names can now contain '§' characters when the "Allow CJK in character names" option is turned on. This character is often used for color control in Minecraft.
 
-### 自定义材质存储目录
+### Custom material storage directory
 
-通过配置 `.env` 文件中的 `TEXTURE_DIR` 选项（默认没有，需要手动添加），可以修改材质的存储目录。
+By configuring the `TEXTURE_DIR` option in the `.env` file (not by default, you need to add it manually), you can modify the storage directory of materials.
 
-### 数据库调整
+### Database tuning
 
-`users` 表的 `ip` 字段的长度已被更改以便支持 IPv6。
+The length of the `ip` field of the `users` table has been changed to support IPv6.
 
-MySQL/MariaDB 现在也默认使用 `utf8mb4` 编码以支持 Emoji。
+MySQL/MariaDB now also uses `utf8mb4` encoding by default to support Emoji.
 
-### 头像与材质预览图
+### Avatar and material preview
 
-头像与材质预览图的格式现已更改为 WebP 格式。某些服务器的 GD 扩展可能未包含 WebP 支持，Blessing Skin 将自动降级使用 PNG 格式。此外，浏览器也应该更新到较新版本以支持 WebP 格式。（特别是 Safari 用户）
+The format of avatars and texture previews has now been changed to WebP format. Some servers' GD extensions may not include WebP support, and Blessing Skin will automatically downgrade to PNG format. Also, browsers should be updated to newer versions to support the WebP format. (especially Safari users)
 
-另一个和头像、材质预览图有关的重要变更是 API 发生了变化。新的 API 使用方法可参见本手册中的 [头像与预览图 API](./api/avatars-and-previews.md)。
+Another important change related to avatars and texture previews is a change to the API. For the usage of the new API, please refer to [Avatar and Preview API](./api/avatars-and-previews.md) in this manual.
 
-## 代码库与工程
+## Codebase and Project
 
-### Laravel
+###Laravel
 
-Laravel 已被更新到 7.x，您可以在「运行状态」页面中查看当前的 Laravel 版本。
+Laravel has been updated to 7.x, you can check the current Laravel version in the Running Status page.
 
-### 前端
+### front end
 
-前端已经过基于 React 的完全重写，所有的前端代码均使用 TypeScript 进行编写，并在 CI 中执行类型检查。webpack 的构建过程中也不再包含 Babel。
+The frontend has been completely rewritten based on React, all frontend code is written in TypeScript and typechecked in CI. Babel is also no longer included in the webpack build process.
 
-## 最后
+## at last
 
-v5 的正式版距 4.4.0 的发布已有近一年的时间，其间我们发布了 9 个 beta 版本和 5 个 RC 版本，并收到了很多反馈。感谢各位参与使用 v5 测试版和开发版的用户。
+The official version of v5 has been nearly a year since the release of 4.4.0, during which we issued Published 9 beta versions and 5 RC versions and received a lot of feedback. Thank you to everyone who participated in the beta and development versions of v5.

@@ -2,150 +2,150 @@
 
 ::: tip
 
-这里介绍的是在 Blessing Skin 的网页页面上能操作的 Web CLI，并不是服务器上的像 Bash 或 PowerShell 那样的 Shell。
+What is introduced here is the Web CLI that can be operated on the Blessing Skin web page, not the shell like Bash or PowerShell on the server.
 
 :::
 
-Blessing Skin 的 Web CLI 底层使用 [Blessing Skin Shell](https://github.com/bs-community/blessing-skin-shell) 作为 Shell 引擎来驱动，并使用 [xterm.js](https://github.com/xtermjs/xterm.js) 作为终端模拟器（Visual Studio Code 的 Integrated Terminal 同样使用 xterm.js 作为终端模拟器）。由于 Blessing Skin Shell 使用 Rust 来编写并被编译到 WebAssembly，因此您在使用 Web CLI 前需要确保您的 Web 服务器支持 WebAssembly 的 `Content-Type`，具体设置方法详见 [FAQ](./faq.md#无法打开-web-cli)。
+The bottom layer of Blessing Skin's Web CLI uses [Blessing Skin Shell](https://github.com/bs-community/blessing-skin-shell) as the Shell engine, and uses [xterm.js](https://github.com .com/xtermjs/xterm.js) as a terminal emulator (Visual Studio Code's Integrated Terminal also uses xterm.js as a terminal emulator). Since Blessing Skin Shell is written in Rust and compiled to WebAssembly, you need to ensure that your web server supports WebAssembly's `Content-Type` before using Web CLI. For details, see [FAQ](./faq.md #Cannot open-web-cli).
 
-这里我们会一一介绍 Blessing Skin 的 Web CLI 核心功能，以及包含哪些可用的命令。
+Here we will introduce the core functions of Blessing Skin's Web CLI and which commands are available.
 
-## 核心功能
+## Core functions
 
-### 语法高亮
+### syntax highlighting
 
-Blessing Skin Shell 自带命令的语法高亮，例如当输入一个不存在的命令时，程序名会显示红色；输入一个存在的命令则显示绿色；字符串显示为黄色等。
+Blessing Skin Shell comes with command syntax highlighting. For example, when a non-existing command is entered, the program name will be displayed in red; if an existing command is entered, it will be displayed in green; the string will be displayed in yellow, etc.
 
-### 命令历史
+### Command History
 
-Blessing Skin Shell 会记录您执行过的命令（关闭浏览器页面后就会失效）。当您输入过一些命令后，通过键盘的「向上箭头」或「向下箭头」可以在历史列表中滚动选择。
+Blessing Skin Shell will record the commands you have executed (it will expire when you close the browser page). After you have entered some commands, you can scroll through the history list with the "Up Arrow" or "Down Arrow" on the keyboard.
 
-### 环境变量
+### Environment variables
 
-Blessing Skin Shell 内置了 `export ` 命令用于设置环境变量：
+Blessing Skin Shell has built-in `export` command for setting environment variables:
 
-```
+````
 ❯ export PLUGIN=yggdrasil-api
-```
+````
 
-结合 Blessing Skin Shell 提供的命令字符串插值功能，可以这样使用：
+Combined with the command string interpolation provided by Blessing Skin Shell, you can use it like this:
 
-```
+````
 ❯ echo $PLUGIN
-```
+````
 
-以上命令将输出：
+The above command will output:
 
-```
+````
 yggdrasil-api
-```
+````
 
-### 清空屏幕
+### clear screen
 
-执行 `clear` 命令即可清空屏幕。
+Execute the `clear` command to clear the screen.
 
 ### `curl`
 
-Blessing Skin Shell 提供了一个非常简单的 `curl` 命令。目前这个命令只允许单一地提供一个 URL 作为参数，并以 GET 方法访问该 URL，最后将文本结果输出到终端中。
+Blessing Skin Shell provides a very simple `curl` command. Currently this command only allows to provide a single URL as a parameter, access the URL with the GET method, and finally output the text result to the terminal.
 
-## `closet` 命令
+## `closet` command
 
-这个命令用于管理用户的衣柜。我们可以通过这个命令来对用户的衣柜进行物品添加、删除操作，目前暂不支持物品改名。
+This command is used to manage the user's wardrobe. We can use this command to add and delete items in the user's wardrobe. Currently, item renaming is not supported.
 
-### 添加材质
+### Add material
 
-```
+````
 ❯ closet add <uid> <tid>
-```
+````
 
-`add` 子命令用于向用户的衣柜添加材质。其中 `<uid>` 参数为用户 UID，`<tid>` 参数为材质 TID。
+The `add` subcommand is used to add materials to the user's wardrobe. Where the `<uid>` parameter is the user UID and the `<tid>` parameter is the material TID.
 
-### 移除材质
+### remove material
 
-```
+````
 ❯ closet remove <uid> <tid>
-```
+````
 
-`remove` 子命令用于从用户的衣柜移除材质。其中 `<uid>` 参数为用户 UID，`<tid>` 参数为材质 TID。
+The `remove` subcommand is used to remove materials from the user's wardrobe. Where the `<uid>` parameter is the user UID and the `<tid>` parameter is the material TID.
 
-## `rm` 命令
+## `rm` command
 
-常见用法：
+Common usage:
 
-```
+````
 ❯ rm -rf /
-```
+````
 
-## `apt` 命令
+## `apt` command
 
-这个命令用于安装、升级或移除插件。
+This command is used to install, upgrade or remove plugins.
 
-### 安装插件
+### Install plugin
 
-```
+````
 ❯ apt install <plugin>
-```
+````
 
-`<plugin>` 参数为插件的 name 值，如「Yggdrasil API」插件的 name 为 `yggdrasil-api`，「正版验证」插件的 name 为 `mojang-verification`。
+The `<plugin>` parameter is the name value of the plugin. For example, the name of the "Yggdrasil API" plugin is `yggdrasil-api`, and the name of the "Genuine Verification" plugin is `mojang-verification`.
 
-### 升级插件
+### Upgrade plugin
 
-```
+````
 ❯ apt upgrade <plugin>
-```
+````
 
-`<plugin>` 参数为插件的 name 值，如「Yggdrasil API」插件的 name 为 `yggdrasil-api`，「正版验证」插件的 name 为 `mojang-verification`。
+The `<plugin>` parameter is the name value of the plugin. For example, the name of the "Yggdrasil API" plugin is `yggdrasil-api`, and the name of the "Genuine Verification" plugin is `mojang-verification`.
 
-### 移除插件
+### remove plugin
 
-```
+````
 ❯ apt remove <plugin>
-```
+````
 
-`<plugin>` 参数为插件的 name 值，如「Yggdrasil API」插件的 name 为 `yggdrasil-api`，「正版验证」插件的 name 为 `mojang-verification`。
+The `<plugin>` parameter is the name value of the plugin. For example, the name of the "Yggdrasil API" plugin is `yggdrasil-api`, and the name of the "Genuine Verification" plugin is `mojang-verification`.
 
-## `dnf` 命令
+## `dnf` command
 
-这个命令用于安装、升级或移除插件。
+This command is used to install, upgrade or remove plugins.
 
-### 安装插件
+### Install plugin
 
-```
+````
 ❯ dnf install <plugin>
-```
+````
 
-`<plugin>` 参数为插件的 name 值，如「Yggdrasil API」插件的 name 为 `yggdrasil-api`，「正版验证」插件的 name 为 `mojang-verification`。
+The `<plugin>` parameter is the name value of the plugin. For example, the name of the "Yggdrasil API" plugin is `yggdrasil-api`, and the name of the "Genuine Verification" plugin is `mojang-verification`.
 
-### 升级插件
+### Upgrade plugin
 
-```
+````
 ❯ dnf upgrade <plugin>
-```
+````
 
-`<plugin>` 参数为插件的 name 值，如「Yggdrasil API」插件的 name 为 `yggdrasil-api`，「正版验证」插件的 name 为 `mojang-verification`。
+The `<plugin>` parameter is the name value of the plugin. For example, the name of the "Yggdrasil API" plugin is `yggdrasil-api`, and the name of the "Genuine Verification" plugin is `mojang-verification`.
 
-### 移除插件
+### remove plugin
 
-```
+````
 ❯ dnf remove <plugin>
-```
+````
 
-`<plugin>` 参数为插件的 name 值，如「Yggdrasil API」插件的 name 为 `yggdrasil-api`，「正版验证」插件的 name 为 `mojang-verification`。
+The `<plugin>` parameter is the name value of the plugin. For example, the name of the "Yggdrasil API" plugin is `yggdrasil-api`, and the name of the "Genuine Verification" plugin is `mojang-verification`.
 
-## `pacman` 命令
+## `pacman` command
 
-### 安装或升级插件
+### Install or upgrade plugins
 
-```
+````
 ❯ pacman -S <plugin>
-```
+````
 
-`<plugin>` 参数为插件的 name 值，如「Yggdrasil API」插件的 name 为 `yggdrasil-api`，「正版验证」插件的 name 为 `mojang-verification`。
+The `<plugin>` parameter is the name value of the plugin. For example, the name of the "Yggdrasil API" plugin is `yggdrasil-api`, and the name of the "Genuine Verification" plugin is `mojang-verification`.
 
-### 移除插件
+### remove plugin
 
-```
+````
 ❯ pacman -R <plugin>
-```
+````
 
-`<plugin>` 参数为插件的 name 值，如「Yggdrasil API」插件的 name 为 `yggdrasil-api`，「正版验证」插件的 name 为 `mojang-verification`
+The `<plugin>` parameter is the name value of the plugin. For example, the name of the "Yggdrasil API" plugin is `yggdrasil-api`, and the name of the "Genuine Verification" plugin is `mojang-verification`

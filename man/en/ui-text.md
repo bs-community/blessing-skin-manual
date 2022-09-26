@@ -1,67 +1,67 @@
-# 自定义 UI 文本
+# custom UI text
 
-从 Blessing Skin 5.0.0 开始，您可以在管理面板中的「多语言」页面自定义 Blessing Skin 上的 UI 文本（同时也包括后端返回的消息文本）。
+Starting from Blessing Skin 5.0.0, you can customize the UI text on the Blessing Skin (and also the message text returned by the backend) on the "Multilingual" page in the admin panel.
 
-## 理解概念
+## Understand concepts
 
-对于每一条文本，都有三个属性，分别是「分组」、「键」、「文本」。
+For each text, there are three attributes, namely "group", "key", "text".
 
-以用户仪表盘中关于积分系统介绍的那段文本为例，在 Blessing Skin 内部，是通过调用 `trans('user.score-intro.introduction')` 来获取该文本的。
+Take the text about the introduction of the score system in the user dashboard as an example. Inside the Blessing Skin, this text is obtained by calling `trans('user.score-intro.introduction')`.
 
-### 分组
+### Grouping
 
-上面的整个 `user.score-intro.introduction` 可被小数点分成三段，其中第一段就是「分组」。以刚刚的文本为例，这里的分组就是 `user`。
+The entire `user.score-intro.introduction` above can be divided into three segments by a decimal point, the first of which is the "grouping". Taking the text just now as an example, the grouping here is `user`.
 
-实际上，它是 Blessing Skin 目录下 `resources/lang/{xxx}/`（其中 `xxx` 为语种，如 `en` 或 `zh_CN`）下的文件名（不含扩展名，即 `.yml`）。
-例如，上面提到的那条文本就位于 `resources/lang/{xxx}/user.yml` 文件内。
-该目录下还有 `admin.yml`、`skinlib.yml` 等文件，所以相应地，它们的「分组」就是 `admin`、`skinlib`，依此类推。
+In fact, it is the file name (without extension, `.yml') under `resources/lang/{xxx}/` (where `xxx` is the language, such as `en` or `zh_CN`) in the Blessing Skin directory `).
+For example, the text mentioned above is in the `resources/lang/{xxx}/user.yml` file.
+There are also `admin.yml`, `skinlib.yml` and other files in this directory, so correspondingly, their "groups" are `admin`, `skinlib`, and so on.
 
-### 键
+### key
 
-还是以 `user.score-intro.introduction` 为例。键就是除了「分组」后剩下的部分。
-所以对于这条文本，它的键就是 `score-intro.introduction`。
+Again, take `user.score-intro.introduction` as an example. The key is what is left after the "grouping".
+So for this text, its key is `score-intro.introduction`.
 
-但要注意，在语言文件（YAML 文件）里，文件结构并不是像这个键那样为扁平化结构，而是树状结构，是嵌套的。
-打开 `resources/lang/{xxx}/user.yml` 文件，我们就可以发现，该条文本位于 `score-intro` 块中的 `introduction` 条。
+But it should be noted that in the language file (YAML file), the file structure is not a flat structure like this key, but a tree structure, which is nested.
+Open the `resources/lang/{xxx}/user.yml` file, we can find that this text is located in the `introduction` section of the `score-intro` block.
 
-### 文本
+### text
 
-就是该条目的具体文本内容。在大多数情况下，文本内容只能是单行的。
+is the specific text content of the entry. In most cases, the text content can only be a single line.
 
-## 添加新条目
+## add new entry
 
-在页面右方的表单可以添加新的条目，填写好「分组」、「键」、「文本」并提交后，如果该条文本在 Blessing Skin 有定义过，那么刷新页面即可生效。
+In the form on the right side of the page, you can add a new entry, fill in the "group", "key", "text" and submit it, if the text has been defined in Blessing Skin, then refresh the page to take effect.
 
-以修改「签到」按钮的文本为例。该条文本的分组是 `front-end`，键是 `user.sign`，文本则按您喜欢的去写，如「点此获取积分」。
-提交之后，刷新 `/user` 页面，就能看到按钮文本被更新。
+Take, for example, modifying the text of the "Sign In" button. The grouping of the text is `front-end`, the key is `user.sign`, and the text is written as you like, such as "click here to get points".
+After submitting, refresh the `/user` page to see the button text updated.
 
-如果需要修改其它语种下的文本，请先切换站点语言。例如要修改英文下的某条文本，就需要先切换到英文页面，再去修改。
-单单修改某一语种下的文本，不会影响其它语种下的内容。
+If you need to modify the text in other languages, please switch the site language first. For example, if you want to modify a text in English, you need to switch to the English page first, and then modify it.
+Just modifying the text in one language will not affect the content in other languages.
 
-## 修改现有条目
+## Modify existing entry
 
-在「多语言」页面的列表里，选择想要修改的条目，单击「修改」按钮，即可在弹出的提示窗口内对文本内容进行修改。
+In the list on the "Multilingual" page, select the item you want to modify, and click the "Modify" button to modify the text content in the pop-up prompt window.
 
-如果需要修改其它语种下的文本，请先切换站点语言。
+If you need to modify the text in other languages, please switch the site language first.
 
-注意，只能修改该条目的文本内容，不能修改分组或键。
+Note that only the text content of the entry can be modified, not the grouping or the key.
 
-## 删除条目
+## delete entry
 
-当您想将某条文本恢复为 Blessing Skin 的默认值，将该条目删除即可。
+When you want to restore a text to the default value of Blessing Skin, just delete the entry.
 
 ::: warning
-注意：删除某条目时，会同时删除该条目在所有语种下的内容。
+Note: When an entry is deleted, the content of the entry in all languages ​​will be deleted at the same time.
 :::
 
-## 被 JavaScript 渲染的文本
+## Text rendered by JavaScript
 
-由于 Blessing Skin 的不少前端页面都在浏览器基于 JavaScript 进行渲染，因此它们无法直接获取 `admin.yml`、`user.yml`、`skinlib.yml` 等语言文件的内容。
-对于这部分的语言文本，它们均为于 `front-end.yml`。上面提到的「签到」按钮就属于这种情况。
+Since many front-end pages of Blessing Skin are rendered in the browser based on JavaScript, they cannot directly obtain the content of language files such as `admin.yml`, `user.yml`, `skinlib.yml`, etc.
+For this part of the language text, they are in `front-end.yml`. This is the case with the "Sign In" button mentioned above.
 
-## 一点点技巧
+## A little trick
 
-由于 Blessing Skin 中存在大量的文本，对于多数用户也难以清楚某条文本的分组和键是什么。
+Due to the large amount of text in Blessing Skin, it is difficult for most users to know what the grouping and key of a certain text are.
 
-这里有个技巧：想修改某条文本，然后全局搜索该条文本的内容，看看它是位于哪个分组下的什么键。
-有时会遇到相同文本内容，但分组或键不同的情况，这时候拿这些不同的分组和键，多试几次就可以。
+Here's a trick: you want to modify a piece of text, and then search the content of the text globally to see what key it is under which group.
+Sometimes you will encounter the same text content, but different groups or keys. At this time, you can take these different groups and keys and try several times.

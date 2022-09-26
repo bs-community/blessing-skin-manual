@@ -1,67 +1,67 @@
-# 报告问题的正确姿势
+# Correct posture for reporting problems
 
-任何事物都不可能永远尽善尽美，Blessing Skin 也是如此。
+Nothing can always be perfect, and the same goes for Blessing Skin.
 
-因此，当你在使用 Blessing Skin 的途中遇到问题时（包括但不限于：你自己无法解决的报错、BUG、安全漏洞），不要气急败坏，请遵守下述规则向开发者提交错误报告。
+Therefore, when you encounter problems in the way of using Blessing Skin (including but not limited to: errors, bugs, security vulnerabilities that you cannot solve by yourself), don't be impatient, please follow the rules below to submit a bug report to the developer.
 
-## 我遇到了问题，我应该怎么做？
+## I have a problem, what should I do?
 
-首先，你应该确定这到底是不是 Blessing Skin 的锅：机器宕机、网络问题、甚至是你的浏览器出错都会导致你无法正常使用。因此，在向开发者报告问题之前，你应该先以自己的经验判断一下，这到底是不是 Blessing Skin 的锅。如果你自己判断不了，就在互联网上搜索一下吧，_Google is your friend_。
+First of all, you should determine whether this is the fault of Blessing Skin: machine downtime, network problems, or even an error in your browser will prevent you from using it normally. Therefore, before reporting a problem to the developer, you should first judge from your own experience whether this is the fault of Blessing Skin. If you can't judge for yourself, just search the internet, _Google is your friend_.
 
-其次，你应该好好阅读一遍 [常见问题解答](/faq.md)，并确保你的问题不在此列。很多情况下你遇到的问题也曾经坑过不少人，并且他们已经总结出了解决方法：那你为什么不看一看呢？
+Second, you should read the [FAQ](/faq.md) carefully and make sure your question is not listed here. In many cases, the problems you have encountered have also pitted many people, and they have summed up the solutions: why don't you take a look?
 
-确认你遇到的问题不在其中后，你可以着手准备错误报告了。
+Once you've confirmed that the problem you're encountering isn't one of them, you can start preparing a bug report.
 
 :::tip
-**推荐阅读：[《提问的智慧》](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)**
+**Recommended reading: ["The Wisdom of Asking"](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)**
 
-充分理解这篇文章可以帮助你更好地提问并更快地收到回复和正确的解答（不论何时何地）。但请注意，《提问的智慧》的创作团队仅是提供这一篇文章来指导你如何正确提问，他们并不提供针对任何问题的任何技术支持。**不要做白痴。**
+Fully understanding this article can help you ask better questions and receive responses and correct answers faster (no matter when and where). But please note that the creative team of "The Wisdom of Asking" is only providing this article to guide you on how to ask questions correctly, and they do not provide any technical support for any questions. **Don't be an idiot. **
 :::
 
-## 开发者不是神
+## Developers are not gods
 
-开发者是没法仅通过你的只言片语就定位问题的！
+Developers can't locate the problem with just a few words of yours!
 
-所以，报告问题的时候不要再直接一句「皮肤站不能用了」丢过来然后就再也没有下文了。在没有日志、报错截图等信息的辅助下，我 **不可能** 知道你发生了什么。
+Therefore, when reporting a problem, don't throw the sentence "The skin station can't be used anymore" and then there is no more text. Without the aid of logs, error screenshots, etc., I **impossible** to know what happened to you.
 
-## 我应该提供什么信息给开发者以帮助调试？
+## What information should I provide to the developer to help with debugging?
 
-这也要根据具体情况而定，我这里说几个通用的吧。
+This also depends on the specific situation, I will mention a few general ones here.
 
-### 报错截图
+### Error screenshot
 
-如果是 Blessing Skin 程序的问题，应该会有错误信息提示，请把这个提示截图发给我。
+If it is a problem with the Blessing Skin program, there should be an error message prompt, please send me a screenshot of this prompt.
 
-::: tip 提示：
-反馈之前请先将 `.env` 配置文件中的 `APP_DEBUG` 的值设置为 `true`，这样可以显示更多的调试信息。
+::: tip:
+Please set the value of `APP_DEBUG` in the `.env` configuration file to `true` before giving feedback, so that more debugging information can be displayed.
 :::
 
-### 日志
+### log
 
-错误日志是开发者的好朋友，所以报告问题时请带上这些日志：
+Error logs are a developer's best friend, so bring them with you when reporting a problem:
 
-1. 皮肤站日志（位于 `storage/logs/laravel.log`）；
+1. Skin station log (located in `storage/logs/laravel.log`);
 
-如果是游戏内皮肤无法显示等问题，你还需要带上你的皮肤 Mod 日志。例如，CustomSkinLoader 的日志（位于 `.minecraft/CustomSkinLoader/CustomSkinLoader.log`）。
+If the in-game skin cannot be displayed, etc., you also need to bring your skin mod log. For example, the log for CustomSkinLoader (located at `.minecraft/CustomSkinLoader/CustomSkinLoader.log`).
 
-如果是 Yggdrasil 外置登录的问题：
+If it is a Yggdrasil external login problem:
 
-- 游戏服务器从启动开始的所有日志
-- 游戏客户端从启动开始的所有日志
+- All logs from game server start-up
+- All logs of the game client since launch
 
-### 你的运行环境信息
+### Your operating environment information
 
-- 你的 PHP 版本是多少？
-- 你用的是什么 Web 服务器？Nginx/Apache？
-- 你用的什么数据库？版本是多少？
-- 你用什么浏览器访问程序时出现了问题？
-- 出现问题时浏览器地址栏上的 URL 是什么？
+- What is your PHP version?
+- What web server are you using? Nginx/Apache?
+- What database are you using? What is the version?
+- What browser are you using to access the program?
+- What was the URL on the browser's address bar when the problem occurred?
 
-等等……
+and many more……
 
-## 我该如何联系开发者？
+## How do I contact the developer?
 
 - GitHub Issues
-- 加入 Telegram 群组 [@blessing_skin](https://t.me/blessing_skin)
+- Join the Telegram group [@blessing_skin](https://t.me/blessing_skin)
 
-<iframe src="https://discord.com/widget?id=761226550921658380&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+<iframe src="https://discord.com/widget?id=761226550921658380&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups -to-escape-sandbox allow-same-origin allow-scripts"></iframe>

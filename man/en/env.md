@@ -1,166 +1,166 @@
-# 配置文件介绍
+# Configuration file introduction
 
-## 什么是 `.env`？
+## What is `.env`?
 
-`.env` 是一个文件，其中保存了 Blessing Skin 最基础的配置信息（数据库信息、密码安全、邮件发送配置等）。
+`.env` is a file that saves the most basic configuration information of Blessing Skin (database information, password security, email sending configuration, etc.).
 
-::: tip 提示：
-如果您使用 4.0.0 或以上版本，您在大多数情况下不需要手动配置 `.env` 文件——在安装的时候，我们会在浏览器中要求您填写数据库连接信息。
+::: tip:
+If you're using version 4.0.0 or above, you won't need to configure the `.env` file manually in most cases - during installation, we will ask you to fill in the database connection information in your browser.
 :::
 
-## 如何创建 `.env` 文件？
+## How to create a `.env` file?
 
-安装包中默认包含了一个 `.env.example` 配置模板文件，直接把它重命名为 `.env` 即可。
+The installation package contains a `.env.example` configuration template file by default, just rename it to `.env`.
 
-::: tip 提示：
-如果看不到 `.env.example` 这个文件，请打开你文件浏览器的「显示隐藏文件（以 `.` 开头的文件）」的选项。
+::: tip:
+If you don't see the `.env.example` file, turn on the "Show hidden files (files starting with `.`)" option in your file browser.
 :::
 
-重命名之前你也可以创建一个副本作为备份。
+You can also create a copy as a backup before renaming.
 
 --------------
 
-**对于 Windows 用户**，请遵循如下步骤：
+**For Windows users**, follow these steps:
 
-1. 右键 `.env.example` 文件并点击「重命名」；
-2. 在输入框中将该文件重命名为 `.env.`（**注意**，最后有一个点符号 `.`）；
-3. 按下回车确认，文件名最后的 `.` 将会自动消失；
-4. 你已完成重命名操作（是的，Windows 就是这么神秘）。
+1. Right-click the `.env.example` file and click "Rename";
+2. Rename the file to `.env.` in the input box (**NOTE**, there is a dot symbol `.` at the end);
+3. Press Enter to confirm, the `.` at the end of the file name will disappear automatically;
+4. You're done renaming (yes, Windows is so mysterious).
 
-当然您也可以在 PowerShell 中执行 `Rename-Item .env.example .env` 或在 CMD 中执行 `copy .env.example .env`。
+Of course you can also do `Rename-Item .env.example .env` in PowerShell or `copy .env.example .env` in CMD.
 
 --------------
 
-Linux 或 macOS 用户直接 `cp .env.example .env` 就好了。
+Linux or macOS users can simply `cp .env.example .env` just fine.
 
-## 配置文件字段详解
+## Configuration file field details
 
-为了支持国际化，我们把 `.env` 的注释换成通用的英文了，但是为了方便中文用户，下面介绍一下各个字段的含义。
+In order to support internationalization, we have replaced the `.env` comments with general English, but for the convenience of Chinese users, the meaning of each field is described below.
 
-### 应用基本选项
+### Apply basic options
 
 #### `APP_DEBUG`
 
-请务必在生产环境（线上环境）下关闭 `APP_DEBUG`（即设置为 `false`），不然你的数据库信息可能被泄露。
-相反，如果遇到什么错误要报告的话请开启这个选项以获得报错的详细堆栈信息。
+Please be sure to turn off `APP_DEBUG` (ie set to `false`) in the production environment (online environment), otherwise your database information may be leaked.
+Conversely, if you encounter any errors to report, turn on this option to get detailed stack information about the errors.
 
 #### `APP_ENV`
 
-生产环境下，请将 `APP_ENV` 设置为 `production`。仅在开发 Blessing Skin 时（如，您正在为 Blessing Skin 做贡献），才可将该配置项设为 `development`。（当 `WEBPACK_ENV` 为 `development` 时，所有前端资源均从 `webpack-dev-server` 中加载）
+In production environment, please set `APP_ENV` to `production`. Set this configuration item to `development` only when developing a Blessing Skin (e.g. you are contributing to a Blessing Skin). (When `WEBPACK_ENV` is `development`, all frontend assets are loaded from `webpack-dev-server`)
 
 #### `APP_FALLBACK_LOCALE`
 
-降级语言设置。如果 Blessing Skin 无法从浏览器和客户端中检测用户使用哪种语言，Blessing Skin 将使用这个选项所指定的值作为语言，默认为 `en` 即英语。
+Downgrade language settings. If Blessing Skin cannot detect from the browser and client which language the user is using, Blessing Skin will use the value specified by this option as the language, which defaults to `en` which is English.
 
-### 数据库相关
+### Database related
 
-- `DB_CONNECTION` 数据库的连接类型，目前支持 `mysql`、`sqlite`、`pgsql`，即分别为 MySQL（或 MariaDB）、SQLite 和 PostgreSQL。
-- `DB_HOST` 数据库主机，一般为 `localhost`
-- `DB_PORT` 数据库端口
-- `DB_DATABASE` 数据库名，自行修改
-- `DB_USERNAME` 数据库用户名
-- `DB_PASSWORD` 数据库用户密码
-- `DB_PREFIX` 数据表前缀，当你有在一个数据库中安装多个皮肤站的需求时，请为每个皮肤站设置不同的数据表前缀
+- `DB_CONNECTION` database connection type, currently supports `mysql`, `sqlite`, `pgsql`, namely MySQL (or MariaDB), SQLite and PostgreSQL respectively.
+- `DB_HOST` database host, usually `localhost`
+- `DB_PORT` database port
+- `DB_DATABASE` database name, modify it yourself
+- `DB_USERNAME` database username
+- `DB_PASSWORD` database user password
+- `DB_PREFIX` data table prefix, when you need to install multiple skin stations in one database, please set a different data table prefix for each skin station
 
-### 安全相关
+### Security related
 
-- `PWD_METHOD` 用户密码加密方式，可选的值有：
-	- `BCRYPT`（默认的）
-  - `ARGON2I`（需要 Blessing Skin v5 或更高版本）
+- `PWD_METHOD` user password encryption method, optional values ​​are:
+- `BCRYPT` (default)
+  - `ARGON2I` (requires Blessing Skin v5 or higher)
   - `PHP_PASSWORD_HASH`
   - `MD5`
-	- `SALTED2MD5`（加盐与不加的区别，下同）
+- `SALTED2MD5` (the difference between adding salt and not adding salt, the same below)
   - `SHA256`
-	- `SALTED2SHA256`
+- `SALTED2SHA256`
   - `SHA512`
-	- `SALTED2SHA512`
-- `SALT` 盐用于 Token 和密码加密
-- `APP_KEY` 用于框架内各种东西的加密，格式为 `"base64:".base64_encode(random_bytes(32))`
+- `SALTED2SHA512`
+- `SALT` salt for token and password encryption
+- `APP_KEY` is used to encrypt various things in the framework, the format is `"base64:".base64_encode(random_bytes(32))`
 
-**请注意，皮肤站安装好后请勿随意更改这些安全设置，否则会导致原有的用户无法登录。**
+**Please note that after the skin station is installed, please do not change these security settings at will, otherwise the original users will not be able to log in. **
 
-`SALT` 和 `APP_KEY` 都可以选择在安装时自动随机生成，您也可以选择在命令行中重新生成：
+Both `SALT` and `APP_KEY` can optionally be randomly generated at install time, or you can choose to regenerate them on the command line:
 
-```
-# 重新生成盐
+````
+# regenerate salt
 php artisan salt:random
 
-# 重新生成 APP_KEY
+# Regenerate APP_KEY
 php artisan key:generate
-```
+````
 
-### 邮件相关
+### Email related
 
-邮件配置主要用用户邮箱验证与发送密码重置邮件。
+Email configuration mainly uses user mailboxes to verify and send password reset emails.
 
-#### 如果你使用 SMTP，请添加以下字段（内容自行修改）：
+#### If you use SMTP, please add the following fields (modify the content yourself):
 
-- `MAIL_MAILER` 为 `smtp`（v4 及以前的用户，这一项应为 `MAIL_DRIVER`）
-- `MAIL_HOST` 为邮件服务器地址
-- `MAIL_PORT` 为邮件服务器端口，默认为 465
-- `MAIL_USERNAME` 为邮件服务器认证所需的用户名
-- `MAIL_PASSWORD` 为邮件服务器认证所需的密码
-- `MAIL_ENCRYPTION` 为加密方式
-- `MAIL_FROM_ADDRESS` 为发件人的邮件地址
-- `MAIL_FROM_NAME` 为发件人的名称，默认为空，可以填写成站点名
+- `MAIL_MAILER` is `smtp` (v4 and previous users, this item should be `MAIL_DRIVER`)
+- `MAIL_HOST` is the mail server address
+- `MAIL_PORT` is the mail server port, default is 465
+- `MAIL_USERNAME` is the username required for mail server authentication
+- `MAIL_PASSWORD` password required for mail server authentication
+- `MAIL_ENCRYPTION` is the encryption method
+- `MAIL_FROM_ADDRESS` is the sender's email address
+- `MAIL_FROM_NAME` is the sender's name, the default is empty, it can be filled in as the site name
 
-#### 如果您使用 SendGrid：
+#### If you use SendGrid:
 
-请在 `MAIL_USERNAME` 中填写 API Key，在 `MAIL_FROM_ADDRESS` 和 `MAIL_FROM_NAME` 中填写发件人的信息。
+Please fill in the API Key in `MAIL_USERNAME` and the sender's information in `MAIL_FROM_ADDRESS` and `MAIL_FROM_NAME`.
 
-#### 如果您使用 Mailgun，请添加以下字段：
+#### If you are using Mailgun, add the following fields:
 
-```
+````
 MAIL_DRIVER=mailgun
 MAIL_USERNAME=test@example.com
 MAILGUN_DOMAIN=example.com
 MAILGUN_SECRET=api-key
-```
+````
 
-#### 如果您使用 sendmail，请添加以下字段：
+#### If you are using sendmail, add the following fields:
 
-```
+````
 MAIL_DRIVER=sendmail
-SENDMAIL_COMMAND='/usr/sbin/sendmail -bs' #注意用引号包起来
-```
+SENDMAIL_COMMAND='/usr/sbin/sendmail -bs' #Be careful to wrap it in quotation marks
+````
 
-将 `MAIL_DRIVER` 设置为 `null` 即可停用所有邮件相关的功能。
+Set `MAIL_DRIVER` to `null` to disable all mail related features.
 
-### 驱动相关
+### Driver related
 
 - `CACHE_DRIVER`
 
-此项配置与缓存有关，默认为 `file`。可使用 `file`、 `memcached`、 `redis` 其中的一项。
+This configuration is related to caching and defaults to `file`. One of `file`, `memcached`, `redis` can be used.
 
 - `SESSION_DRIVER`
 
-此项配置与 Web 中的 Session（会话）有关，默认为 `file`。可使用 `file`、 `memcached`、 `cookie`、`redis` 其中的一项。
+This configuration is related to the Session in the web and defaults to `file`. One of `file`, `memcached`, `cookie`, `redis` can be used.
 
 - `QUEUE_CONNECTION`
 
-默认情况下，Blessing Skin 将以同步的方式发送通知。如果您的站点有较多的用户，当向全部用户发送通知时，站点将会变慢甚至请求超时。为此，您需要在此配置队列以提高性能。
+By default, Blessing Skin will send notifications synchronously. If your site has a large number of users, the site will slow down or even time out requests when sending notifications to all users. To do this, you need to configure the queue here to improve performance.
 
-这个配置项默认为 `sync`，即不使用任何队列。您可以根据需要将此配置项设为 `database`，此时队列信息将存储在数据库中；如果您有 Redis，推荐将此项设为 `redis`。
+This configuration item defaults to `sync`, which means no queue is used. You can set this configuration item to `database` as needed, and the queue information will be stored in the database; if you have Redis, it is recommended to set this item to `redis`.
 
-除了 `sync` 以外，不管使用哪种其它的队列，您都需要单独执行一个进程以保证队列正常运行。方法是：执行 `php artisan queue:work`，请保持这个命令的运行，不要退出。
+With the exception of `sync`, whichever other queues are used, you need to execute a separate process to keep the queues running properly. The method is: execute `php artisan queue:work`, please keep this command running and do not exit.
 
-### Redis 相关
+### Redis related
 
-如果条件允许，请为您的站点使用 Redis。Redis 作为内存数据库，能在一定程度上提升站点的性能。
+If possible, use Redis for your site. As an in-memory database, Redis can improve site performance to a certain extent.
 
-- `REDIS_CLIENT` 这一项的值只能为 `phpredis` 或 `predis`。如果您的站点有在使用 Redis，请安装 PHP 的 Redis 扩展，并将此值改为 `phpredis`。
-- `REDIS_HOST` Redis 数据库的主机地址，通常为 127.0.0.1，请根据您的实际情况进行修改。
-- `REDIS_PASSWORD` Redis 数据库密码。默认为 `null`，如果您有为 Redis 设置密码，请相应地修改此项。
-- `REDIS_PORT` Redis 数据库端口，默认为 6379。
+- The value of `REDIS_CLIENT` can only be `phpredis` or `predis`. If your site is using Redis, install the Redis extension for PHP and change this value to `phpredis`.
+- `REDIS_HOST` The host address of the Redis database, usually 127.0.0.1, please modify it according to your actual situation.
+- `REDIS_PASSWORD` Redis database password. Defaults to `null`, if you have a password set for Redis, please modify this accordingly.
+- `REDIS_PORT` Redis database port, default is 6379.
 
-### 插件相关
+### Plugin related
 
-通常您不需要修改这部分配置。
+Usually you do not need to modify this part of the configuration.
 
-- `PLUGINS_DIR` 此配置项会影响插件的存放位置，Blessing Skin 中的插件市场会把插件安装在此处，并从这个目录中读取并加载插件。请确保这个目录有可读写权限。保留 `null` 以使用默认值。从 5.0.0 起，您可以定义多个不同的插件目录，用英文状态下的逗号分开不同的路径即可。
+- `PLUGINS_DIR` This configuration item affects the storage location of the plugin, the plugin market in Blessing Skin will install the plugin here, and read and load the plugin from this directory. Make sure this directory has read and write permissions. Leave `null` to use the default value. From 5.0.0 onwards, you can define multiple different plugin directories by separating different paths with commas in English.
 
-- `PLUGINS_URL` 此配置项会影响插件中的前端资源文件 URL。建议保留 `null` 以使用默认值。
+- `PLUGINS_URL` This configuration item affects the frontend resource file URL in the plugin. It is recommended to keep `null` to use the default value.
 
-### 其它
+### Other
 
-- `UPDATE_SOURCE` 修改此项配置可更改 Blessing Skin 的更新源。（即，告诉 Blessing Skin 将从哪里获取新版本信息）如果您觉得默认的更新源速度慢，可更换为第三方源。（可用的第三方更新源见 [此处](/update-sources.md)）
+- `UPDATE_SOURCE` Modify this configuration to change the update source of Blessing Skin. (ie, tell Blessing Skin where to get the new version information) If you find the default update source slow, you can switch to a third-party source. (See [here](/update-sources.md) for available third-party update sources)

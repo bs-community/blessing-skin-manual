@@ -1,5 +1,5 @@
 # Yggdrasil API
 
-提问之前请确保你已经阅读过本文档中的 **所有条目**，并且确认你自己确实无法解决此问题。
+Please make sure you have read **all items** in this document before asking a question and that you really cannot solve this problem yourself.
 
-提问前，请在皮肤站的 .env 文件中添加 `YGG_VERBOSE_LOG` 一项并将值设置为 `true` 以开启「记录详细日志」功能（问题解决后记得关闭）。复现问题后，在提问的同时提供可用的日志文件（日志位于 `皮肤站根目录/storage/logs/yggdrasil.log`，其中可能含有敏感信息，请不要将其发送给你不信任的人）。
+Before asking a question, please add a `YGG_VERBOSE_LOG` entry in the .env file of the skin site and set the value to `true` to enable the "record verbose log" function (remember to turn it off after the problem is solved). After reproducing the problem, provide the available log file when asking the question (the log is located in `skin site root directory/storage/logs/yggdrasil.log`, which may contain sensitive information, please do not send it to people you don't trust) .

@@ -1,156 +1,156 @@
-# 搜索语法
+# search syntax
 
-从 Blessing Skin v5 起，「用户管理」和「角色管理」中的筛选和排序功能被整合到管理列表上方的搜索框中。通过运用符合语法的查询，可以实现灵活的筛选和排序。
+From Blessing Skin v5, the filtering and sorting functions in User Management and Role Management are integrated into the search box above the management list. Flexible filtering and sorting can be achieved by using syntactical queries.
 
-## 搜索
+## search
 
-### 精确搜索
+### Exact search
 
-列表中的大部分字段支持精确搜索。例如，查找 UID 为 1 的用户可以使用这样的查询：
+Most fields in the list support exact searches. For example, to find the user with UID 1 you can use a query like this:
 
-```
+````
 uid = 1
-```
+````
 
-也可以使用冒号（`:`，半角的）代替等号（`=`）：
+You can also use a colon (`:`, half-width) instead of the equal sign (`=`):
 
-```
+````
 uid: 1
-```
+````
 
-上面的语句中，空格不会影响查询。
+In the above statement, spaces do not affect the query.
 
-再来一些例子：
+Some more examples:
 
-查询某个邮箱地址对应的用户：
+Query the user corresponding to an email address:
 
-```
+````
 email = 'a@b.c'
-```
+````
 
-单引号可以改为双引号。但无论使用哪种引号，都必须是半角的引号：
+Single quotes can be changed to double quotes. But no matter what kind of quotation marks are used, they must be half-width quotation marks:
 
-```
+````
 email = "a@b.c"
-```
+````
 
-### 指定比较关系的搜索
+### Specifies the search for the comparison relation
 
-查询中还可以使用 `>`、`<`、`>=`、`<=` 操作符。这些操作符不仅适用于数字（包括整数和小数），还适用于日期。
+The `>`, `<`, `>=`, `<=` operators can also be used in queries. These operators work not only with numbers (including integers and decimals), but also with dates.
 
-例如，查找积分超过 50 分的用户：
+For example, to find users with more than 50 points:
 
-```
+````
 score > 50
-```
+````
 
-或查找注册时间在 2020-01-01 00:00:00 之后的用户：
+Or to find users whose registration time is after 2020-01-01 00:00:00:
 
-```
+````
 register_at > '2020-01-01 00:00:00'
-```
+````
 
-注意使用日期时要 **加上** 引号。
+Note that **add** quotation marks when using dates.
 
-此外，按日期查找时，还可以使用 `today` 和 `tomorrow` 等相对日期：
+Additionally, relative dates such as `today` and `tomorrow` can be used when looking up by date:
 
-```
+````
 register_at >= today
-```
+````
 
-此时 **不需要** 加上引号。
+At this point **no need** for the quotation marks.
 
-### 模糊搜索
+### Fuzzy search
 
-有几个字段可以进行模糊搜索。目前支持模糊搜索的字段有：
+There are several fields for fuzzy search. The fields that currently support fuzzy search are:
 
-- 用户模型中的 `email` 字段
+- `email` field in User model
 
-- 用户模型中的 `nickname` 字段
+- the `nickname` field in the user model
 
-- 角色模型中的 `name` 字段
+- the `name` field in the role model
 
-使用模糊搜索时，不必像「精确搜索」那样指定字段名，而且搜索时也不需要完全匹配。
+When using fuzzy search, you don't have to specify field names like Exact Search, and you don't need an exact match when searching.
 
-例如，假设有两个用户，邮箱地址分别为 `abc@test.test` 和 `bcd@test.test`，当使用模糊搜索时，可以直接在搜索框中输入：
+For example, suppose there are two users with email addresses `abc@test.test` and `bcd@test.test`. When using fuzzy search, you can directly enter in the search box:
 
-```
+````
 bc
-```
+````
 
-那么这两个用户都会被搜索到。
+Then both users will be searched.
 
-相比之下，如果输入：
+By contrast, if you enter:
 
-```
+````
 email = 'bc'
-```
+````
 
-这时没有用户会被匹配到，因为这是精确搜索。
+At this point no user will be matched because this is an exact search.
 
-### 逻辑操作符
+### Logical operators
 
-目前支持的逻辑操作符有 `not`、`and` 和 `or`。
+Currently supported logical operators are `not`, `and` and `or`.
 
-查找积分不超过 50 分的用户：
+Find users with 50 or fewer points:
 
-```
+````
 not score>50
-```
+````
 
-查找积分超过 50 分并且 UID 大于 100 的用户：
+Find users with more than 50 points and a UID greater than 100:
 
-```
+````
 score > 50 and uid > 100
-```
+````
 
-查找积分超过 50 分或 UID 大于 100 的用户：
+Find users with more than 50 points or UIDs greater than 100:
 
-```
+````
 score > 50 or uid > 100
-```
+````
 
-使用时，可添加半角括号来明确表达式的优先级：
+When used, half-width parentheses can be added to clarify the precedence of expressions:
 
-```
+````
 (score < 50 or uid < 100) and permission = 0
-```
+````
 
-上面的查询语句会查找满足下列 **任意一个** 条件的用户：
+The above query will find users who meet **any** of the following conditions:
 
-- 积分小于 50 的普通用户（`permission` 为 0）
-- UID 小于 100 的普通用户（`permission` 为 0）
+- Ordinary users with less than 50 points (`permission` is 0)
+- Normal users with UID less than 100 (`permission` is 0)
 
-## 排序
+## sort
 
-若要指定排序，只需要在查询语句中添加 `sort:` 再加字段名即可。默认为升序。
+To specify a sort, just add `sort:` and the field name to the query. The default is ascending order.
 
-如：
+like:
 
-```
+````
 sort:register_at
-```
+````
 
-这表示按注册时间的升序进行排序。
+This means sorting in ascending order of registration time.
 
-如果需要降序排序，在字段名前加 `-` 即可：
+If you need to sort in descending order, add `-` before the field name:
 
-```
+````
 sort:-register_at
-```
+````
 
-## 查询数量限制
+## Queries limit
 
-尽管这个功能很少用，但我们还是可以在查询语句中限制查询条目数量，就像 SQL 那样：
+Although this feature is rarely used, we can limit the number of query items in the query statement, just like SQL:
 
-```
+````
 limit:5 from:7
-```
+````
 
-这表示从第 8 条开始，并且只查询 5 条记录。
+This means start at 8 and only query 5 records.
 
 ::: tip
 
-`limit` 参数和 `from` 参数可以各自单独使用。
+The `limit` parameter and the `from` parameter can be used independently of each other.
 
 :::

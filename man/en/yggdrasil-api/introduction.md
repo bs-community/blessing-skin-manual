@@ -1,19 +1,19 @@
-# 介绍
+# introduce
 
-这是一个适用于 [Blessing Skin](https://github.com/bs-community/blessing-skin-server) 的插件。
+This is a plugin for [Blessing Skin](https://github.com/bs-community/blessing-skin-server).
 
-通过安装此插件，您可以为您的 Blessing Skin 皮肤站添加 Yggdrasil API 支持。配合 [authlib-injector](https://github.com/yushijinhun/authlib-injector)，您可以在 Minecraft 中实现宛如正版登录一般的用户体验。
+By installing this plugin you can add Yggdrasil API support to your Blessing Skin skin station. With [authlib-injector](https://github.com/yushijinhun/authlib-injector), you can achieve a user experience like a genuine login in Minecraft.
 
-具体来讲，您可以实现这些功能：
+Specifically, you can implement these functions:
 
-- 玩家可以在皮肤站网页中注册账号，并使用皮肤站的账号密码登录游戏
-- 在启动器中登录后可以直接进入服务器，不需要进服后输入 `/login` 等命令
-- 只有在启动器中登录过的用户才能进入服务器
-- 不需要安装任何皮肤 Mod 即可显示皮肤站中玩家设定的皮肤
-- 防假人压测
-- 网页端玩家管理系统
+- Players can register an account on the skin station webpage and log in to the game with the account password of the skin station
+- After logging in in the launcher, you can directly enter the server without entering commands such as `/login` after entering the server
+- Only users logged in in the launcher can access the server
+- No need to install any skin mods to display the skins set by the player in the skin station
+- Anti-dummy stress test
+- Web player management system
 
-以及其他所有 Blessing Skin 皮肤站的功能（包括对接论坛等）。
+And all other Blessing Skin skin station features (including docking forums, etc.).
 
-如果您想知道其实现原理，您也可以看看这篇博文：
-[又是一种 Minecraft 外置登录解决方案：自行实现 Yggdrasil API](https://blessing.studio/minecraft-yggdrasil-api-third-party-implementation/)
+If you want to know how it works, you can also check out this blog post:
+[Another Minecraft external login solution: Implement the Yggdrasil API yourself](https://blessing.studio/minecraft-yggdrasil-api-third-party-implementation/)
