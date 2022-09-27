@@ -1,6 +1,6 @@
-# Base
+# API Base
 
-## API rate limit
+## API Rate Limit
 
 To prevent API abuse, Blessing Skin has a default limit of 60 API calls in 1 minute.
 
@@ -14,13 +14,13 @@ When the rate limit is exceeded, the following fields are added:
 - `Retry-After` indicates how long before the limit is lifted (unit: seconds)
 - `X-RateLimit-Reset` indicates when the limit will be lifted, the value is a UNIX timestamp
 
-## HTTP request headers
+## HTTP Request Headers
 
 For each request, the client SHOULD send `Accept` with a value of `application/json` to make it clear that the response content must be JSON.
 
 By default, the text of the message will be in the language specified in the Blessing Skin configuration (default is `en` which is English). If you need to return Chinese, please add `Accept-Language` in the HTTP request header with the value `zh-CN`.
 
-## root
+## Root API
 
 Use this API to get some basic information about the current skin station.
 
@@ -28,9 +28,7 @@ Use this API to get some basic information about the current skin station.
 GET /api
 ````
 
-### Parameters
-
-none.
+### No Parameters
 
 ### Response
 
@@ -39,6 +37,6 @@ none.
   "blessing_skin": "<version of Blessing Skin>",
   "spec": 0,
   "copyright": "<copyright text>",
-  "site_name": "My Skin Server"
+  "site_name": "<name of site>"
 }
 ````

@@ -1,38 +1,44 @@
-# Avatar and material preview
+# Avatar And Texture Previews
 
 ::: tip
 
-This part of the API does not require user login and authentication.
+This part of the API does not require the HTTP Authorization Header.
 
 :::
 
-## Get the avatar based on the character name
+::: tip
 
-Through this API, you can get the avatar corresponding to the skin used by the character.
+Textures are commonly refered to as Materials throughout Blessing Skin due to translation.
+
+:::
+
+## Get Avatar From Player/Role Name
+
+You can get the avatar corresponding to the skin used by a player/role.
 
 ````
 GET /avatar/player/{name}
 ````
 
-The `{name}` parameter is the role name.
+The `{name}` parameter is the player/role name.
 
 ### Parameters
 
 | Name | Type | Description |
-| ------ | --------- | -------------------------------- ---------------------------- |
+| ------ | --------- | ------------------------------------------------------------ |
 | `size` | `integer` | Avatar size. Note that this is not the final image size. |
 | `3d` | `any` | When this parameter is present, a "3D"-like avatar will be generated instead of a front view of the avatar. |
 | `png` | `any` | When this parameter exists, it will return the image in PNG format; otherwise, it will return in WebP format. (but still returns PNG if the server's GD extension does not support WebP) |
 
 ### Response
 
-Returns 404 if the character does not exist; returns 404 if the material does not exist; returns 200 normally.
+Returns 404 if the character does not exist; returns 404 if the texture does not exist; returns 200 normally.
 
 The image format can be determined by the `Content-Type` field of the response header.
 
-## Get avatar based on user UID
+## Get Avatar From User ID (UID)
 
-Through this API, you can get the avatar set by the user.
+You can get an avatar from a user.
 
 ````
 GET /avatar/user/{uid}
@@ -43,105 +49,105 @@ Where the `{uid}` parameter is the user UID.
 ### Parameters
 
 | Name | Type | Description |
-| ------ | --------- | -------------------------------- ---------------------------- |
+| ------ | --------- | ------------------------------------------------------------ |
 | `size` | `integer` | Avatar size. Note that this is not the final image size. |
 | `3d` | `any` | When this parameter is present, a "3D"-like avatar will be generated instead of a front view of the avatar. |
 | `png` | `any` | When this parameter exists, it will return the image in PNG format; otherwise, it will return in WebP format. (but still returns PNG if the server's GD extension does not support WebP) |
 
 ### Response
 
-If the user does not exist, return a default avatar (HTTP status code is 200); if the material does not exist, return 404; return 200 normally.
+If the user does not exist, return a default avatar (HTTP status code is 200); if the texture does not exist, return 404; return 200 normally.
 
 The image format can be determined by the `Content-Type` field of the response header.
 
-## Generate avatar based on material TID
+## Generate Avatar From Texture ID (TID)
 
-Through this API, the avatar image corresponding to the material can be generated and returned.
+An avatar image corresponding a texture can be generated and returned.
 
 ````
 GET /avatar/{tid}
 ````
 
-where the `{tid}` parameter is the material TID.
+Where the `{tid}` parameter is the texture TID.
 
 ### Parameters
 
 | Name | Type | Description |
-| ------ | --------- | -------------------------------- ---------------------------- |
+| ------ | --------- | ------------------------------------------------------------ |
 | `size` | `integer` | Avatar size. Note that this is not the final image size. |
 | `3d` | `any` | When this parameter is present, a "3D"-like avatar will be generated instead of a front view of the avatar. |
 | `png` | `any` | When this parameter exists, it will return the image in PNG format; otherwise, it will return in WebP format. (but still returns PNG if the server's GD extension does not support WebP) |
 
 ### Response
 
-Returns 404 if the material does not exist; returns 200 normally.
+Returns 404 if the texture does not exist; returns 200 normally.
 
 The image format can be determined by the `Content-Type` field of the response header.
 
-## Generate avatar according to the material file hash
+## Generate Avatar From Texture File Hash
 
-Through this API, the avatar image corresponding to the material can be generated and returned without knowing the TID of the material in advance.
+An avatar image corresponding to a texture can be generated and returned without knowing the TID of the texture in advance.
 
 ````
 GET /avatar/hash/{hash}
 ````
 
-The `{hash}` parameter is the hash value of the material file.
+The `{hash}` parameter is the hash value of the texture file.
 
 ### Parameters
 
 | Name | Type | Description |
-| ------ | --------- | -------------------------------- ---------------------------- |
+| ------ | --------- | ------------------------------------------------------------ |
 | `size` | `integer` | Avatar size. Note that this is not the final image size. |
 | `3d` | `any` | When this parameter is present, a "3D"-like avatar will be generated instead of a front view of the avatar. |
 | `png` | `any` | When this parameter exists, it will return the image in PNG format; otherwise, it will return in WebP format. (but still returns PNG if the server's GD extension does not support WebP) |
 
 ### Response
 
-Returns 404 if the material does not exist; returns 200 normally.
+Returns 404 if the texture does not exist; returns 200 normally.
 
 The image format can be determined by the `Content-Type` field of the response header.
 
-## Generate material preview based on material TID
+## Generate Texture Preview From Texture ID (TID)
 
-Generates and returns a preview of the front and back of the material.
+Generates and returns a preview of the front and back of the texture.
 
 ````
 GET /preview/{tid}
 ````
 
-Where the `{tid}` parameter is the material TID.
+Where the `{tid}` parameter is the texture TID.
 
 ### Parameters
 
 | Name | Type | Description |
-| ------ | --------- | -------------------------------- ---------------------------- |
+| ------ | --------- | ------------------------------------------------------------ |
 | `png` | `any` | When this parameter exists, it will return the image in PNG format; otherwise, it will return in WebP format. (but still returns PNG if the server's GD extension does not support WebP) |
 
 ### Response
 
-Returns 404 if the material does not exist; returns 200 normally.
+Returns 404 if the texture does not exist; returns 200 normally.
 
 The image format can be determined by the `Content-Type` field of the response header.
 
-## Generate a material preview image based on the material file hash
+## Generate Texture Preview From The Texture File Hash
 
-Generates and returns a preview of the front and back of a material without prior knowledge of the material's TID.
+Generates and returns a preview of the front and back of a texture without prior knowledge of the texture's TID.
 
 ````
 GET /preview/hash/{hash}
 ````
 
-The `{hash}` parameter is the hash value of the material file.
+The `{hash}` parameter is the hash value of the texture file.
 
 ### Parameters
 
 | Name | Type | Description |
-| ----- | ----- | ------------------------------------- ----------------------- |
+| ----- | ----- | ------------------------------------------------------------ |
 | `png` | `any` | When this parameter exists, it will return the image in PNG format; otherwise, it will return in WebP format. (but still returns PNG if the server's GD extension does not support WebP) |
 
 ### Response
 
-Returns 404 if the material does not exist; returns 200 normally.
+Returns 404 if the texture does not exist; returns 200 normally.
 
 The image format can be determined by the `Content-Type` field of the response header.

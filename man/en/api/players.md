@@ -1,16 +1,20 @@
-# Role
+# Players
 
-## Get all characters
+::: tip
 
-Returns a list with all roles.
+Players are commonly refered to as Roles or players throughout Blessing Skin due to translation.
+
+:::
+
+## Get All Players
+
+Returns a list with all players.
 
 ````
 GET /api/players
 ````
 
-### Parameters
-
-none.
+### No Parameters
 
 ### Response
 
@@ -29,9 +33,9 @@ Status: 200
 ]
 ````
 
-## add roles
+## Create Player
 
-Add a new character.
+Create a new player.
 
 ````
 POST /api/players
@@ -41,7 +45,7 @@ POST /api/players
 
 | Name | Type | Description |
 | ------ | -------- | ------------------ |
-| `name` | `string` | **Required. ** character name. |
+| `name` | `string` | **Required. ** player name. |
 
 ### Response
 
@@ -62,17 +66,15 @@ Status: 200
 }
 ````
 
-## delete role
+## Delete Player
 
-Delete a role.
+Delete a player.
 
 ````json
 DELETE /api/players/{pid}
 ````
 
-### Parameters
-
-none.
+### No Parameters
 
 ### Response
 
@@ -85,9 +87,9 @@ Status: 200
 }
 ````
 
-## Change character name
+## Change Player Name
 
-Change the name of the role.
+Change the name of a player.
 
 ````
 PUT /api/players/{pid}/name
@@ -97,7 +99,7 @@ PUT /api/players/{pid}/name
 
 | Name | Type | Description |
 | ------ | -------- | ------------------ |
-| `name` | `string` | **Required. ** character name. |
+| `name` | `string` | **Required. ** player name. |
 
 ### Response
 
@@ -118,9 +120,9 @@ Status: 200
 }
 ````
 
-## Change character material
+## Change Player Textures
 
-The character's skin can be changed individually, the character's cape can also be changed individually, or both the skin and the cape can be changed at the same time.
+The player's skin can be changed individually, the player's cape can also be changed individually, or both the skin and the cape can be changed at the same time.
 
 ````
 PUT /api/players/{pid}/textures
@@ -130,10 +132,10 @@ PUT /api/players/{pid}/textures
 
 | Name | Type | Description |
 | ------ | --------- | ------------------------------ |
-| `skin` | `integer` | The TID of the material you wish to apply to the character's skin. |
-| `cape` | `integer` | The TID of the texture you wish to apply to the character's cape. |
+| `skin` | `integer` | The TID of the texture you wish to apply to the player's skin. |
+| `cape` | `integer` | The TID of the texture you wish to apply to the player's cape. |
 
-It should be noted that the `skin` parameter and the `cape` parameter can appear at the same time or not at the same time, but at least one of them is present.
+It should be noted that the `skin` parameter and the `cape` parameter can appear at the same time or individually but one of them must be present.
 
 ### Response
 
@@ -154,9 +156,10 @@ Status: 200
 }
 ````
 
-## reset character texture
+## Reset Player Textures
 
-To reset the material of the character, you can reset the skin or the cape individually, or both the skin and the cape at the same time.
+To reset the texture of the player. 
+You can reset the skin or the cape individually, or both the skin and the cape at the same time.
 
 ````
 DELETE /api/players/{pid}/textures
@@ -167,7 +170,7 @@ DELETE /api/players/{pid}/textures
 Two formats are supported:
 
 | Name | Type | Description |
-| ------ | -------------------- | --------------------- --------------------------------------- |
+| ------ | -------------------- | ------------------------------------------------------------ |
 | `type` | array containing `string` | **Required. ** Strings in the array can only be `skin` or `cape`. The array must contain 1 to 2 elements. |
 
 or

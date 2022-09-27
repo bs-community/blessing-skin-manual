@@ -1,8 +1,8 @@
-# OAuth2 authentication
+# OAuth2 Authentication
 
 Assumption: The address of the skin site is `https://example.com/`.
 
-When the client first requests authorization from the user, it should let the user access `https://example.com/oauth/authorize?client_id={client ID}&redirect_uri={callback URL}&response_type=code&scope=` (preferably the client The client can actively call the browser).
+When the client first requests authorization from the user, it should let the user access `https://example.com/oauth/authorize?client_id={client ID}&redirect_uri={callback URL}&response_type=code&scope=` (preferably the client can actively call the browser).
 
 At this point the browser displays a page that allows the user to choose whether to allow authorization to the client. If allowed by the user, the user will be redirected to the callback URL with a query string with a `code` field.
 

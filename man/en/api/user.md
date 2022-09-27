@@ -1,13 +1,13 @@
-# users
+# User
 
-## Get basic information
+## Get Basic Information
 
 In the returned user information, the `permission` field contains 4 possible values:
 
 | value | meaning |
 | --- | ----- |
 | -1 | Banned |
-| 0 | Ordinary users |
+| 0 | Normal/User |
 | 1 | Administrator |
 | 2 | Super Administrator |
 
@@ -15,9 +15,7 @@ In the returned user information, the `permission` field contains 4 possible val
 GET /api/user
 ````
 
-### Parameters
-
-none.
+### No Parameters
 
 ### Response
 
@@ -37,7 +35,7 @@ Status: 200
 }
 ````
 
-## Get notification list
+## Get Notifications
 
 Gets all unread notifications.
 
@@ -45,9 +43,7 @@ Gets all unread notifications.
 GET /api/user/notifications
 ````
 
-### Parameters
-
-none.
+### No Parameters
 
 ### Response
 
@@ -62,7 +58,7 @@ Status: 200
 ]
 ````
 
-## Read a single notification
+## Read Single Notification
 
 Get the title and content of a single notification and mark the notification as "read".
 
@@ -70,9 +66,7 @@ Get the title and content of a single notification and mark the notification as 
 POST /api/user/notifications/{id}
 ````
 
-### Parameters
-
-none.
+### No Parameters
 
 ### Response
 

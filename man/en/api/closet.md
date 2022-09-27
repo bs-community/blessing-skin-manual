@@ -1,8 +1,8 @@
-# Wardrobe
+# Closet
 
-## Get the wardrobe list
+## Get Items
 
-Returns a list containing wardrobe items.
+Returns a list containing the closet items.
 
 ````
 GET /api/closet
@@ -13,7 +13,7 @@ You can add the `page` parameter to the URL to get results with different page n
 ### Parameters
 
 | Name | Type | Description |
-| ---------- | -------- | ----------------------------- -------- |
+| ---------- | -------- | ------------------------------------- |
 | `category` | `string` | Item category, value can only be `skin` or `cape`. |
 
 ### Response
@@ -47,9 +47,9 @@ Status: 200
 }
 ````
 
-## add material
+## Add Item
 
-Add a material to the wardrobe.
+Add a texture to the user's closet.
 
 ````
 POST /api/closet
@@ -59,8 +59,8 @@ POST /api/closet
 
 | Name | Type | Description |
 | ------ | --------- | -------------------------------- ------------- |
-| `tid` | `integer` | **Required. ** The TID of the material to add. |
-| `name` | `string` | **Required. ** Wardrobe item name, does not have to be the same as the material name. |
+| `tid` | `integer` | **Required. ** The TID of the texture to add. |
+| `name` | `string` | **Required. ** closet item name, does not have to be the same as the texture name. |
 
 ### Response
 
@@ -73,9 +73,9 @@ Status: 200
 }
 ````
 
-## change name
+## Rename Item
 
-Change the names of wardrobe items.
+Change the name of closet item.
 
 ````
 PUT /api/closet/{tid}
@@ -85,7 +85,7 @@ PUT /api/closet/{tid}
 
 | Name | Type | Description |
 | ------ | -------- | ----------------------------- |
-| `name` | `string` | **Required. ** New names for wardrobe items. |
+| `name` | `string` | **Required. ** New name for closet item. |
 
 ### Response
 
@@ -98,7 +98,7 @@ Status: 200
 }
 ````
 
-## delete item
+## Delete item
 
 Delete items from the closet.
 
@@ -106,9 +106,7 @@ Delete items from the closet.
 DELETE /api/closet/{tid}
 ````
 
-### Parameters
-
-none.
+### No Parameters
 
 ### Response
 
