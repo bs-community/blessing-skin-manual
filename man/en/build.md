@@ -28,4 +28,4 @@ pwsh ./tools/build.ps1
 
 If you pass the parameter `-Simple` to script `build.ps`, it will only run webpack to compile code without copying background image of home page and generating commit information.
 
-Next, please follow [Setup](setup.md) to finish installation.
+Next, please follow [Setup](/en/setup.md) to finish installation.

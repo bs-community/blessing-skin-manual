@@ -1,4 +1,4 @@
-# v5 Release Note
+# v5 Release Notes
 
 ::: tip
 

@@ -1,4 +1,4 @@
-# search syntax
+# Search Syntax
 
 From Blessing Skin v5, the filtering and sorting functions in User Management and Role Management are integrated into the search box above the management list. Flexible filtering and sorting can be achieved by using syntactical queries.
 

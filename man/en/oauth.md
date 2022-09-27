@@ -1,4 +1,4 @@
-# worth mentioning
+# OAuth Configuration
 
 Starting from Blessing Skin v5, we provide third-party login functionality based on OAuth2 and implement it as a plugin. With these plugins, your users do not need to register or enter a password to log in, but use their accounts on other websites or platforms to directly access the skin station.
 

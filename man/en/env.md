@@ -1,4 +1,4 @@
-# Configuration file introduction
+# Enviroment/Configuration File
 
 ## What is `.env`?
 
@@ -161,6 +161,8 @@ Usually you do not need to modify this part of the configuration.
 
 - `PLUGINS_URL` This configuration item affects the frontend resource file URL in the plugin. It is recommended to keep `null` to use the default value.
 
+- `PLUGINS_REGISTRY` Changes the plugin market format `http://example.com/market_{lang}.json` where `{lang}` is prefilled with `en` or `zh_CN` depending on the current language
+
 ### Other
 
-- `UPDATE_SOURCE` Modify this configuration to change the update source of Blessing Skin. (ie, tell Blessing Skin where to get the new version information) If you find the default update source slow, you can switch to a third-party source. (See [here](/update-sources.md) for available third-party update sources)
+- `UPDATE_SOURCE` Modify this configuration to change the update source of Blessing Skin. (ie, tell Blessing Skin where to get the new version information) If you find the default update source slow, you can switch to a third-party source. (See [here](./update-sources.md) for available third-party update sources)

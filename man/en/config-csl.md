@@ -1,4 +1,4 @@
-# Modify the CustomSkinLoader configuration file
+# Configure CustomSkinLoader
 
 If you want to load materials from a skin station other than the CustomSkinLoader's default load list, you will need to modify the configuration file.
 

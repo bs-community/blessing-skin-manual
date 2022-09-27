@@ -1,4 +1,4 @@
-# benchmark
+# Benchmarking
 
 Here is [GPlane](https://github.com/g-plane) performance on its Arch Linux test running in VirtualBox.
 

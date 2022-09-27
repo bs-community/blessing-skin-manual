@@ -1,6 +1,6 @@
-# custom UI text
+# Customizing UI Text
 
-Starting from Blessing Skin 5.0.0, you can customize the UI text on the Blessing Skin (and also the message text returned by the backend) on the "Multilingual" page in the admin panel.
+Starting from Blessing Skin 5.0.0, you can customize the UI text on the Blessing Skin (and also the message text returned by the backend) on the "Internationalization" page in the admin panel.
 
 ## Understand concepts
 
@@ -16,7 +16,7 @@ In fact, it is the file name (without extension, `.yml') under `resources/lang/{
 For example, the text mentioned above is in the `resources/lang/{xxx}/user.yml` file.
 There are also `admin.yml`, `skinlib.yml` and other files in this directory, so correspondingly, their "groups" are `admin`, `skinlib`, and so on.
 
-### key
+### Keys
 
 Again, take `user.score-intro.introduction` as an example. The key is what is left after the "grouping".
 So for this text, its key is `score-intro.introduction`.
@@ -24,11 +24,11 @@ So for this text, its key is `score-intro.introduction`.
 But it should be noted that in the language file (YAML file), the file structure is not a flat structure like this key, but a tree structure, which is nested.
 Open the `resources/lang/{xxx}/user.yml` file, we can find that this text is located in the `introduction` section of the `score-intro` block.
 
-### text
+### Value (Text)
 
 is the specific text content of the entry. In most cases, the text content can only be a single line.
 
-## add new entry
+## Add New Entry
 
 In the form on the right side of the page, you can add a new entry, fill in the "group", "key", "text" and submit it, if the text has been defined in Blessing Skin, then refresh the page to take effect.
 
@@ -38,20 +38,20 @@ After submitting, refresh the `/user` page to see the button text updated.
 If you need to modify the text in other languages, please switch the site language first. For example, if you want to modify a text in English, you need to switch to the English page first, and then modify it.
 Just modifying the text in one language will not affect the content in other languages.
 
-## Modify existing entry
+## Modify Existing Entry
 
-In the list on the "Multilingual" page, select the item you want to modify, and click the "Modify" button to modify the text content in the pop-up prompt window.
+In the list on the "Internationalization" page, select the item you want to modify, and click the "Modify" button to modify the text content in the pop-up prompt window.
 
 If you need to modify the text in other languages, please switch the site language first.
 
 Note that only the text content of the entry can be modified, not the grouping or the key.
 
-## delete entry
+## Delete Entry
 
 When you want to restore a text to the default value of Blessing Skin, just delete the entry.
 
 ::: warning
-Note: When an entry is deleted, the content of the entry in all languages ​​will be deleted at the same time.
+When an entry is deleted, it will be deleted in all languages at the same time.
 :::
 
 ## Text rendered by JavaScript
@@ -59,7 +59,7 @@ Note: When an entry is deleted, the content of the entry in all languages ​​
 Since many front-end pages of Blessing Skin are rendered in the browser based on JavaScript, they cannot directly obtain the content of language files such as `admin.yml`, `user.yml`, `skinlib.yml`, etc.
 For this part of the language text, they are in `front-end.yml`. This is the case with the "Sign In" button mentioned above.
 
-## A little trick
+## A Little Trick
 
 Due to the large amount of text in Blessing Skin, it is difficult for most users to know what the grouping and key of a certain text are.
 

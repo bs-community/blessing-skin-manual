@@ -8,7 +8,7 @@ The CLI here refers to the real shell on the server, not the Blessing Skin Shell
 
 :::
 
-## enable plugin
+## Enable Plugin
 
 A plugin can be enabled with the following command:
 
@@ -18,7 +18,7 @@ $ php artisan plugin:enable <name>
 
 The `name` parameter is required, which is the unique identifier of the plugin (that is, the `name` field in the plugin information), such as `mojang-verification`.
 
-## disable plugin
+## Disable Plugin
 
 A plugin can be disabled with the following command:
 
@@ -28,7 +28,7 @@ $ php artisan plugin:disable <name>
 
 The `name` parameter is required, which is the unique identifier of the plugin (that is, the `name` field in the plugin information), such as `mojang-verification`.
 
-## Cache site options
+## Cache Site Options
 
 This command has no parameters and is used as follows:
 
@@ -46,7 +46,7 @@ After the cache is generated, any changes you make to any settings in the site a
 
 If you want to stop caching, just delete the `storage/options.php` file.
 
-## (re)generate APP_KEY
+## Regenerate APP_KEY
 
 `APP_KEY` is used to encrypt the user's Session and other data, so it is required.
 
@@ -58,7 +58,7 @@ $ php artisan key:generate
 
 If the above command is executed on an existing site, the `APP_KEY` will be regenerated, but be aware that the user login status will be invalidated. (password will not be affected)
 
-## (re)generate salt
+## Regenerate salt
 
 If the password encryption algorithm you are using uses a salt, you can generate a new salt with the following command:
 

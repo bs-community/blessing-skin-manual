@@ -12,7 +12,7 @@ Here we will introduce the core functions of Blessing Skin's Web CLI and which c
 
 ## Core functions
 
-### syntax highlighting
+### Syntax Highlighting
 
 Blessing Skin Shell comes with command syntax highlighting. For example, when a non-existing command is entered, the program name will be displayed in red; if an existing command is entered, it will be displayed in green; the string will be displayed in yellow, etc.
 

@@ -1,4 +1,4 @@
-# Working with Flarum
+# Flarum Configuration
 
 Blessing Skin provides an OAuth Server, so we've written a Flarum extension. Using with this extension, Flarum will be an OAuth client and fetch user data from Blessing Skin.
 

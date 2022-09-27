@@ -8,14 +8,14 @@ Therefore, when you encounter problems in the way of using Blessing Skin (includ
 
 First of all, you should determine whether this is the fault of Blessing Skin: machine downtime, network problems, or even an error in your browser will prevent you from using it normally. Therefore, before reporting a problem to the developer, you should first judge from your own experience whether this is the fault of Blessing Skin. If you can't judge for yourself, just search the internet, _Google is your friend_.
 
-Second, you should read the [FAQ](/faq.md) carefully and make sure your question is not listed here. In many cases, the problems you have encountered have also pitted many people, and they have summed up the solutions: why don't you take a look?
+Second, you should read the [FAQ](/en/faq.md) carefully and make sure your question is not listed here. In many cases, the problems you have encountered have also pitted many people, and they have summed up the solutions: why don't you take a look?
 
 Once you've confirmed that the problem you're encountering isn't one of them, you can start preparing a bug report.
 
 :::tip
-**Recommended reading: ["The Wisdom of Asking"](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)**
+**Recommended reading: ["How To Ask Questions The Smart Way"](http://www.catb.org/~esr/faqs/smart-questions.html)**
 
-Fully understanding this article can help you ask better questions and receive responses and correct answers faster (no matter when and where). But please note that the creative team of "The Wisdom of Asking" is only providing this article to guide you on how to ask questions correctly, and they do not provide any technical support for any questions. **Don't be an idiot. **
+Fully understanding this article can help you ask better questions and receive responses and correct answers faster (no matter when and where). But please note that the creative team of "How To Ask Questions The Smart Way" is only providing this article to guide you on how to ask questions correctly, and they do not provide any technical support for any questions. **Don't be an idiot. **
 :::
 
 ## Developers are not gods

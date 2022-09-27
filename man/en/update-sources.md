@@ -1,4 +1,4 @@
-# update source list
+# Update Sources
 
 This page lists available update sources and mirrors for the Blessing Skin that we know of and whose maintainers are willing to make public.
 

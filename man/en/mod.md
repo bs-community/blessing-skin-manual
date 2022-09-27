@@ -1,4 +1,4 @@
-# Mod Configuration
+# SkinLoader Configurations
 
 ::: tip
 
