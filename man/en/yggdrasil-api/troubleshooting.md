@@ -1,4 +1,4 @@
-# Error troubleshooting
+# Troubleshooting
 
 If you're having trouble, be sure to check the following items before asking for help:
 
@@ -85,8 +85,8 @@ Generally speaking, this means that there is a problem with the Yggdrasil API of
 
 Instructions:
 
-1. Use `https://example.yggdrasil.yushi.moe` as the API Root to fill in the configuration of the launcher, client and game server (that is, put the `https://skin site address/ in your previous configuration) api/yggdrasil` is modified to `https://example.yggdrasil.yushi.moe`);
-2. Use email `test2@to2mbn.org` and password `222222` to log in and start the game;
+1. Use `https://auth-demo.yushi.moe/` as the API Root to fill in the configuration of the launcher, client and game server (that is, put the `https://skin site address/ in your previous configuration) api/yggdrasil` is modified to `https://auth-demo.yushi.moe`);
+2. Use email `test2@example.com` and password `222222` to log in and start the game;
 3. Attempt to enter the server.
 
 If you modify the API Root of the original skin station to the "Sample Yggdrasil API" provided above, you can enter the game, load the skin, and join the server normally, then it means that the problem you encountered is on the **skin station** , please contact us to troubleshoot errors. If the problem still exists after using the sample API, it means that your problem is caused by the wrong configuration of the launcher, client or game server. Please refer to the configuration tutorial in this document to reconfigure the relevant configuration.

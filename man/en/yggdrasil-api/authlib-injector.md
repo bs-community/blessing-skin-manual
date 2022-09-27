@@ -1,10 +1,10 @@
 # Authlib Injector
 
-This plugin is only based on the original user system of the Blessing Skin skin station, and fully implements a set of APIs that conform to the Yggdrasil API specification (this set of specifications is the official Mojang API for authentic Minecraft login authentication), and we must use [authlib -injector](https://github.com/yushijinhun/authlib-injector) This program replaces the "Mojang genuine login API address" in the game with the "Yggdrasil API address provided by the skin station" at runtime, thereby Implement an external login system.
+This plugin is only based on the original user system of the Blessing Skin skin station, and fully implements a set of APIs that conform to the Yggdrasil API specification (this set of specifications is the official Mojang API for authentic Minecraft login authentication), and we must use [authlib-injector](https://github.com/yushijinhun/authlib-injector) This program replaces the "Mojang genuine login API address" in the game with the "Yggdrasil API address provided by the skin station" at runtime, thereby Implement an external login system.
 
-## configure the launcher
+## Configure Launcher
 
-If you or the skin station you are using has the "Authenticity Verification" plug-in installed, and your account has been authenticated, you can use **any launcher** (only need to allow custom JVM parameters), and then in Modify the JVM parameters in the launcher settings to make the game client load authlib-injector.
+If you or the skin station you are using has the "Mojang Verification" plug-in installed, and your account has been authenticated, you can use **any launcher** (only need to allow custom JVM parameters), and then in Modify the JVM parameters in the launcher settings to make the game client load authlib-injector.
 
 Take HMCL3 as an example:
 
@@ -14,7 +14,7 @@ Take MCCL as an example:
 
 ![mccl-tutorial](https://i.imgur.com/uvRNC6U.png)
 
-## Load authlib-injector for game server
+## Setup Authlib-Injector for Server
 
 ::: tip
 To use this external login scheme, you must set `online-mode` to `true` in `server.properties`.
@@ -22,7 +22,7 @@ To use this external login scheme, you must set `online-mode` to `true` in `serv
 If you are using BungeeCord, authlib-injector needs to be loaded on all servers, but only BungeeCord should have `online-mode` turned on, other servers should have `online-mode` turned off.
 :::
 
-How to modify the server startup parameters, please refer to [Using authlib-injector on the Minecraft server](https://github.com/yushijinhun/authlib-injector/wiki/%E5%9C%A8-Minecraft-%E6%9C%8D% E5%8A%A1%E7%AB%AF%E4%BD%BF%E7%94%A8-authlib-injector).
+How to modify the server startup parameters, please refer to [Using authlib-injector on the Minecraft server](https://github.com/yushijinhun/authlib-injector/wiki/%E5%9C%A8-Minecraft-%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BD%BF%E7%94%A8-authlib-injector).
 
 Example:
 
@@ -32,7 +32,7 @@ The script used to start the Minecraft server generally looks something like thi
 java -Xmx1024M -Xms1024M -jar minecraft_server.1.12.2.jar nogui
 ````
 
-Next please insert [`-javaagent`](https://github.com/yushijinhun/authlib-injector/wiki/%E5 in the **correct place** (before `-jar xxx.jar`) in the startup command %90%AF%E5%8A%A8%E5%99%A8%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83#%E6%B7%BB%E5% 8A%A0-jvm-%E5%8F%82%E6%95%B0) parameter.
+Next please insert [`-javaagent`](https://github.com/yushijinhun/authlib-injector/wiki/%E5%90%AF%E5%8A%A8%E5%99%A8%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83#%E6%B7%BB%E5%8A%A0-jvm-%E5%8F%82%E6%95%B0) in the **correct place** (before `-jar xxx.jar`) in the startup command) parameter.
 
 Suppose:
 
@@ -46,7 +46,7 @@ Then you should modify the example startup command above to this:
 java -Xmx1024M -Xms1024M -javaagent:authlib-injector-1.1.18-daa6fb4.jar=https://example.com/api/yggdrasil -jar minecraft_server.1.12.2.jar nogui
 ````
 
-## Load authlib-injector correctly
+## Setup Authlib-Injector for Client
 
 It should be noted that authlib-injector implements runtime bytecode substitution through the JVM's `-javaagent` parameter, so you must ensure that:
 

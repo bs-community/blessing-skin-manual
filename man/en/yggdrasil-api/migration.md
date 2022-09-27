@@ -1,6 +1,6 @@
-# migrate
+# Migration
 
-If you were using an in-game login plugin like Authme and want to switch to this project, you may want to be aware of the UUID issue.
+If you were using an in-game login plugin like Authme and want to switch to this project, you may want to be aware of the UUID issues.
 
 ## Overview
 
@@ -16,7 +16,7 @@ Then when you use this external login solution on a server that is originally in
 
 and so on.
 
-## Modify the UUID generation algorithm of the skin station
+## Modify the UUID Generation Algorithm
 
 For maximum compatibility with offline mode, the skin station provides the option to modify the UUID generation algorithm.
 
@@ -36,7 +36,7 @@ Under normal circumstances, you do not need to continue reading. The following t
 
 **Note: Importing the wrong UUID may cause unpredictable problems, please proceed with caution. **
 
-## Reference link (English)
+## Reference Links
 
 - https://www.reddit.com/r/feedthebeast/comments/6jvjzt/how_do_you_transfer_an_offline_server_to_online/
 - https://www.minecraftforum.net/forums/support/server-support/2254587-player-data-migration-between-offline-and-online
