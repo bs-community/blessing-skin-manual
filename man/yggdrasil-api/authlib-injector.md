@@ -8,11 +8,13 @@
 
 以 HMCL3 为例：
 
-![hmcl3-tutorial](https://i.imgur.com/YC47PWh.png)
+![hmcl3-tutorial](https://gitcode.net/chearlai/f/-/raw/master/HMCL.png)
 
 以 MCCL 为例：
 
-![mccl-tutorial](https://i.imgur.com/uvRNC6U.png)
+![mccl-tutorial](https://gitcode.net/chearlai/f/-/raw/master/MCCL.png)
+
+*其他启动器请自行寻找相关文档进行配置*
 
 ## 为游戏服务端加载 authlib-injector
 
