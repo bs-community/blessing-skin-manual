@@ -14,8 +14,6 @@
 
 ![mccl-tutorial](https://gitcode.net/chearlai/f/-/raw/master/MCCL.png)
 
-*其他启动器请自行寻找相关文档进行配置*
-
 ## 为游戏服务端加载 authlib-injector
 
 ::: tip
