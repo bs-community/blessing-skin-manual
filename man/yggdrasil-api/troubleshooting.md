@@ -85,15 +85,24 @@ unable to fetch metadata: java.io.IOException: Server returned HTTP response cod
 
 使用方法：
 
-1. 使用 `https://example.yggdrasil.yushi.moe` 作为 API Root 填入启动器、客户端以及游戏服务端的配置中（也就是把之前您配置中的 `https://皮肤站地址/api/yggdrasil` 修改为 `https://example.yggdrasil.yushi.moe`）；
-2. 使用邮箱 `test2@to2mbn.org` 与密码 `222222` 登录并启动游戏；
-3. 尝试进入服务器。
+1. 使用 `https://auth-demo.yushi.moe` 作为 API Root 填入启动器、客户端以及游戏服务端的配置中（也就是把之前您配置中的 `https://皮肤站地址/api/yggdrasil` 修改为 `https://auth-demo.yushi.moe`）；
+2. 使用以下邮箱和密码进行登录：
+
+|邮箱|密码|
+|--|--|
+|test1@example.com|111111|
+|test2@example.com|222222|
+|test3@example.com|333333|
+|deadmau5@example.com|123456|
+
+3. 启动游戏；
+4. 尝试进入服务器。
 
 如果您将原本皮肤站的 API Root 修改为上面提供的「样例 Yggdrasil API」后可以正常进入游戏、加载皮肤、加入服务器的话，那就说明您遇到的问题出在 **皮肤站** 上，请联系我们排查错误。如果使用了样例 API 后问题依然存在，即说明您的问题是启动器、客户端或是游戏服务端的错误配置导致的，请参照本文档的配置教程重新进行相关的配置。
 
 ![2018-07-06_21.40.19.png](https://i.loli.net/2018/07/07/5b3f99f2e9128.png)
 
-另一个可用的样例 API 是 `https://mcskin.littleservice.cn/api/yggdrasil`，您可以使用 LittleSkin 的账号进行登录测试。
+另一个可用的样例 API 是 `https://mcskin.littleservice.cn/api/yggdrasil`，您可以使用 [LittleSkin](https://littleskin.cn) 的账号进行登录测试。
 
 ## 寻求帮助
 
