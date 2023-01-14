@@ -101,7 +101,7 @@ unable to fetch metadata: java.io.IOException: Server returned HTTP response cod
 
 ![2018-07-06_21.40.19.png](https://i.loli.net/2018/07/07/5b3f99f2e9128.png)
 
-*另一个可用的样例 API 是 `https://mcskin.littleservice.cn/api/yggdrasil`，您可以使用 [LittleSkin]() 的账号进行登录测试。*
+另一个可用的样例 API 是 `https://mcskin.littleservice.cn/api/yggdrasil`，您可以使用 [LittleSkin](https://littleskin.cn) 的账号进行登录测试。
 
 ## 寻求帮助
 
