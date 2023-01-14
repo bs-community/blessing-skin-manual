@@ -94,6 +94,7 @@ unable to fetch metadata: java.io.IOException: Server returned HTTP response cod
 |test2@example.com|222222|
 |test3@example.com|333333|
 |deadmau5@example.com|123456|
+
 3. 启动游戏；
 4. 尝试进入服务器。
 
