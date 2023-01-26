@@ -12,7 +12,7 @@
 
 流畅运行 Blessing Skin 对你的服务器的配置的要求非常低（除非你运营的是一个巨型皮肤站）。你需要检查的是你的运行环境。
 
-Blessing Skin 只支持 Nginx 或 Apache 作为 Web 服务器，不支持 IIS。PHP 版本必须为 8.0.2 或以上。
+Blessing Skin 支持 Nginx 或 Apache 以及 Caddy 作为 Web 服务器，不支持 IIS。PHP 版本必须为 8.0.2 或以上。
 
 ### 必需的 PHP 扩展
 
@@ -110,6 +110,21 @@ location / {
 ::: tip 提示：
 如果你用的是 LNMP 一键包、某某面板之类的东西添加的站点配置，请阅读 [printempw/blessing-skin-server#46](https://github.com/printempw/blessing-skin-server/issues/46) 并查看你的配置文件中是不是也有类似的东西，否则可能导致无法正常显示图片。
 :::
+
+### Caddy 用户
+
+1. 找到你的 Caddy 站点配置文件，文件名通常会是 `Caddyfile`。
+
+2. 在属于你的站点的配置块中配置如下内容：
+
+```
+root * /path/to/your/blessing-skin/public
+file_server
+
+try_files {path} {path}/ /index.php?{query}
+```
+
+这只是 Caddy 的配置的一部分，你需要为你的站点完成其他的基础配置才能使其正常工作。
 
 ## 测试伪静态是否生效
 
