@@ -4,13 +4,13 @@
 
 ### Basic Requirements
 
-Blessing Skin supports Nginx or Apache only, and it doesn't support IIS. PHP version must be 7.3 or above.
+Blessing Skin supports Nginx, Apache and Caddy, however it doesn't support IIS. PHP version must be 8.0.2 or above.
 
 ### Required PHP Extensions
 
 Make sure the extensions below are installed and enabled correctly:
 
-- OpenSSL
+- OpenSSL >= 1.1.1 (TLS 1.3)
 - PDO
 - Mbstring
 - Tokenizer
@@ -89,6 +89,19 @@ location / {
 ```
 
 Please note that the root of your web server must point to the `public` directory of the whole application.
+
+### Caddy
+
+Open your Caddy configuration file (usually named as `Caddyfile`), and edit it with the snippet below in your site's block:
+
+```
+root * /path/to/your/blessing-skin/public
+file_server
+
+try_files {path} {path}/ /index.php?{query}
+```
+
+This is only part of Caddy's configuration. You need to complete the rest of the basic configuration for your site to make it work properly.
 
 ## Enter Setup Wizard
 
