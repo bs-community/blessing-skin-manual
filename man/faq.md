@@ -178,8 +178,8 @@ CrazyLogin：自 Blessing Skin Server v4 起，CrazyLogin 数据对接不受 Ble
 
 具体请参考 Minecraft Wiki：
 
-- https://minecraft-zh.gamepedia.com/index.php?title=%E9%9E%98%E7%BF%85&variant=zh
-- https://minecraft-zh.gamepedia.com/index.php?title=%E6%8A%AB%E9%A3%8E&variant=zh
+- https://minecraft.fandom.com/zh/wiki/%E9%9E%98%E7%BF%85
+- https://minecraft.fandom.com/zh/wiki/%E6%8A%AB%E9%A3%8E
 
 ### 如何在皮肤库中查看一个披风是否带有鞘翅材质？
 
