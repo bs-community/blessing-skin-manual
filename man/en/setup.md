@@ -101,7 +101,7 @@ file_server
 try_files {path} {path}/ /index.php?{query}
 ```
 
-This is only part of Caddy's configuration, you will need to complete the rest of the basic configuration for your site to make it work properly.
+This is only part of Caddy's configuration. You need to complete the rest of the basic configuration for your site to make it work properly.
 
 ## Enter Setup Wizard
 
