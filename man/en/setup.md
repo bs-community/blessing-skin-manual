@@ -72,7 +72,7 @@ If you don't generate a key, you will receive an error with message "No applicat
 
 ### Apache
 
-Make sure that the root of your web server must point to the `public` directory of the whole application. Also, `mod_rewrite` must be enabled. Also don't forget to open your Apache configuration file and check the value of `AllowOverride`. If it's `None`, please change it to `FileInfo`.
+Make sure that the root of your web server must point to the `public` directory of the whole application. Also, `mod_rewrite` must be enabled. Also don't forget to open your Apache configuration file and check the value of `AllowOverride`. If it's `None`, please change it to `All`.
 
 `.htaccess` is bundled with Blessing Skin, so you don't need to configure rewrite rules.
 
