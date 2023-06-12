@@ -20,7 +20,7 @@
 
 如果成功，返回的 JSON 响应中会包含 `access_token` 、`refresh_token` 和 `expires_in` 属性。`expires_in` 属性包含访问令牌的有效期（单位：秒）。
 
-获取到 `access_token` 后以 `GET` 方法请求URL：`https://example.com/api/user`，并携带以下请求头：
+获取到 `access_token` 后以 GET 方法请求 URL：`https://example.com/api/user`，并携带以下请求头：
 
 |key|value|
 |-|-|
