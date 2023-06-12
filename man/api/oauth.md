@@ -24,6 +24,6 @@
 
 |key|value|
 |-|-|
-|Authorization|Bearer `access_token`|
+|Authorization|Bearer <access_token>|
 
 如果令牌正确，那么将返回用户信息。
