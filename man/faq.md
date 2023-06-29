@@ -278,3 +278,9 @@ innodb_file_format=Barracuda
 ## 安装或升级时遇到「Table 'notifications' already exists」
 
 打开数据库，将 `notifications` 表删除即可。
+
+## 插件市场打不开
+
+这是一个已知问题：[插件市场无法打开 / Unable to load plugin market / Undefined array key "packages" · Issue #454 · bs-community/blessing-skin-server](https://github.com/bs-community/blessing-skin-server/issues/454)
+
+临时解决方案：在 [bs-community/plugins-dist](https://github.com/bs-community/plugins-dist) 下载所需所需插件，并通过 *插件管理* 页面上传 `.zip` 文件安装。
