@@ -28,6 +28,29 @@
 
 其中「名称」可以填写为您的皮肤站名称；「重定向 URI」则根据您的皮肤站地址相应地修改域名，但后面的 `/auth/login/live/callback` 不需要改变。
 
+在添加「品牌打造和属性」的页面有一个「验证发布者域」的东西，需要在 Web 服务器中创建 `/.well-known/microsoft-identity-association.json` 文件。对于 Apache 用户，要注意 `public/.htaccess` 文件声明了禁止对 `.` 开头的目录或文件的访问。因此需要编辑这个文件，在 `RewriteRule (^\.|/\.) - [F]` 上面加一行 `RewriteRule ^\.well-known/microsoft-identity-association\.json$ - [L]`：
+
+```diff
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # You may need to uncomment the following line for some hosting environments,
+    # if you have installed to a subdirectory, enter the name here also.
+    #
+    # RewriteBase /
+
+    # Black list protected files
++   RewriteRule ^\.well-known/microsoft-identity-association\.json$ - [L]
+    RewriteRule (^\.|/\.) - [F]
+    RewriteRule ^storage/.* - [F]
+
+    # 后面省略……
+```
+
 填写完成后点击页面下方的「注册」按钮，并稍等片刻。注册完成后，将得到「应用程序（客户端）ID」，将它复制下来。
 
 ![Screenshot_20200713_150328.png](https://i.loli.net/2020/07/13/BPEOTpHVNb1WLus.png)
