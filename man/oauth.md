@@ -28,15 +28,9 @@
 
 其中「名称」可以填写为您的皮肤站名称；「重定向 URI」则根据您的皮肤站地址相应地修改域名，但后面的 `/auth/login/live/callback` 不需要改变。
 
-在添加“品牌打造和属性”的页面有一个 **验证发布者域** 的东西，需要在 Web 服务器中创建 `/.well-known/microsoft-identity-association.json` 文件。
+在添加「品牌打造和属性」的页面有一个「验证发布者域」的东西，需要在 Web 服务器中创建 `/.well-known/microsoft-identity-association.json` 文件。对于 Apache 用户，要注意 `public/.htaccess` 文件声明了禁止对 `.` 开头的目录或文件的访问。因此需要编辑这个文件，在 `RewriteRule (^\.|/\.) - [F]` 上面加一行 `RewriteRule ^\.well-known/microsoft-identity-association\.json$ - [L]`：
 
-但是创建完成后试图在浏览器访问会返回 403 Forbidden。
-
-这是因为在 `blessing-skin/public/.htaccess` 文件中声明了禁止访问 `.` 开头的目录或者文件。
-
-解决方法是编辑这个文件，在 `RewriteRule (^\.|/\.) - [F]` 上面加一行 `RewriteRule ^\.well-known/microsoft-identity-association\.json$ - [L]`：
-
-```conf {14}
+```diff
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
@@ -50,7 +44,7 @@
     # RewriteBase /
 
     # Black list protected files
-    RewriteRule ^\.well-known/microsoft-identity-association\.json$ - [L]
++   RewriteRule ^\.well-known/microsoft-identity-association\.json$ - [L]
     RewriteRule (^\.|/\.) - [F]
     RewriteRule ^storage/.* - [F]
 
