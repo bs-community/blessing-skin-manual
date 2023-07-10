@@ -1,13 +1,11 @@
 # 在 Ubuntu 上安装
 
-~~理论上只要一顿 CV 就能装好！~~
-
 - 请先看看 [安装指南](./setup)
-- **请知晓自己要执行的每条命令的意义！**
+- 请知晓自己要执行的每条命令的意义
 
 ## 系统版本
 
-`Ubuntu Server 22.04.2 LTS x86_64`
+Ubuntu Server 22.04.2 LTS x86_64
 
 ## 系统更新
 
@@ -35,43 +33,16 @@ sudo reboot
 sudo apt install vim git zip -y
 ```
 
-## 安装 PHP 及相关拓展
+## 安装 PHP 及相关扩展
 
 ```sh
 sudo apt install apache2 php php-gd php-mbstring php-xml php-zip php-pgsql -y
 ```
 
-<details>
-<summary>详情</summary>
-
-```text
-正在读取软件包列表... 完成
-正在分析软件包的依赖关系树... 完成
-正在读取状态信息... 完成
-将会同时安装下列软件：
-  apache2-bin apache2-data apache2-utils libapache2-mod-php8.1 libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libgd3 liblua5.3-0 libonig5 libzip4 mailcap mime-support php-common php8.1
-  php8.1-cli php8.1-common php8.1-gd php8.1-mbstring php8.1-opcache php8.1-readline php8.1-xml php8.1-zip ssl-cert
-建议安装：
-  apache2-doc apache2-suexec-pristine | apache2-suexec-custom php-pear libgd-tools
-下列【新】软件包将被安装：
-  apache2 apache2-bin apache2-data apache2-utils libapache2-mod-php8.1 libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libgd3 liblua5.3-0 libonig5 libzip4 mailcap mime-support php php-common
-  php-gd php-mbstring php-xml php-zip php8.1 php8.1-cli php8.1-common php8.1-gd php8.1-mbstring php8.1-opcache php8.1-readline php8.1-xml php8.1-zip ssl-cert
-升级了 0 个软件包，新安装了 31 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
-需要下载 8,255 kB 的归档。
-解压缩后会消耗 32.8 MB 的额外空间。
-您希望继续执行吗？ [Y/n]
-```
-
-</details>
-
 验证 PHP 版本：
 
-```text {1}
-ubuntu@10-60-84-53:~$ php -v
-PHP 8.1.2-1ubuntu2.11 (cli) (built: Feb 22 2023 22:56:18) (NTS)
-Copyright (c) The PHP Group
-Zend Engine v4.1.2, Copyright (c) Zend Technologies
-    with Zend OPcache v8.1.2-1ubuntu2.11, Copyright (c), by Zend Technologies
+```sh
+php -v
 ```
 
 ## 下载 blessing-skin-server
@@ -115,7 +86,7 @@ sudo vim /etc/apache2/sites-available/blessing-skin.conf
 <VirtualHost *:80>
   ServerAdmin webmaster@localhost
   DocumentRoot /var/www/blessing-skin/public
-  
+
   <Directory /var/www/blessing-skin/public>
     AllowOverride All
   </Directory>
@@ -134,16 +105,19 @@ sudo vim /etc/apache2/sites-available/blessing-skin.conf
 把这三个文件上传到云主机的 `/var/www/blessing-skin/ssl/` 目录中，然后执行以下操作：
 
 1.  修改文件权限：
+
     ```sh
     sudo chown www-data:www-data -R /var/www/blessing-skin/ssl
     ```
 
 2.  启用 Apache2 的 SSL 模块：
+
     ```sh
     sudo a2enmod ssl
     ```
 
 3.  编辑 `/etc/apache2/sites-available/blessing-skin.conf` 配置文件：
+
     ```conf
     <IfModule mod_ssl.c>
       <VirtualHost *:80>
@@ -154,7 +128,7 @@ sudo vim /etc/apache2/sites-available/blessing-skin.conf
       <VirtualHost *:443>
         ServerAdmin webmaster@localhost
         DocumentRoot /var/www/blessing-skin/public
-  
+
         ServerName skin.mc.yue.zone
         SSLCertificateFile /var/www/blessing-skin/ssl/public.crt
         SSLCertificateKeyFile /var/www/blessing-skin/ssl/private.key
@@ -199,7 +173,7 @@ sudo systemctl restart apache2.service
 sudo apt install postgresql -y
 sudo su postgres
 psql
-\password 
+\password
 CREATE DATABASE blessingskin;
 ```
 
@@ -227,4 +201,4 @@ sudo apt install redis php-redis
 
 现在访问主机 IP 可以看到欢迎页面了，请在选择数据库类型为 PostgreSQL：
 
-![](/安装向导-填写数据库信息.png)
+![](/setup-database.png)
