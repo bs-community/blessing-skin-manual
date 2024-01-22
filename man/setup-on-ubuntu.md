@@ -34,16 +34,73 @@ sudo apt install vim git zip -y
 ```
 
 ## 安装 PHP 及相关扩展
+::: tip 提示
+由于6.0.2不支持php8.2 请安装pip8.1
+例如此教程(以下的参考)：https://www.kjnotes.com/devtools/82
+注:Debian和Ubuntu在储存库上有差异，以下仅针对于Ubuntu，请知晓
+另请注意，Ondřej Surý只维护LTS（https://github.com/oerdnj/deb.sury.org/issues/1662）
+:::
+
+
 
 ```sh
-sudo apt install apache2 php php-gd php-mbstring php-xml php-zip php-pgsql -y
+sudo apt-get install python-software-properties
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:ondrej/php
+## LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
+#最后更新
+sudo apt-get update
 ```
+
+
+```sh
+sudo apt install php8.1  -y
+sudo apt install  php8.1-gd php8.1-mbstring php8.1-xml php8.1-zip php8.1-pgsql -y
+sudo apt install apache2 -y
+```
+
 
 验证 PHP 版本：
 
 ```sh
-php -v
+php -vOutput
 ```
+::: 切换PHP版本
+##### 命令行PHP
+```sh
+sudo update-alternatives --config php
+```
+选择pip8.1
+```sh
+有 4 个候选项可用于替换 php (提供 /usr/bin/php)。
+
+  选择       路径                优先级  状态
+------------------------------------------------------------
+* 0            /usr/bin/php.default   100       自动模式
+  1            /usr/bin/php.default   100       手动模式
+  2            /usr/bin/php8.1        81        手动模式
+  3            /usr/bin/php8.2        82        手动模式
+  4            /usr/bin/php8.3        83        手动模式
+
+要维持当前值[*]请按<回车键>，或者键入选择的编号：2
+```
+
+##### Apache PHP
+禁用你原来的PHP(以8.3为例)
+```sh
+sudo a2dismod php8.3
+sudo systemctl restart apache2
+```
+
+启用PHP 8.1
+```sh
+sudo a2enmod php8.1
+sudo systemctl restart apache2
+```
+(来自https://news.sangniao.com/p/1366233398)
+:::
+
+
 
 ## 下载 blessing-skin-server
 
@@ -168,14 +225,19 @@ sudo systemctl restart apache2.service
 ```
 
 ## 安装配置 PostgreSQL
-
+!请逐行输入
 ```sh
 sudo apt install postgresql -y
 sudo su postgres
 psql
 \password
 CREATE DATABASE blessingskin;
+\q
 ```
+su回原账户
+
+<br>
+
 
 修改 `/etc/postgresql/14/main/postgresql.conf` 文件第 60 行取消注释，允许本地登入数据库。
 

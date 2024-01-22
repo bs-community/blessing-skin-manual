@@ -107,6 +107,7 @@ location / {
 
 注意上面的 `root` 配置项，务必使它指向皮肤站的 `public` 目录。
 
+另：请记得配置php、php-fpm
 ::: tip 提示：
 如果你用的是 LNMP 一键包、某某面板之类的东西添加的站点配置，请阅读 [printempw/blessing-skin-server#46](https://github.com/printempw/blessing-skin-server/issues/46) 并查看你的配置文件中是不是也有类似的东西，否则可能导致无法正常显示图片。
 :::
