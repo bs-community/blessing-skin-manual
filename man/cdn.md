@@ -81,6 +81,15 @@ CDN 是 CloudFlare 的 Enterprise 套餐，并开启中国网络，全球都有�
 
 完整的使用方法：[https://blog.paperjun.xyz/knowledgebase_blessingskin_cdn_config.html](https://blog.paperjun.xyz/knowledgebase_blessingskin_cdn_config.html)
 
+### mecdn.mcserverx.com
+
+资源链接: `https://mecdn.mcserverx.com/gh/bs-community/blessing-skin-server/:version/public`
+
+由 FiveCDN 提供，境内使用 火山引擎 + 白山云 CDN ，境外使用 Cloudflare CDN。
+支持所有 Github 官方仓库的所有 Tags / Branches 作为 :version 的值。
+
+如果您在使用本 CDN 的过程中遇到了问题，请联系 Mail:[im#aehxy.com](mailto:im@aehxy.com)。
+
 ::: tip 想要提交新的公共 CDN？
 请在 [bs-community/blessing-skin-manual](https://github.com/bs-community/blessing-skin-manual) 下提一个 Issue 或直接发起 Pull Request。
 :::
