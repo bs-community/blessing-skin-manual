@@ -18,49 +18,6 @@
 注意，我们无法 100% 保证第三方 CDN 的安全。请谨慎使用，防止恶意代码的注入。
 :::
 
-### hempflower
-
-> 此 CDN 由 [OreCraft](http://www.orecraft.cn) 提供。 如果此 CDN 对您有帮助，可以通过 [爱发电](https://afdian.net/@hempflower) 打赏。
->
-> 如果在 CDN 支持的版本中没有找到您需要的，您可以联系 QQ 1993996310 更新。
-
-地址：`https://bs-mirror.i-creator.cn/:version/public`
-
-![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=bs-mirror.i-creator.cn/:version/public)
-![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=bs-mirror.i-creator.cn/:version/public&version=4.4.0)
-
-其中 `:version` 替换成 BS 版本。替换后的地址应类似于：`https://bs-mirror.i-creator.cn/4.0.4/public`
-
-### [bairuo.top](https://blog.bairuo.top)
-
-地址：`https://bs-mirrors.bairuo.top/:version/public`
-
-支持 v4 所有版本。
-
-![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=bs-mirrors.bairuo.top/:version/public)
-![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=bs-mirrors.bairuo.top/:version/public&version=4.4.0)
-
-由白渃提供。
-
-QQ：3337980633，添加时注明 Blessing Skin。
-
-爱发电：[@TheBaiRuo](https://afdian.net/@TheBaiRuo)
-
-### s1.pangdidi.cn
-
-CDN 是 CloudFlare 的 Enterprise 套餐，并开启中国网络，全球都有节点。
-
-地址: https://s1.pangdidi.cn/CDN/blessing-skin-server/:version/public
-
-![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=s1.pangdidi.cn/CDN/blessing-skin-server/:version/public)
-![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=s1.pangdidi.cn/CDN/blessing-skin-server/:version/public&version=4.4.0)
-
-请将地址中的 `:version` 替换为皮肤站当前所使用的版本。[点击这里可查看支持的版本](https://s1.pangdidi.cn/CDN/blessing-skin-server/versions.json)。
-
-如果您在使用本 CDN 的过程中遇到了问题，请联系 QQ 14907471。
-
-由 [FeiYuab](https://github.com/FeiYuab) 提供。
-
 ### bs-cdn.yecdn.com
 
 地址: `https://bs-cdn.yecdn.com/:version/public`
@@ -72,18 +29,11 @@ CDN 是 CloudFlare 的 Enterprise 套餐，并开启中国网络，全球都有�
 
 如果您在使用本 CDN 的过程中遇到了问题，欢迎通过 Telegram 联系我: [@ZoharWang](https://t.me/ZoharWang)
 
-### cdn.paperjun.xyz
-
-资源链接：`https://cdn.paperjun.xyz/blessingskin-cdn/:version`
-
-![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=cdn.paperjun.xyz/blessingskin-cdn/:version)
-![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=cdn.paperjun.xyz/blessingskin-cdn/:version&version=4.4.0)
-
-完整的使用方法：[https://blog.paperjun.xyz/knowledgebase_blessingskin_cdn_config.html](https://blog.paperjun.xyz/knowledgebase_blessingskin_cdn_config.html)
-
 ### mecdn.mcserverx.com
 
 资源链接: `https://mecdn.mcserverx.com/gh/bs-community/blessing-skin-server/:version/public`
+
+![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=mecdn.mcserverx.com/gh/bs-community/blessing-skin-server/:version/public)
 
 由 FiveCDN 提供，境内使用 火山引擎 + 白山云 CDN ，境外使用 Cloudflare CDN。
 支持所有 Github 官方仓库的所有 Tags / Branches 作为 :version 的值。
