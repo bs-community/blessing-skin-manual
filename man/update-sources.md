@@ -52,18 +52,7 @@ https://dev.azure.com/blessing-skin/51010f6d-9f99-40f1-a262-0a67f788df32/_apis/g
 
 指定版本: `https://update.mojy.xyz/blessing-skin/update/{version}/update.json`
 
-目前已有版本：stable ![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.mojy.xyz/blessing-skin/update/stable/update.json), 
-beta ![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.mojy.xyz/blessing-skin/update/beta/update.json), 
-rc ![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.mojy.xyz/blessing-skin/update/rc/update.json), 
-alpha ![](https://blessing-skin-manual.vercel.app/api/update?url=https://update.mojy.xyz/blessing-skin/update/alpha/update.json)
-
 如果您在使用过程中遇到了问题，欢迎给我发邮件联系: [@SANYIMOE](mailto:abcd2890000456@126.com)
-
-### cdn.monika.love
-
-地址：`https://cdn.monika.love/bs/update.json`
-
-![](https://blessing-skin-manual.vercel.app/api/update?url=https://cdn.monika.love/bs/update.json)
 
 ### static-cdn.zerodream.net
 
