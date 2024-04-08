@@ -31,9 +31,10 @@
 
 ### mecdn.mcserverx.com
 
-资源链接: `https://mecdn.mcserverx.com/gh/bs-community/blessing-skin-server/:version/public`
+资源链接: `https://mecdn.mcserverx.com/static/skin/:version/public`
 
-![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=mecdn.mcserverx.com/gh/bs-community/blessing-skin-server/:version/public)
+![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=mecdn.mcserverx.com/static/skin/:version/public)
+![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=mecdn.mcserverx.com/static/skin/4.4.0/public&version=4.4.0)
 
 由 FiveCDN 提供，境内使用 火山引擎 + 白山云 CDN ，境外使用 Cloudflare CDN。
 支持所有 Github 官方仓库的所有 Tags / Branches 作为 :version 的值。
