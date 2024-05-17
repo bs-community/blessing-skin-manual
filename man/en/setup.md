@@ -6,9 +6,9 @@
 
 Blessing Skin supports Nginx, Apache and Caddy, however it doesn't support IIS. PHP version must be 8.1.0 or above.
 
-::: warning For users who used the stable version of Blessing Skin
+::: warning For users of the stable version of Blessing Skin
 
-The latest stable version of Blessing Skin (I.e. 6.0.2) didn't support PHP version 8.2.0 or above. Compile with the latest source code if needed.
+The latest stable version of Blessing Skin (v6.0.2) doesn't support PHP 8.2.0 or above. Please build with the latest source code if needed.
 
 :::
 
