@@ -12,7 +12,13 @@
 
 流畅运行 Blessing Skin 对你的服务器的配置的要求非常低（除非你运营的是一个巨型皮肤站）。你需要检查的是你的运行环境。
 
-Blessing Skin 支持 Nginx 或 Apache 以及 Caddy 作为 Web 服务器，不支持 IIS。PHP 版本必须为 8.0.2 或以上。
+Blessing Skin 支持 Nginx 或 Apache 以及 Caddy 作为 Web 服务器，不支持 IIS。PHP 版本必须为 8.1.0 或以上。
+
+::: warning 对于使用稳定版 Blessing Skin 的用户
+
+最新的 Blessing Skin 稳定版本（即 6.0.2）不支持 PHP 8.2.0 或以上。如果需要，使用最新源码编译即可。
+
+:::
 
 ### 必需的 PHP 扩展
 
