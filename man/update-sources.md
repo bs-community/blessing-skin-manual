@@ -82,3 +82,11 @@ https://static-cdn.zerodream.net/bss/{channel}/{version}/{subversion}/{build}
 ![](https://blessing-skin-manual.vercel.app/api/update?url=https://cdn.mc9y.com/bs/update.json)
 
 指定版本：`https://cdn.mc9y.com/bs/{version}/update.json`
+
+### bscdn.tbedu.top
+
+地址: `https://bscdn.tbedu.top/update.json`
+
+![](https://blessing-skin-manual.vercel.app/api/update?url=https://bs-cdn.yecdn.com/update.json)
+
+如果您在使用过程中遇到了问题，欢迎通过 Mail 联系: [2877181146@qq.com](mailto:2877181146@qq.com)
