@@ -48,10 +48,9 @@
 
 ### bscdn.tbedu.top
 
-地址: `https://bscdn/:version/public`
+地址: `https://bscdn.tbedu.top/:version/public`
 
-![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=bs-cdn.yecdn.com/:version/public)
-![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=bs-cdn.yecdn.com/:version/public&version=4.4.0)
+![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=bscdn.tbedu.top/:version/public)
 
 请将地址中的 `:version` 替换为皮肤站当前所使用的版本。[点击查看当前支持的版本](https://bscdn.tbedu.top/versions)
 
