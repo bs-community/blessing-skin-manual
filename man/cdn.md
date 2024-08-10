@@ -10,6 +10,11 @@
 
 不知道怎么填写才对？访问 `{你应该填写的地址}/app/manifest.json`，如果正常显示，那就可以了。
 
+::: tip 提示
+在 Blessing Skin Server 6.0.2 中，你不会再看到`{你应该填写的地址}/app/manifest.json`。
+如果要进行验证，你应该有个替补。如`{你应该填写的地址}/app/favicon.ico`。
+:::
+
 ## 目前可用的公共 CDN
 
 由第三方维护，选择其中一个地址填入「静态文件 CDN」插件配置页面中即可。
@@ -39,8 +44,19 @@
 由 FiveCDN 提供，境内使用 火山引擎 + 白山云 CDN ，境外使用 Cloudflare CDN。
 支持所有 Github 官方仓库的所有 Tags / Branches 作为 :version 的值。
 
-如果您在使用本 CDN 的过程中遇到了问题，请联系 Mail:[im#aehxy.com](mailto:im@aehxy.com)。
+如果您在使用本 CDN 的过程中遇到了问题，请联系 Mail:[im@aehxy.com](mailto:im@aehxy.com)。
+
+### bscdn.tbedu.top
+
+地址: `https://bscdn/:version/public`
+
+![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=bs-cdn.yecdn.com/:version/public)
+![](https://blessing-skin-manual.vercel.app/api/cdn?cdn=bs-cdn.yecdn.com/:version/public&version=4.4.0)
+
+请将地址中的 `:version` 替换为皮肤站当前所使用的版本。[点击查看当前支持的版本](https://bscdn.tbedu.top/versions)
+
+如果您在使用本 CDN 的过程中遇到了问题，欢迎通过 Mail 联系我: [2877181146@qq.com](mailto:i2877181146@qq.com)
 
 ::: tip 想要提交新的公共 CDN？
-请在 [bs-community/blessing-skin-manual](https://github.com/bs-community/blessing-skin-manual) 下提一个 Issue 或直接发起 Pull Request。
+请在 [bs-community/blessing-skin-manual](https://github.com/bs-community/blessing-skin-manual) 下发起 Pull Request。
 :::
