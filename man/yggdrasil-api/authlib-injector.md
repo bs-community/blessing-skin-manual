@@ -8,13 +8,13 @@
 
 以 HMCL3 为例：
 
-![hmcl3-tutorial](https://gitcode.net/chearlai/f/-/raw/master/HMCLsmall.png)
+![hmcl3-tutorial](/hmcl3-tutorial.webp)
 
 *⑤：选择你刚刚添加的认证服务器*
 
 以 MCCL 为例：
 
-![mccl-tutorial](https://gitcode.net/chearlai/f/-/raw/master/MCCL.png)
+![mccl-tutorial](/mccl-tutorial.webp)
 
 ## 为游戏服务端加载 authlib-injector
 
